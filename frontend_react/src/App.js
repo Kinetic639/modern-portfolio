@@ -8,9 +8,9 @@ import { About } from "./container/About/About";
 const App = () => {
   return (
     <div>
-      {/*<Navbar />*/}
+      <Navbar />
+      <Header />
       <About />
-      {/*<Header />*/}
     </div>
   );
 };
