@@ -1,15 +1,34 @@
-import {useContext, useState} from "react";
+import React, {useContext, useState} from "react";
 import {HiMenuAlt4, HiX} from "react-icons/hi";
 import {motion} from "framer-motion";
 
 import {images} from "../../constants";
 import "./Navbar.scss";
-import {ThemeContext} from "../../App";
+import {AppContext} from "../../App";
 
-export const Navbar = () => {
+export const Navbar = ({links}) => {
     const [toggle, setToggle] = useState(false);
-    const themeContext = useContext(ThemeContext);
-    const {theme, toggleTheme} = themeContext;
+    const themeContext = useContext(AppContext);
+    const {theme, toggleTheme, activeSection, changeActiveSection} = themeContext;
+    const handleLinkClick = (label) => {
+        let scrolling = false;
+
+        const onScroll = () => {
+            scrolling = true;
+        };
+
+        const checkScrollEnd = () => {
+            if (scrolling) {
+                scrolling = false;
+                requestAnimationFrame(checkScrollEnd);
+            } else {
+                changeActiveSection(label);
+            }
+        };
+
+        window.addEventListener("scroll", onScroll);
+        requestAnimationFrame(checkScrollEnd);
+    };
 
     return (
         <nav className="app__navbar">
@@ -17,13 +36,20 @@ export const Navbar = () => {
                 <img src={images.logo} alt="logo"/>
             </div>
             <ul className="app__navbar-links">
-                {["home", "about", "work", "skills", "contact"].map((page) => (
+                <li key="button">
+                    <button onClick={toggleTheme}>{theme}</button>
+                </li>
+                {links.map((link) => (
                     <li
-                        className="app__navbar-link app__flex p-text"
-                        key={`link-${page}`}
+                        className={`link ${activeSection === link.label ? "link--active" : ""}`}
+                        key={`link-${link.label}`}
                     >
-                        <div/>
-                        <a href={`#${page}`}>{page}</a>
+                        <a
+                            href={`#${link.label}`}
+                            onClick={() => handleLinkClick(link.label)}
+                        >
+                            {link.label}
+                        </a>
                     </li>
                 ))}
             </ul>
