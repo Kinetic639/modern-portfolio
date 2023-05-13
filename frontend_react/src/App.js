@@ -1,9 +1,9 @@
 import React, {createContext, useEffect, useState} from "react";
 import {GridLoader} from "react-spinners";
-import {Navbar} from "./components";
 
 import "./App.scss";
 import Header from "./container/Header/Header";
+import {Navbar} from "./components";
 
 export const ThemeContext = createContext(null)
 

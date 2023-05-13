@@ -1,9 +1,7 @@
 import React from "react";
-import {motion} from "framer-motion";
-
-import {images} from "../../constants";
 import "./Header.scss";
 import {AppWrap} from "../../wrapper";
+import {useTranslation} from "react-i18next";
 
 const scaleVariants = {
     whileInView: {
@@ -17,9 +15,24 @@ const scaleVariants = {
 };
 
 const Header = () => {
+    const {t, i18n} = useTranslation("global");
+
+    const changeLanguage = (lng) => {
+        i18n.changeLanguage(lng);
+    };
+
     return (
         <div className="app__header app__flex">
             Header section <span>secondary</span>
+            <h1>{t('header.title')}</h1>
+            <div>
+                <button type="button" onClick={() => changeLanguage('en')}>
+                    en
+                </button>
+                <button type="button" onClick={() => changeLanguage('pl')}>
+                    pl
+                </button>
+            </div>
             {/*<motion.div*/}
             {/*  whileInView={{ x: [-100, 0], opacity: [0, 1] }}*/}
             {/*  transition={{ duration: 0.5 }}*/}
