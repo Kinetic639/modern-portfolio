@@ -53,6 +53,13 @@
       margin: 0 auto 5px;
     }
 
+    &.link--active {
+      a {
+
+        color: var(--font-secondary);
+      }
+    }
+
     a {
       color: var(--gray-color);
       text-decoration: none;

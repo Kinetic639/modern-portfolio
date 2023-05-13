@@ -25,10 +25,10 @@
     --color-secondary: #18b967;
     --font-primary: #1f1f1f;
     --font-secondary: #18b967;
+    --font-third: #636363;
 }
 
 .darkmode {
-
     --color: 0, 0%; /*the base color*/
     --l: 12%; /*the initial lightness*/
 
@@ -37,6 +37,7 @@
     --color-secondary: #27e98b;
     --font-primary: #fff;
     --font-secondary: #27e98b;
+    --font-third: #636363;
 }
 
 * {
@@ -55,7 +56,6 @@ html {
 body {
     background: var(--color-primary);
     color: var(--font-primary);
-    transition: all .2s ease-in-out;
+    transition: all .1s ease-in-out;
     font-size: var(--font-size-base);
-
 }
