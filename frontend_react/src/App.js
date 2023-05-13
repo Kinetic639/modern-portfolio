@@ -1,22 +1,21 @@
 import React, {createContext, useEffect, useState} from "react";
 import {GridLoader} from "react-spinners";
-import About from "./container/About/About";
-import Header from "./container/Header/Header";
 import {Navbar} from "./components";
 
 import "./App.scss";
-import "./scss/variables.scss";
+import Header from "./container/Header/Header";
 
 export const ThemeContext = createContext(null)
 
 const App = () => {
     const [loading, setLoading] = useState(true);
-    const [theme, setTheme] = useState("light")
+    const [theme, setTheme] = useState("dark")
     const toggleTheme = () => {
         document.body.classList.toggle('darkmode');
         setTheme(curr => curr === 'light' ? 'dark' : 'light')
     }
     useEffect(() => {
+        document.body.classList.add("darkmode");
         const handleLoad = () => {
             setLoading(false);
         };
@@ -29,13 +28,12 @@ const App = () => {
     }, []);
 
     return (<>
-            {loading ? <GridLoader className="spinner" color="#36d7b7"/> :
-                <ThemeContext.Provider value={{toggleTheme}}>
-                    <div>
-                        <div onClick={toggleTheme}>{theme}</div>
+            {loading ? <GridLoader className="spinner" color="#27e98b"/> :
+                <ThemeContext.Provider value={{theme, toggleTheme}}>
+                    <div className="app-wrapper">
                         <Navbar/>
                         <Header/>
-                        <About/>
+                        {/*<About/>*/}
                     </div>
                 </ThemeContext.Provider>
             }
