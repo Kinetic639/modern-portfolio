@@ -1,21 +1,61 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
 
 :root {
-  --font-base: "DM Sans", sans-serif;
+    --font-family-primary: 'Inter', sans-serif;
 
-  --primary-color: #edf2f8;
-  --secondary-color: #313bac;
-  --black-color: #030303;
-  --lightGray-color: #e4e4e4;
-  --gray-color: #6b7688;
-  --brown-color: #46364a;
-  --white-color: #ffffff;
+    --main-width: 1100px;
+
+    --screen-size-xs: 440px;
+    --screen-size-s: 650px;
+    --screen-size-m: 720px;
+    --screen-size-l: 900px;
+    --screen-size-xl: 1100px;
+
+    --font-size-base: 1.6rem;
+
+    --space-between-sections: 4rem;
+
+
+    --color: 0, 0%; /*the base color*/
+    --l: 100%; /*the initial lightness*/
+
+    --color-primary: hsl(var(--color), var(--l));
+    --color-primary-darker: hsl(var(--color), calc(var(--l) - 10%));
+    --color-secondary: #18b967;
+    --font-primary: #1f1f1f;
+    --font-secondary: #18b967;
+}
+
+.darkmode {
+
+    --color: 0, 0%; /*the base color*/
+    --l: 12%; /*the initial lightness*/
+
+    --color-primary: hsl(var(--color), var(--l));
+    --color-primary-darker: hsl(var(--color), calc(var(--l) - 1%));
+    --color-secondary: #27e98b;
+    --font-primary: #fff;
+    --font-secondary: #27e98b;
 }
 
 * {
-  font-family: var(--font-base);
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  scroll-behavior: smooth;
+    font-family: var(--font-family-primary);
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+html {
+    font-size: 62.5%;
+    background: #1f1f1f;
+}
+
+body {
+    background: var(--color-primary);
+    color: var(--font-primary);
+    transition: all .2s ease-in-out;
+    font-size: var(--font-size-base);
+
 }
