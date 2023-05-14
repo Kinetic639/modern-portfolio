@@ -5,7 +5,7 @@ import "./App.scss";
 import Header from "./container/Header/Header";
 import {Navbar} from "./components";
 import About from "./container/About/About";
-import {VerticalNavbar} from "./components/VarticalNavbar/VerticalNavbar";
+import {VerticalNavbar} from "./components";
 import Skills from "./container/Skills/Skills";
 import {AiOutlineHome} from "react-icons/ai";
 import {RxPerson} from "react-icons/rx";
@@ -48,7 +48,7 @@ const App = () => {
                 const currentSection = sortedSections.length > 0 ? sortedSections[0].id : null;
 
                 changeActiveSection(currentSection);
-            }, 800);
+            }, 600);
         };
 
         document.addEventListener("scroll", handleScroll);
@@ -90,8 +90,8 @@ const App = () => {
                 >
                     <>
                         <VerticalNavbar links={links}/>
+                        <Navbar links={links}/>
                         <div className="app-wrapper">
-                            <Navbar links={links}/>
                             <Header/>
                             <About/>
                             <Skills/>
