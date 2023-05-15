@@ -12,7 +12,7 @@ export const ThemeSelect = () => {
         toggleTheme()
     };
     return (
-        <button className="settings-button" onClick={changeTheme}>
+        <button className="settings-button settings-button--theme" onClick={changeTheme}>
             {theme === 'light' ? <CgSun/> :
                 <FaMoon/>}
         </button>

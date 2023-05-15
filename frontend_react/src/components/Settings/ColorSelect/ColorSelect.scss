@@ -1,18 +1,17 @@
 .color-select {
   display: flex;
+  align-items: center;
   gap: 15px;
-  padding: 5px;
 }
 
 .other-colors {
   display: flex;
   gap: 15px;
-  margin-right: 15px;
 }
 
 .color-button {
-  width: 25px;
-  height: 25px;
+  width: 30px;
+  height: 30px;
   border: none;
   border-radius: 50%;
   cursor: pointer;
@@ -24,8 +23,8 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    height: 30px;
-    width: 30px;
+    height: calc(100% + 5px);
+    width: calc(100% + 5px);
     border: 1px solid var(--font-third);
     border-radius: 50%;
   }
@@ -36,9 +35,9 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    height: 30px;
-    width: 30px;
-    border: 1px solid var(--color-secondary);
+    height: calc(100% + 5px);
+    width: calc(100% + 5px);
+    border: 1px solid var(--font-secondary);
     border-radius: 50%;
   }
 
@@ -70,4 +69,25 @@
     background: #ff99cc;
   }
 
+}
+
+.settings-icon {
+  display: flex;
+  align-items: center;
+}
+
+.settings-icon__container {
+  color: var(--font-third);
+  font-size: 2.6rem;
+  transition: color .2s ease-in-out;
+  padding: 3px;
+  margin-left: 10px;
+
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    color: var(--font-secondary);
+    transition: color .2s ease-in-out;
+  }
 }
