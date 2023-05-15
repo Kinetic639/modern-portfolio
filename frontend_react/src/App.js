@@ -3,16 +3,16 @@ import {GridLoader} from "react-spinners";
 
 import "./App.scss";
 import Header from "./container/Header/Header";
-import {Navbar} from "./components";
 import About from "./container/About/About";
-import {VerticalNavbar} from "./components";
 import Skills from "./container/Skills/Skills";
+import Work from "./container/Work/Work";
+import {Navbar} from "./components";
+import {Settings} from "./components/Settings/Settings";
+import {VerticalNavbar} from "./components";
 import {AiOutlineHome} from "react-icons/ai";
 import {RxPerson} from "react-icons/rx";
 import {IoBriefcaseOutline, IoFileTrayStackedOutline} from "react-icons/io5";
-import {HiOutlineEnvelope} from "react-icons/hi2";
-import Work from "./container/Work/Work";
-import {Settings} from "./components/Settings/Settings";
+import {AiOutlineMessage} from "react-icons/ai";
 
 export const AppContext = createContext(null);
 
@@ -26,7 +26,7 @@ const App = () => {
         {id: 1, label: "about", icon: RxPerson},
         {id: 2, label: "skills", icon: IoFileTrayStackedOutline},
         {id: 3, label: "work", icon: IoBriefcaseOutline},
-        {id: 4, label: "contact", icon: HiOutlineEnvelope},
+        {id: 4, label: "contact", icon: AiOutlineMessage},
     ];
 
     useEffect(() => {

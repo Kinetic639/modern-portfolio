@@ -1,0 +1,29 @@
+.settings-button--theme {
+  padding: 2px;
+  font-size: 1.9rem;
+  width: 30px;
+  height: 30px;
+  margin-left: 15px;
+  position: relative;
+  transition: all .2s ease-in-out;
+  color: var(--font-third);
+
+  &:hover {
+    color: var(--font-secondary);
+    border-color: var(--font-secondary);
+    transition: all .2s ease-in-out;
+  }
+
+  &:hover:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: calc(100% + 5px);
+    width: calc(100% + 5px);
+    border: 1px solid var(--font-secondary);
+    border-radius: 50%;
+    transition: all .2s ease-in-out;
+  }
+}
