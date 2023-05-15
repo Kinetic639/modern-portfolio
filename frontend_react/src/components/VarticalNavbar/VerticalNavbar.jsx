@@ -4,11 +4,12 @@ import {AppContext} from "../../App";
 
 export const VerticalNavbar = ({links}) => {
     const themeContext = useContext(AppContext);
-    const {theme, toggleTheme, activeSection, changeActiveSection} = themeContext;
+    const {activeSection, changeActiveSection} = themeContext;
 
     const handleLinkClick = (label) => {
         changeActiveSection(label);
     };
+
     return (
         <nav className="nav">
             <ul className="links">

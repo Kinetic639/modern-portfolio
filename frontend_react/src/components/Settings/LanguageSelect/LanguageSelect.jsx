@@ -1,16 +1,14 @@
-import React, {useContext} from "react";
+import React from "react";
 import "./LanguageSelect.scss";
-import {AppContext} from "../../../App";
 import {useTranslation} from "react-i18next";
 
 export const LanguageSelect = () => {
-    const {t, i18n} = useTranslation()
-    const themeContext = useContext(AppContext);
-    const {theme, toggleTheme} = themeContext;
+    const {i18n} = useTranslation()
 
-    const changeLanguage = (lang) => {
+    const changeLanguage = () => {
         i18n.changeLanguage(i18n.language === 'pl' ? 'en' :
-            'pl')
+            'pl').then(() => {
+        })
     }
     return (
         <button className="settings-button settings-button--lang" onClick={changeLanguage}>

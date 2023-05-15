@@ -1,10 +1,10 @@
-import React, {useEffect, useRef} from "react";
+import React from "react";
 import "./Header.scss";
 import {AppWrap} from "../../wrapper";
 import {useTranslation} from "react-i18next";
 import {motion} from "framer-motion";
 
-
+ 
 import {images} from "../../constants";
 
 const scaleVariants = {
@@ -19,7 +19,7 @@ const scaleVariants = {
 };
 
 const Header = () => {
-    const {t, i18n} = useTranslation('global')
+    const {t} = useTranslation('global')
 
     return (
         <div className="app__header app__flex">
