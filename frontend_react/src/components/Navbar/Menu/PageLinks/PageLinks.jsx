@@ -2,6 +2,7 @@ import React, {useContext, useState} from "react";
 import "./PageLinks.scss";
 import {motion} from "framer-motion";
 import {AppContext} from "../../../../App";
+import {useTranslation} from "react-i18next";
 
 const textMotion = {
     rest: {
@@ -46,6 +47,7 @@ export const PageLinks = ({links, toggleNavigation}) => {
     const themeContext = useContext(AppContext);
     const [activeLink, setActiveLink] = useState(null);
     const {activeSection, changeActiveSection} = themeContext;
+    const {t} = useTranslation('global')
 
     const handleLinkClick = (label) => {
         changeActiveSection(label);
@@ -76,7 +78,7 @@ export const PageLinks = ({links, toggleNavigation}) => {
                                   variants={textMotion}
                                   transition={{delay: .6 + (index / 6)}}
                                   onClick={() => handleLinkClick(link.label)}
-                        >{link.label}
+                        >{t(`nav.sections.${link.label}`)}
                         </motion.a>
                     </motion.div>
 

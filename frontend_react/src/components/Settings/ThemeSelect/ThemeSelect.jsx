@@ -4,12 +4,14 @@ import {AppContext} from "../../../App";
 import {CgSun} from "react-icons/cg"
 import {FaMoon} from "react-icons/fa"
 import {Tooltip} from "react-tooltip";
+import {useTranslation} from "react-i18next";
 
 export const ThemeSelect = () => {
     const themeContext = useContext(AppContext);
     const {theme, toggleTheme} = themeContext;
+    const {t} = useTranslation('global')
 
-    const changeTheme = (label) => {
+    const changeTheme = () => {
         toggleTheme()
     };
     return (<>
@@ -17,7 +19,7 @@ export const ThemeSelect = () => {
                 {theme === 'light' ? <CgSun/> :
                     <FaMoon/>}
                 <Tooltip className='example' anchorSelect=".settings-button--theme" place="top">
-                    zmień widok
+                    {t('tooltips.settings.theme')}
                 </Tooltip>
             </button>
         </>
