@@ -53,7 +53,7 @@
 
   &--dimmed {
     a {
-      color: #c9c9c9;
+      color: var(--font-dimmed);
       transition: color 0.2s ease-in-out;
     }
   }

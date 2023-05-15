@@ -12,6 +12,7 @@ import {RxPerson} from "react-icons/rx";
 import {IoBriefcaseOutline, IoFileTrayStackedOutline} from "react-icons/io5";
 import {HiOutlineEnvelope} from "react-icons/hi2";
 import Work from "./container/Work/Work";
+import {Settings} from "./components/Settings/Settings";
 
 export const AppContext = createContext(null);
 
@@ -19,6 +20,7 @@ const App = () => {
     const [loading, setLoading] = useState(true);
     const [theme, setTheme] = useState("light");
     const [activeSection, setActiveSection] = useState("home");
+    const [selectedColor, setSelectedColor] = useState("green");
     const links = [
         {id: 0, label: "home", icon: AiOutlineHome},
         {id: 1, label: "about", icon: RxPerson},
@@ -62,6 +64,15 @@ const App = () => {
         document.body.classList.toggle("darkmode");
         setTheme((curr) => (curr === "light" ? "dark" : "light"));
     };
+    const changeSelectedColor = (color) => {
+        const colors = ['orange', 'yellow', 'blue', 'red', 'purple', 'green', 'pink'];
+        colors.forEach((color) => {
+            document.body.classList.remove(color);
+        });
+
+        document.body.classList.add(color);
+        setSelectedColor(color)
+    };
 
 
     const changeActiveSection = (section) => {
@@ -86,11 +97,12 @@ const App = () => {
                 <GridLoader className="spinner" color="#27e98b"/>
             ) : (
                 <AppContext.Provider
-                    value={{theme, toggleTheme, activeSection, changeActiveSection}}
+                    value={{theme, toggleTheme, activeSection, changeActiveSection, selectedColor, changeSelectedColor}}
                 >
                     <>
                         <VerticalNavbar links={links}/>
                         <Navbar links={links}/>
+                        <Settings/>
                         <div className="app-wrapper">
                             <Header/>
                             <About/>
