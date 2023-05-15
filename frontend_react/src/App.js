@@ -18,7 +18,7 @@ export const AppContext = createContext(null);
 
 const App = () => {
     const [loading, setLoading] = useState(true);
-    const [theme, setTheme] = useState("light");
+    const [theme, setTheme] = useState("dark");
     const [activeSection, setActiveSection] = useState("home");
     const [selectedColor, setSelectedColor] = useState("green");
     const links = [
@@ -28,6 +28,13 @@ const App = () => {
         {id: 3, label: "work", icon: IoBriefcaseOutline},
         {id: 4, label: "contact", icon: AiOutlineMessage},
     ];
+
+    useEffect(() => {
+        document.body.classList.add('darkmode'); // Add your desired class name here
+        return () => {
+            document.body.classList.remove('darkmode'); // Remove the class when the component unmounts
+        };
+    }, []);
 
     useEffect(() => {
         const handleScroll = () => {

@@ -13,10 +13,11 @@
     --l: 100%; /*the initial lightness*/
     --color-primary: hsl(var(--color), var(--l));
     --color-primary-darker: hsl(var(--color), calc(var(--l) - 10%));
-    --color-secondary: #18b967;
+    --color-secondary: #1dc275;
     --font-primary: #1f1f1f;
-    --font-secondary: #18b967;
+    --font-secondary: #1dc275;
     --font-third: #636363;
+    --font-tooltip: #4b4b4b;
     --font-dimmed: #c9c9c9;
 }
 
@@ -30,15 +31,17 @@
 }
 
 .yellow {
-    --font-secondary: #e4af12;
+    --font-secondary: #eab515;
 }
 
 .orange {
-    --font-secondary: #e96127;
+    --font-secondary: #ff7338;
+    --font-tooltip: #1d1d1d;
 }
 
 .red {
     --font-secondary: #f31313;
+    --font-tooltip: #dbdbdb;
 }
 
 .blue {
@@ -46,15 +49,17 @@
 }
 
 .green {
-    --font-secondary: #29e98c;
+    --font-secondary: #1dc275;
 }
 
 .pink {
     --font-secondary: #ff99cc;
+    --font-tooltip: #3f3f3f;
 }
 
 .purple {
     --font-secondary: #493ee5;
+    --font-tooltip: #dbdbdb;
 }
 
 * {

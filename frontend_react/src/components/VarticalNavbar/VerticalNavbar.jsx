@@ -1,6 +1,7 @@
 import React, {useContext} from "react";
 import "./VerticalNavbar.scss";
 import {AppContext} from "../../App";
+import {Tooltip} from 'react-tooltip';
 
 export const VerticalNavbar = ({links}) => {
     const themeContext = useContext(AppContext);
@@ -15,12 +16,16 @@ export const VerticalNavbar = ({links}) => {
             <ul className="links">
                 {links.map((link) => (
                     <li
-                        className={`link ${activeSection === link.label ? "link--active" : ""}`}
+                        className={`link ${activeSection === link.label ? "link--active" : ""} link-${link.label}`}
                         key={`link-${link.label}`}
                     >
-                        <a href={`#${link.label}`} onClick={() => handleLinkClick(link.label)}>
+                        <a href={`#${link.label}`}
+                           onClick={() => handleLinkClick(link.label)}>
                             {<link.icon/>}
                         </a>
+                        <Tooltip className='example' anchorSelect={`.link-${link.label}`} place="left">
+                            {link.label}
+                        </Tooltip>
                     </li>
                 ))}
             </ul>
