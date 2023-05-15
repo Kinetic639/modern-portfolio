@@ -17,6 +17,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  color: var(--font-secondary);
 }
 
 .title {
@@ -43,7 +44,7 @@
     top: 0;
     height: 100%;
     width: 1px;
-    background: black;
+    background: var(--font-third);;
   }
 
   &:after {

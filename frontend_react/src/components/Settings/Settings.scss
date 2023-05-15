@@ -1,0 +1,27 @@
+.settings-container {
+  padding: 5px;
+  position: fixed;
+  right: 40px;
+  bottom: 0;
+  transform: translateY(-50%);
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 30px;
+}
+
+.settings-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  color: var(--font-third);
+  border-radius: 50%;
+  font-size: 2rem;
+  border: 1px solid var(--font-third);
+  background: transparent;
+  cursor: pointer;
+  width: 35px;
+  height: 35px;
+}

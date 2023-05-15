@@ -19,6 +19,7 @@ const scaleVariants = {
 };
 
 const Header = () => {
+    const {t, i18n} = useTranslation('global')
 
     return (
         <div className="app__header app__flex">
@@ -31,7 +32,7 @@ const Header = () => {
                     <div className="badge-cmp app__flex">
                         <span>👋</span>
                         <div style={{marginLeft: 20}}>
-                            <p className="p-text">Hello, I am</p>
+                            <p className="p-text">{t('text')}</p>
                             <h1 className="head-text">Michał</h1>
                         </div>
                     </div>
