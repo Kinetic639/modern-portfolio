@@ -46,7 +46,7 @@
   }
 
   &--orange {
-    background: #fe6f1d;
+    background: #f57722;
   }
 
   &--red {
@@ -62,7 +62,7 @@
   }
 
   &--green {
-    background: #29e98c;
+    background: #19b068;
   }
 
   &--pink {
@@ -82,6 +82,7 @@
   transition: color .2s ease-in-out;
   padding: 3px;
   margin-left: 10px;
+  cursor: pointer;
 
   display: flex;
   align-items: center;
