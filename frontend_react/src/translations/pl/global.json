@@ -1,6 +1,20 @@
 {
-  "text": "twoja stara",
-  "header": {
-    "title": "zxczxczx"
+  "tooltips": {
+    "settings": {
+      "settings": "Ustawienia",
+      "language": "Wybierz język",
+      "theme": "Zmień widok",
+      "light": "jasny",
+      "dark": "ciemny"
+    }
+  },
+  "nav": {
+    "sections": {
+      "home": "Witaj",
+      "about": "O mnie",
+      "skills": "Umiejętności",
+      "work": "Portfolio",
+      "contact": "Kontakt"
+    }
   }
 }

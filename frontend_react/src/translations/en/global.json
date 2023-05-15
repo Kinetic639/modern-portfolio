@@ -1,6 +1,20 @@
 {
-  "text": "your mom",
-  "header": {
-    "title": "hello"
+  "tooltips": {
+    "settings": {
+      "settings": "settings",
+      "language": "select language",
+      "theme": "select theme",
+      "light": "light",
+      "dark": "dark"
+    }
+  },
+  "nav": {
+    "sections": {
+      "home": "Hello",
+      "about": "About",
+      "skills": "Skills",
+      "work": "Work",
+      "contact": "Contact"
+    }
   }
 }

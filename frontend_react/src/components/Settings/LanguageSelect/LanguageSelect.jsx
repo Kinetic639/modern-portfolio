@@ -4,7 +4,7 @@ import {useTranslation} from "react-i18next";
 import {Tooltip} from "react-tooltip";
 
 export const LanguageSelect = () => {
-    const {i18n} = useTranslation()
+    const {t, i18n} = useTranslation('global')
 
     const changeLanguage = () => {
         i18n.changeLanguage(i18n.language === 'pl' ? 'en' :
@@ -17,7 +17,7 @@ export const LanguageSelect = () => {
                     'EN'}
             </button>
             <Tooltip className='example' anchorSelect=".settings-button--lang" place="left">
-                Zmień język
+                {t('tooltips.settings.language')}
             </Tooltip>
         </div>
     );

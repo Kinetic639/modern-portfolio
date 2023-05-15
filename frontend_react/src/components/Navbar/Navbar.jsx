@@ -1,6 +1,5 @@
-import React, {useContext, useEffect, useState} from "react";
+import React, {useState} from "react";
 import "./Navbar.scss";
-import {AppContext} from "../../App";
 import {MenuToggle} from "./MenuToggle/MenuToggle";
 import {BoxShadow} from "./boxShadow/BoxShadow";
 import {AnimatePresence} from "framer-motion";

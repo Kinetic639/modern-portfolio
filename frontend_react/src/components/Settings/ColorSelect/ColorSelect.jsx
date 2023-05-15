@@ -1,10 +1,11 @@
-import React, {useContext, useEffect, useState} from "react";
+import React, {useContext, useState} from "react";
 import "./ColorSelect.scss";
 import {motion} from "framer-motion";
 import {AppContext} from "../../../App";
 import {ThemeSelect} from "../ThemeSelect/ThemeSelect";
 import {RxGear} from 'react-icons/rx'
 import {Tooltip} from "react-tooltip";
+import {useTranslation} from "react-i18next";
 
 const container = {
     hidden: {opacity: 0},
@@ -25,7 +26,7 @@ export const ColorSelect = () => {
     const {selectedColor, changeSelectedColor} = themeContext;
     const [isOpen, setIsOpen] = useState(false)
     const colors = ['orange', 'yellow', 'blue', 'red', 'purple', 'green', 'pink'];
-
+    const {t} = useTranslation('global')
 
     const changeColor = (color) => {
         changeSelectedColor(color)
@@ -54,7 +55,7 @@ export const ColorSelect = () => {
                 <motion.span className="settings-icon" animate={{rotate: 360}}
                              transition={spinTransition}><RxGear/></motion.span>
                 <Tooltip className='example' anchorSelect=".settings-icon__container" place="top">
-                    Ustawienia
+                    {t('tooltips.settings.settings')}
                 </Tooltip>
             </motion.div>
         </motion.div>

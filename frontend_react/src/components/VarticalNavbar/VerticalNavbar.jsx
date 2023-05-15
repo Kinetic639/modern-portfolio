@@ -2,8 +2,10 @@ import React, {useContext} from "react";
 import "./VerticalNavbar.scss";
 import {AppContext} from "../../App";
 import {Tooltip} from 'react-tooltip';
+import {useTranslation} from "react-i18next";
 
 export const VerticalNavbar = ({links}) => {
+    const {t} = useTranslation('global')
     const themeContext = useContext(AppContext);
     const {activeSection, changeActiveSection} = themeContext;
 
@@ -24,7 +26,7 @@ export const VerticalNavbar = ({links}) => {
                             {<link.icon/>}
                         </a>
                         <Tooltip className='example' anchorSelect={`.link-${link.label}`} place="left">
-                            {link.label}
+                            {t(`nav.sections.${link.label}`)}
                         </Tooltip>
                     </li>
                 ))}
