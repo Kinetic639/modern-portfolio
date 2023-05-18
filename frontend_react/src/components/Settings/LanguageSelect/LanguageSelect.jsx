@@ -16,7 +16,7 @@ export const LanguageSelect = () => {
                 {i18n.language === 'pl' ? 'PL' :
                     'EN'}
             </button>
-            <Tooltip className='example' anchorSelect=".settings-button--lang" place="left">
+            <Tooltip className='example' anchorSelect=".settings-button--lang" place="right">
                 {t('tooltips.settings.language')}
             </Tooltip>
         </div>
