@@ -13,6 +13,8 @@ import {AiOutlineHome} from "react-icons/ai";
 import {RxPerson} from "react-icons/rx";
 import {IoBriefcaseOutline, IoFileTrayStackedOutline} from "react-icons/io5";
 import {AiOutlineMessage} from "react-icons/ai";
+import {Contact} from "./container/Contact/Contact";
+import {LanguageSelect} from "./components/Settings/LanguageSelect/LanguageSelect";
 
 export const AppContext = createContext(null);
 
@@ -21,13 +23,29 @@ const App = () => {
     const [theme, setTheme] = useState("dark");
     const [activeSection, setActiveSection] = useState("home");
     const [selectedColor, setSelectedColor] = useState("green");
+    const [showAsideContact, setShowAsideContact] = useState(false);
+
     const links = [
         {id: 0, label: "home", icon: AiOutlineHome},
         {id: 1, label: "about", icon: RxPerson},
         {id: 2, label: "skills", icon: IoFileTrayStackedOutline},
         {id: 3, label: "work", icon: IoBriefcaseOutline},
         {id: 4, label: "contact", icon: AiOutlineMessage},
-    ];
+    ]
+
+    const checkScreenWidth = () => {
+        const screenWidth = window.innerWidth;
+        setShowAsideContact(screenWidth > 1200);
+    };
+
+    useEffect(() => {
+        checkScreenWidth();
+        window.addEventListener('resize', checkScreenWidth);
+
+        return () => {
+            window.removeEventListener('resize', checkScreenWidth);
+        };
+    }, []);
 
     useEffect(() => {
         document.body.classList.add('darkmode'); // Add your desired class name here
@@ -104,12 +122,26 @@ const App = () => {
                 <GridLoader className="spinner" color="#27e98b"/>
             ) : (
                 <AppContext.Provider
-                    value={{theme, toggleTheme, activeSection, changeActiveSection, selectedColor, changeSelectedColor}}
+                    value={{
+                        theme,
+                        toggleTheme,
+                        activeSection,
+                        changeActiveSection,
+                        selectedColor,
+                        changeSelectedColor,
+                        showAsideContact
+                    }}
                 >
                     <>
-                        <VerticalNavbar links={links}/>
                         <Navbar links={links}/>
-                        <Settings/>
+                        {showAsideContact && (
+                            <>
+                                <VerticalNavbar links={links}/>
+                                <Settings/>
+                                <LanguageSelect/>
+                                <Contact/>
+                            </>
+                        )}
                         <div className="app-wrapper">
                             <Header/>
                             <About/>

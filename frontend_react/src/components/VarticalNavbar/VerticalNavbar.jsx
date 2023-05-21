@@ -25,7 +25,7 @@ export const VerticalNavbar = ({links}) => {
                            onClick={() => handleLinkClick(link.label)}>
                             {<link.icon/>}
                         </a>
-                        <Tooltip className='example' anchorSelect={`.link-${link.label}`} place="left">
+                        <Tooltip className='example' anchorSelect={`.link-${link.label}`} place="right">
                             {t(`nav.sections.${link.label}`)}
                         </Tooltip>
                     </li>

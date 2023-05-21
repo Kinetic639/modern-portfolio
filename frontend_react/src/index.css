@@ -14,7 +14,7 @@
     --color-primary: hsl(var(--color), var(--l));
     --color-primary-darker: hsl(var(--color), calc(var(--l) - 10%));
     --color-secondary: #1dc275;
-    --font-primary: #1f1f1f;
+    --font-primary: #404040;
     --font-secondary: #1dc275;
     --font-third: #636363;
     --font-tooltip: #4b4b4b;
@@ -26,7 +26,7 @@
     --l: 12%; /*the initial lightness*/
     --color-primary: hsl(var(--color), var(--l));
     --color-primary-darker: hsl(var(--color), calc(var(--l) - 1%));
-    --font-primary: #fff;
+    --font-primary: #eaeaea;
     --font-dimmed: #383838;
 }
 
