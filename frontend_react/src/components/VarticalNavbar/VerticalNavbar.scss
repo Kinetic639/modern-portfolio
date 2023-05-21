@@ -3,11 +3,12 @@
   border-radius: 50px;
   padding: 25px 15px;
   position: fixed;
-  left: 320px;
+  left: 420px;
   top: 50%;
   transform: translateY(-50%);
-  z-index: 999;
   border-right: none;
+  background: var(--color-primary);
+  z-index: 2;
 
   &:before {
     content: "";

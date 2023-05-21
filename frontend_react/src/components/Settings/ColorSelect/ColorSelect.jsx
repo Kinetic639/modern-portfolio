@@ -51,6 +51,7 @@ export const ColorSelect = () => {
                     <ThemeSelect/>
                     {colors.map(color => (
                         <motion.button
+                            key={color}
                             className={`color-button ${color === selectedColor ? 'color-button--active' : 'color-button--pallet'}  color-button--${color}`}
                             onClick={() => changeColor(color)}/>
                     ))}
