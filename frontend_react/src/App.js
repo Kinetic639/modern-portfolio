@@ -1,7 +1,5 @@
 import React, {createContext, useEffect, useState} from "react";
 import {GridLoader} from "react-spinners";
-
-import "./App.scss";
 import Header from "./container/Header/Header";
 import About from "./container/About/About";
 import Skills from "./container/Skills/Skills";
@@ -15,6 +13,8 @@ import {IoBriefcaseOutline, IoFileTrayStackedOutline} from "react-icons/io5";
 import {AiOutlineMessage} from "react-icons/ai";
 import {Contact} from "./container/Contact/Contact";
 import {LanguageSelect} from "./components/Settings/LanguageSelect/LanguageSelect";
+
+import styles from "./App.module.scss";
 
 export const AppContext = createContext(null);
 
@@ -48,9 +48,9 @@ const App = () => {
     }, []);
 
     useEffect(() => {
-        document.body.classList.add('darkmode'); // Add your desired class name here
+        document.body.classList.add('darkmode'); // select dark mode as default
         return () => {
-            document.body.classList.remove('darkmode'); // Remove the class when the component unmounts
+            document.body.classList.remove('darkmode');
         };
     }, []);
 
@@ -119,7 +119,7 @@ const App = () => {
     return (
         <>
             {loading ? (
-                <GridLoader className="spinner" color="#27e98b"/>
+                <GridLoader className={styles.spinner} color="#27e98b"/>
             ) : (
                 <AppContext.Provider
                     value={{
@@ -142,7 +142,7 @@ const App = () => {
                                 <Contact/>
                             </>
                         )}
-                        <div className="app-wrapper">
+                        <div className={styles.appWrapper}>
                             <Header/>
                             <About/>
                             <Skills/>

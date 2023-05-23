@@ -1,4 +1,15 @@
-.settings-button--lang {
+.buttonLang {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  color: var(--font-third);
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+  width: 35px;
+  height: 35px;
   position: fixed;
   left: 427px;
   top: calc(50% + 25%);

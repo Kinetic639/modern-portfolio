@@ -1,4 +1,4 @@
-.nav-links {
+.links {
   align-self: center;
   list-style: none;
   font-size: 4.5rem;
@@ -28,14 +28,14 @@
   }
 }
 
-.nav-link__container {
+.linkContainer {
   position: relative;
   display: flex;
   align-items: center;
   cursor: pointer;
 }
 
-.nav-link__icon {
+.linkIcon {
   position: absolute;
   padding: 10px 0 10px 10px;
   top: 0;
@@ -44,14 +44,14 @@
   font-size: 2rem;
 }
 
-.nav-link {
-  &--active {
+.link {
+  &Active {
     a {
       color: var(--font-secondary);
     }
   }
 
-  &--dimmed {
+  &Dimmed {
     a {
       color: var(--font-dimmed);
       transition: color 0.2s ease-in-out;

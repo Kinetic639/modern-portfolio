@@ -1,6 +1,7 @@
 import React from "react";
-import "./BoxShadow.scss";
 import {motion} from "framer-motion";
+
+import styles from "./BoxShadow.module.scss";
 
 const item = {
     exit: {
@@ -12,13 +13,13 @@ const item = {
         }
     }
 }
-export const BoxShadow = ({expanded, toggleNavigation}) => {
+export const BoxShadow = ({toggleNavigation}) => {
 
     return (
         <motion.div variants={item}
                     initial={{opacity: 0}}
                     animate={{opacity: .8}}
                     transition={{duration: .4, delay: .2}}
-                    exit="exit" className="box-shadow" onClick={toggleNavigation}/>
+                    exit="exit" className={styles.boxShadow} onClick={toggleNavigation}/>
     );
 };

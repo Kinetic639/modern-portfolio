@@ -12,6 +12,7 @@
   transition: all 0.2s ease-in-out;
   border: 1px solid var(--font-third);
   pointer-events: auto;
+  z-index: 999;
 
   &:hover {
     cursor: pointer;
@@ -23,19 +24,6 @@
       transition: all 0.2s ease-in-out;
     }
   }
-}
-
-
-.checkbox__nav {
-  display: flex;
-  width: 4rem;
-  height: 3.2rem;
-  position: absolute;
-  top: 1.5rem;
-  right: 1.5rem;
-  cursor: pointer;
-  opacity: 0;
-  z-index: 4;
 }
 
 .menuToggle span {

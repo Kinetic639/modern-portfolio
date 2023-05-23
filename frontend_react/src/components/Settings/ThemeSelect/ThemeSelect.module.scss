@@ -1,4 +1,13 @@
-.settings-button--theme {
+.buttonTheme {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid var(--font-third);
+  background: transparent;
+  cursor: pointer;
+
   padding: 2px;
   font-size: 1.9rem;
   width: 30px;

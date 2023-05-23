@@ -1,4 +1,4 @@
-.header-container {
+.container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -7,12 +7,12 @@
 
 }
 
-.header-container > * {
+.container > * {
   writing-mode: vertical-rl;
   transform: rotate(-180deg);
 }
 
-.title-container {
+.titleContainer {
   flex: 1;
   display: flex;
   align-items: center;
@@ -26,14 +26,14 @@
   text-transform: uppercase;
 }
 
-.link-container {
+.linkContainer {
   flex: 1;
   display: flex;
   gap: 10px;
 
 }
 
-.link-line {
+.linkLine {
   flex: 1;
   position: relative;
 
@@ -59,11 +59,11 @@
   }
 }
 
-.link-container:hover .link-line:after {
+.linkContainer:hover .linkLine:after {
   height: 100%;
 }
 
-.header-link {
+.headerLink {
   letter-spacing: 1px;
   color: var(--font-third);
   font-size: 1.6rem;
