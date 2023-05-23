@@ -3,7 +3,7 @@ import {motion} from "framer-motion";
 import {VscDebugBreakpointFunction} from 'react-icons/vsc'
 import {urlFor, client} from "../../client";
 
-import "./About.scss";
+import styles from "./About.module.scss";
 import {AppWrap} from "../../wrapper";
 import {Bootcamps} from "../../components/Bootcamps/Bootcamps";
 
@@ -19,10 +19,10 @@ const About = () => {
     }, []);
 
     return (
-        <div className="about__container">
-            <div className="about__introduction">
-                <div className="about__description-container">
-                    <p className="about__description-paragraph">
+        <div className={styles.container}>
+            <div className={styles.introduction}>
+                <div className={styles.introductionDescription}>
+                    <p>
                         Przygodę z programowaniem zacząłem od pisania skryptów do arkuszy google spreadsheets w Google
                         App Script (framework javascript'u). Programowanie stało się moją pasją, której poświęcam swoje
                         czas i energię. Decyzja, aby zostać
@@ -30,7 +30,7 @@ const About = () => {
                         dziedzinie, pogłębiać moje
                         umiejętności i tworzyć nowe, innowacyjne projekty.
                     </p>
-                    <p className="about__description-paragraph">
+                    <p>
                         Obecnie mam już prawie roczne doświadczenie komercyjne jako programista, które utwierdziło mnie
                         w
                         przekonaniu, że programowanie to moja pasja na całe życie. Mój obecny projekt dobiegł końca,
@@ -39,152 +39,120 @@ const About = () => {
                         rozwijanie się jako programista, wkładając w projekty całe swoje zaangażowanie i pasję.
                     </p>
                 </div>
-                <div className="about__description-image">
+                <div className={styles.descriptionImage}>
                     photo
                 </div>
             </div>
-            <div id="about-experience" className="about__experience">
+            <div id="about-experience" className={styles.aboutSection}>
+                <a href="#about-experience" className={styles.header}>Where I’ve Worked</a>
                 <div>
-                    <div className="experience-route">
-                        <div className="experience-route__dot"></div>
-                        <div className="experience-route__route"></div>
-                    </div>
-                    <div>
-                        <a href="#about-experience" className="about__experience-header">Where I’ve Worked</a>
-                        <div className="about__experience-item">
-                            <div className="about__experience-subheader">
-                                <p className="about__experience-title">Junior software architect <a
-                                    className="about__experience-link"
-                                    href="https://www.trenujemy.pl"
-                                    target="_blank"
-                                    rel="noreferrer">@
-                                    trenujemy.pl</a>
+                    <div className={styles.experienceItem}>
+                        <div className={styles.itemHeader}>
+                            <p className={styles.itemTitle}>Junior software architect <a
+                                className={styles.itemLink}
+                                href="https://www.trenujemy.pl"
+                                target="_blank"
+                                rel="noreferrer">@
+                                trenujemy.pl</a>
+                            </p>
+                            <p className={styles.itemSubtitle}>Wrzesień 2022 - Maj 2023</p>
+                        </div>
+                        <ul className={styles.duties}>
+                            <li className={styles.duty}>
+                                <VscDebugBreakpointFunction className={styles.dutyPoint}/>
+                                <p className={styles.dutyDescription}>
+                                    Tworzenie warstwy front-endowej panelu administratora przy użyciu React.js oraz
+                                    Recoil.js.
                                 </p>
-                                <p className="about__experience-subtitle">Wrzesień 2022 - Maj 2023</p>
-                            </div>
-                            <ul className="about__duties">
-                                <li className="about__duty"><VscDebugBreakpointFunction className="duty__point"/>
-                                    <p className="about__duty-description">Tworzenie warstwy front-endowej panelu
-                                        administratora przy użyciu React.js oraz
-                                        Recoil.js.</p>
-                                </li>
-                                <li className="about__duty"><VscDebugBreakpointFunction className="duty__point"/>
-                                    <p className="about__duty-description">
-                                        Przetwarzanie otrzymanych projektów w formacie PSD na interaktywne widoki
-                                        użytkownika
-                                        wykorzystując Vue.js.
-                                    </p>
-                                </li>
-                                <li className="about__duty"><VscDebugBreakpointFunction className="duty__point"/>
-                                    <p className="about__duty-description">
-                                        Optymalizacja wydajności aplikacji oraz tworzenie testów jednostkowych dla React
-                                        przy użyciu
-                                        React Testing Library.
-                                    </p>
-                                </li>
-                                <li className="about__duty"><VscDebugBreakpointFunction
-                                    className="duty__point"/>
-                                    <p className="about__duty-description">
-                                        Utrzymywanie czystego
-                                        i czytelnego kodu, stosowanie najlepszych praktyk programistycznych oraz
-                                        przestrzeganie
-                                        standardów projektowych.
-                                    </p>
-                                </li>
-                                <li className="about__duty"><VscDebugBreakpointFunction
-                                    className="duty__point"/>
-                                    <p className="about__duty-description">Współpraca z
-                                        zespołem
-                                        i udział w spotkaniach z klientem, aby zrozumieć wymagania dotyczące interfejsu
-                                        użytkownika
-                                        i funkcjonalności aplikacji.
-                                    </p>
-                                </li>
-                                <li className="about__duty"><VscDebugBreakpointFunction
-                                    className="duty__point"/>
-                                    <p className="about__duty-description">Dokumentowanie
-                                        wprowadzonych zmian i udokumentowanie postępów w projekcie.
-                                    </p>
-                                </li>
-                            </ul>
-                            <div className="about__techstack-container">
-                                Few technologies I’ve been working with:
-                                <div className="about__techstack-wrapper">
-                                    <ul className="about__techstack-column">
-                                        <li className="about__duty about__duty--small"><VscDebugBreakpointFunction
-                                            className="duty__point duty__point--small"/> JavaScript (ES6+)
-                                        </li>
-                                        <li className="about__duty about__duty--small"><VscDebugBreakpointFunction
-                                            className="duty__point  duty__point--small"/> TypeScript
-                                        </li>
-                                        <li className="about__duty about__duty--small"><VscDebugBreakpointFunction
-                                            className="duty__point duty__point--small"/> React
-                                        </li>
-                                        <li className="about__duty about__duty--small"><VscDebugBreakpointFunction
-                                            className="duty__point duty__point--small"/> Recoil.js
-                                        </li>
-                                    </ul>
-                                    <ul className="about__techstack-column">
-                                        <li className="about__duty about__duty--small"><VscDebugBreakpointFunction
-                                            className="duty__point duty__point--small"/>
-                                            React Testing Library
-                                        </li>
-                                        <li className="about__duty about__duty--small"><VscDebugBreakpointFunction
-                                            className="duty__point duty__point--small"/> Vue
-                                        </li>
-                                        <li className="about__duty about__duty--small"><VscDebugBreakpointFunction
-                                            className="duty__point duty__point--small"/> Node.js
-                                        </li>
-                                        <li className="about__duty about__duty--small"><VscDebugBreakpointFunction
-                                            className="duty__point duty__point--small"/> GraphQL
-                                        </li>
-                                    </ul>
-                                </div>
+                            </li>
+                            <li className={styles.duty}>
+                                <VscDebugBreakpointFunction className={styles.dutyPoint}/>
+                                <p className={styles.dutyDescription}>
+                                    Przetwarzanie otrzymanych projektów w formacie PSD na interaktywne widoki
+                                    użytkownika wykorzystując Vue.js.
+                                </p>
+                            </li>
+                            <li className={styles.duty}>
+                                <VscDebugBreakpointFunction className={styles.dutyPoint}/>
+                                <p className={styles.dutyDescription}>
+                                    Optymalizacja wydajności aplikacji oraz tworzenie testów jednostkowych dla React
+                                    przy użyciu React Testing Library.
+                                </p>
+                            </li>
+                            <li className={styles.duty}>
+                                <VscDebugBreakpointFunction className={styles.dutyPoint}/>
+                                <p className={styles.dutyDescription}>
+                                    Utrzymywanie czystego i czytelnego kodu, stosowanie najlepszych praktyk
+                                    programistycznych oraz przestrzeganie standardów projektowych.
+                                </p>
+                            </li>
+                            <li className={styles.duty}>
+                                <VscDebugBreakpointFunction className={styles.dutyPoint}/>
+                                <p className={styles.dutyDescription}>
+                                    Współpraca z zespołem i udział w spotkaniach z klientem, aby zrozumieć wymagania
+                                    dotyczące interfejsu użytkownika i funkcjonalności aplikacji.
+                                </p>
+                            </li>
+                            <li className={styles.duty}>
+                                <VscDebugBreakpointFunction className={styles.dutyPoint}/>
+                                <p className={styles.dutyDescription}>
+                                    Dokumentowanie wprowadzonych zmian i udokumentowanie postępów w projekcie.
+                                </p>
+                            </li>
+                        </ul>
+                        <div>
+                            Few technologies I’ve been working with:
+                            <div className={styles.techstackListsContainer}>
+                                <ul className={styles.techstackColumn}>
+                                    <li className={styles.duty}>
+                                        <VscDebugBreakpointFunction
+                                            className={styles.dutyPoint}/> JavaScript (ES6+)
+                                    </li>
+                                    <li className={styles.duty}>
+                                        <VscDebugBreakpointFunction
+                                            className={styles.dutyPoint}/> TypeScript
+                                    </li>
+                                    <li className={styles.duty}>
+                                        <VscDebugBreakpointFunction
+                                            className={styles.dutyPoint}/> React
+                                    </li>
+                                    <li className={styles.duty}>
+                                        <VscDebugBreakpointFunction
+                                            className={styles.dutyPoint}/> Recoil.js
+                                    </li>
+                                </ul>
+                                <ul className={styles.techstackColumn}>
+                                    <li className={styles.duty}>
+                                        <VscDebugBreakpointFunction
+                                            className={styles.dutyPoint}/>
+                                        React Testing Library
+                                    </li>
+                                    <li className={styles.duty}>
+                                        <VscDebugBreakpointFunction
+                                            className={styles.dutyPoint}/> Vue
+                                    </li>
+                                    <li className={styles.duty}>
+                                        <VscDebugBreakpointFunction
+                                            className={styles.dutyPoint}/> Node.js
+                                    </li>
+                                    <li className={styles.duty}>
+                                        <VscDebugBreakpointFunction
+                                            className={styles.dutyPoint}/> GraphQL
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div id="about-courses" className="about__courses-container">
-                <a href="#about-courses" className="about__experience-header">Bootcamps and courses</a>
-                <div>
-                    <p className="about__description-paragraph">
-                        Bootcampy, które ukończyłem w celu rozwoju umiejętności programistycznych:
-                    </p>
-                    <Bootcamps/>
-                </div>
-                <div>
-                    Ukończyłem również liczne kursy online takich autorów jak:
-                    <div className="about__techstack-wrapper about__techstack-wrapper--indented">
-                        <ul className="about__techstack-column">
-                            <li className="about__duty about__duty--small"><VscDebugBreakpointFunction
-                                className="duty__point"/> Brad Traversy
-                            </li>
-                            <li className="about__duty about__duty--small"><VscDebugBreakpointFunction
-                                className="duty__point"/>
-                                Maximilian Schwarzmuller
-                            </li>
-                            <li className="about__duty about__duty--small"><VscDebugBreakpointFunction
-                                className="duty__point"/> Andrew Mead
-                            </li>
-                            <li className="about__duty about__duty--small"><VscDebugBreakpointFunction
-                                className="duty__point"/>
-                                Jonas Schmedtmann
-                            </li>
-                        </ul>
-                        <ul className="about__techstack-column">
-                            <li className="about__duty about__duty--small"><VscDebugBreakpointFunction
-                                className="duty__point"/> Bartłomiej Borowczyk (Samuraj
-                                Programowania)
-                            </li>
-                            <li className="about__duty about__duty--small"><VscDebugBreakpointFunction
-                                className="duty__point"/>
-                                Krzysztof Dąbrowski - Youcode
-                            </li>
-                            <li className="about__duty about__duty--small"><VscDebugBreakpointFunction
-                                className="duty__point"/> Adam Romański (hello roman)
-                            </li>
-                        </ul>
+            <div id="about-courses" className={styles.aboutSection}>
+                <a href="#about-courses" className={styles.header}>Bootcamps and courses</a>
+                <div className={styles.bootcampsContainer}>
+                    <div>
+                        <p>
+                            Bootcampy, które ukończyłem w celu rozwoju umiejętności programistycznych:
+                        </p>
+                        <Bootcamps/>
                     </div>
                 </div>
             </div>

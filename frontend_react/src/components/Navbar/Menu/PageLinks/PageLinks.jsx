@@ -1,8 +1,9 @@
 import React, {useContext, useState} from "react";
-import "./PageLinks.scss";
 import {motion} from "framer-motion";
 import {AppContext} from "../../../../App";
 import {useTranslation} from "react-i18next";
+
+import styles from "./PageLinks.module.scss";
 
 const textMotion = {
     rest: {
@@ -55,10 +56,10 @@ export const PageLinks = ({links, toggleNavigation}) => {
     };
 
     return (
-        <ul className="nav-links">
+        <ul className={styles.links}>
             {links.map((link, index) => (
                 <motion.li
-                    className={`nav-link ${activeSection === link.label ? "nav-link--active" : ""} ${activeLink !== null && activeLink !== link.label ? "nav-link--dimmed" : ""}`}
+                    className={`${styles.link} ${activeSection === link.label ? styles.linkActive : ""} ${activeLink !== null && activeLink !== link.label ? styles.linkDimmed : ""}`}
                     key={link.label}
                     initial={{y: 80, opacity: 0}}
                     animate={{y: 0, opacity: 1}}
@@ -67,11 +68,11 @@ export const PageLinks = ({links, toggleNavigation}) => {
                     onMouseLeave={() => setActiveLink(null)}
                 >
                     <motion.div
-                        className="nav-link__container" initial="initial"
+                        className={styles.linkContainer} initial="initial"
                         whileHover="hover"
                         animate="rest"
                     >
-                        <motion.div className="nav-link__icon" variants={iconMotion}>
+                        <motion.div className={styles.linkIcon} variants={iconMotion}>
                             {<link.icon/>}
                         </motion.div>
                         <motion.a href={`#${link.label}`}

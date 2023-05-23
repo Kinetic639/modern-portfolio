@@ -1,17 +1,14 @@
 import React from "react";
-import "./MenuToggle.scss";
+import styles from "./MenuToggle.module.scss";
 
 export const MenuToggle = ({expanded, toggleNavigation}) => {
 
     return (
-        <div className="nav-wrapper">
-            <div
-                className={`menuToggle ${expanded ? "show" : ""}`} onClick={toggleNavigation}>
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-
+        <div
+            className={`${styles.menuToggle} ${expanded ? styles.show : ""}`} onClick={toggleNavigation}>
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
     );
 };

@@ -67,17 +67,9 @@
     transition: all 0.1s ease-in-out;
   }
 
-  &--active {
+  &Active {
     a {
       color: var(--font-secondary);
     }
   }
-}
-
-.react-tooltip.example {
-  color: var(--font-tooltip);
-  background-color: var(--font-secondary);
-  border-radius: 0;
-  opacity: 1;
-  font-size: 1.4rem;
 }

@@ -1,8 +1,9 @@
 import React, {useContext} from "react";
-import "./VerticalNavbar.scss";
 import {AppContext} from "../../App";
 import {Tooltip} from 'react-tooltip';
 import {useTranslation} from "react-i18next";
+
+import styles from "./VerticalNavbar.module.scss";
 
 export const VerticalNavbar = ({links}) => {
     const {t} = useTranslation('global')
@@ -14,19 +15,22 @@ export const VerticalNavbar = ({links}) => {
         changeActiveSection(label);
     };
 
+
     return (
-        <nav className="nav">
-            <ul className="links">
+        <nav className={styles.nav}>
+            <ul className={styles.links}>
                 {filteredLinks.map((link) => (
                     <li
-                        className={`link ${activeSection === link.label ? "link--active" : ""} link-${link.label}`}
+                        className={`${styles.link} ${activeSection === link.label ? styles.linkActive : ""} link-${link.label}`}
                         key={`link-${link.label}`}
                     >
                         <a href={`#${link.label}`}
                            onClick={() => handleLinkClick(link.label)}>
                             {<link.icon/>}
                         </a>
-                        <Tooltip className='example' anchorSelect={`.link-${link.label}`} place="right">
+                        <Tooltip style={{backgroundColor: 'var(--font-secondary)', color: 'var(--font-tooltip)'}}
+                                 anchorSelect={`.link-${link.label}`}
+                                 place="right">
                             {t(`nav.sections.${link.label}`)}
                         </Tooltip>
                     </li>

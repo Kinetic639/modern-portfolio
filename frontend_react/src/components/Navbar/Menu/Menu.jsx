@@ -1,5 +1,5 @@
 import React from "react";
-import "./Menu.scss";
+import styles from "./Menu.module.scss";
 import {motion} from "framer-motion";
 import {PageLinks} from "./PageLinks/PageLinks";
 import {Header} from "./Header/Header";
@@ -19,7 +19,7 @@ export const Menu = ({links, toggleNavigation}) => {
 
 
     return (
-        <motion.nav className="container"
+        <motion.nav className={styles.container}
                     variants={nav}
                     initial={{width: 0}}
                     animate={{width: "fit-content"}}
