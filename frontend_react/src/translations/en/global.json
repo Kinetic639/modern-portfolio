@@ -11,7 +11,7 @@
   "nav": {
     "sections": {
       "home": "Hello",
-      "about": "About",
+      "about": "About Me",
       "skills": "Skills",
       "work": "Work",
       "contact": "Contact"
@@ -21,7 +21,7 @@
     "home": {
       "header": {
         "p1": "Hi, my name is",
-        "p2": "I am a junior web developer ready to take on new challenges and grow in a dynamic work environment, collaborating with experienced professionals.",
+        "p2": "I am ready to take on new challenges and grow in a dynamic work environment, collaborating with experienced professionals.",
         "p3": "I invite you to explore the rest of my portfolio and check out my ",
         "p4": " to get a comprehensive view of my ",
         "p5": ", problem-solving abilities and achievements as a junior web developer"

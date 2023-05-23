@@ -11,8 +11,9 @@ const Header = () => {
         <div className="section__content section__content--header">
             <div className='home__header-container'>
                 <p className='text-secondary'>{t('sections.home.header.p1')}</p>
-                <h1 className='home__title'>Michał <span className='text-secondary'>Stępień</span></h1>
-                <div className='home__subtitle'>
+                <h1 className='home__title'>Michał <span className='title-secondary'>Stępień</span></h1>
+                <h1 className='home__subtitle'>Junior Web Developer</h1>
+                <div className='home__description'>
                     <p className='home__paragraph'>{t('sections.home.header.p2')}</p>
                     <p className='home__paragraph'>
                         {t('sections.home.header.p3')}

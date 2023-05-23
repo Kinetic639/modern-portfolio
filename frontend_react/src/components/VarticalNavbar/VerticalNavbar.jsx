@@ -8,6 +8,7 @@ export const VerticalNavbar = ({links}) => {
     const {t} = useTranslation('global')
     const themeContext = useContext(AppContext);
     const {activeSection, changeActiveSection} = themeContext;
+    const filteredLinks = links.filter(link => link.label !== 'contact')
 
     const handleLinkClick = (label) => {
         changeActiveSection(label);
@@ -16,7 +17,7 @@ export const VerticalNavbar = ({links}) => {
     return (
         <nav className="nav">
             <ul className="links">
-                {links.map((link) => (
+                {filteredLinks.map((link) => (
                     <li
                         className={`link ${activeSection === link.label ? "link--active" : ""} link-${link.label}`}
                         key={`link-${link.label}`}
