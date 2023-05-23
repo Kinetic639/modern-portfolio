@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap');
 
 
 :root {
@@ -16,7 +17,7 @@
     --color-secondary: #1dc275;
     --font-primary: #404040;
     --font-secondary: #1dc275;
-    --font-third: #636363;
+    --font-third: #727272;
     --font-tooltip: #4b4b4b;
     --font-dimmed: #c9c9c9;
 }

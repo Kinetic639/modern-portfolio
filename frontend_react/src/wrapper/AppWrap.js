@@ -19,7 +19,7 @@ export const AppWrap = (Component, idName) =>
             <section className="section section--header" id={idName}>
                 <div className="section-header">
                     <link.icon className="section-header__icon"/>
-                    <span className="section-header__title">{t(`nav.sections.${idName}`)}</span>
+                    <a href={`#${idName}`} className="section-header__title">{t(`nav.sections.${idName}`)}</a>
                 </div>
                 <Component/>
             </section>

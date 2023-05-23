@@ -38,6 +38,7 @@
 }
 
 .contact__footer {
+  color: var(--font-third);
   font-size: 1.4rem;
   align-self: center;
 }
@@ -163,7 +164,7 @@
 
 .contact__social-icon {
   box-sizing: border-box;
-  color: var(--font-primary);
+  color: var(--font-third);
   padding: 10px;
   width: 50px;
   height: 50px;
