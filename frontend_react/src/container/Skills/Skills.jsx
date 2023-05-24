@@ -1,106 +1,51 @@
 import React from "react";
 import {AppWrap} from "../../wrapper";
+import {TbKeyframes} from "react-icons/tb";
+import {VscTools} from "react-icons/vsc";
+import {AiOutlineDatabase} from "react-icons/ai";
+import {BsDisplay} from "react-icons/bs";
+
+import styles from "./Skills.module.scss"
 
 const Skills = () => {
 
+    const skills = [
+        {
+            name: 'Frontend',
+            stack: ['HTML5', 'Javascript / Typescript', 'SASS / SCSS', "React + Recoil / Redux", 'Vue', 'Material UI'],
+            icon: BsDisplay
+        },
+        {
+            name: 'Backend',
+            stack: ['NodeJs', 'Express', 'MySQL', 'GraphQL', 'MongoDB', 'Mongoose'],
+            icon: AiOutlineDatabase
+        },
+        {
+            name: 'Design',
+            stack: ['Figma', 'Adobe XD', 'Adobe Illustrator', 'Adobe Photoshop'],
+            icon: TbKeyframes
+        },
+        {
+            name: 'Devtools',
+            stack: ['Git', 'Heroku', 'phpMyAdmin', 'Postman', 'Compass'],
+            icon: VscTools
+        },
+    ]
+
     return (
-        <section className="app__header app__flex">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus excepturi recusandae saepe tempora
-                voluptatum? Ad autem commodi debitis dignissimos ea exercitationem facilis iure libero maiores maxime
-                modi nam nostrum nulla quaerat repellat sequi, tenetur totam voluptatum! Adipisci aperiam debitis,
-                deserunt expedita magnam minima reprehenderit suscipit veniam! Adipisci architecto dicta, dolore dolorem
-                dolores doloribus ducimus et excepturi exercitationem facere facilis fugit harum id illo in ipsam iste
-                nisi numquam obcaecati optio praesentium quasi quibusdam quis quisquam repellendus reprehenderit tempora
-                temporibus totam voluptates voluptatum. Accusantium aut dolorum iusto molestiae nam necessitatibus
-                provident ratione, repellat repellendus sequi. Asperiores commodi consequuntur dicta dolorum eos, error
-                eum id inventore libero magni, maxime natus nostrum obcaecati odio pariatur quae quaerat quod sed ullam
-                veniam! Aspernatur autem iusto reiciendis rerum voluptates voluptatum? Accusamus aspernatur atque
-                delectus numquam quisquam rem repudiandae sapiente sed sequi vero? Asperiores distinctio doloribus eos
-                libero sapiente! Debitis dolor doloremque fugit, optio repellat suscipit.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus excepturi recusandae saepe tempora
-                voluptatum? Ad autem commodi debitis dignissimos ea exercitationem facilis iure libero maiores maxime
-                modi nam nostrum nulla quaerat repellat sequi, tenetur totam voluptatum! Adipisci aperiam debitis,
-                deserunt expedita magnam minima reprehenderit suscipit veniam! Adipisci architecto dicta, dolore dolorem
-                dolores doloribus ducimus et excepturi exercitationem facere facilis fugit harum id illo in ipsam iste
-                nisi numquam obcaecati optio praesentium quasi quibusdam quis quisquam repellendus reprehenderit tempora
-                temporibus totam voluptates voluptatum. Accusantium aut dolorum iusto molestiae nam necessitatibus
-                provident ratione, repellat repellendus sequi. Asperiores commodi consequuntur dicta dolorum eos, error
-                eum id inventore libero magni, maxime natus nostrum obcaecati odio pariatur quae quaerat quod sed ullam
-                veniam! Aspernatur autem iusto reiciendis rerum voluptates voluptatum? Accusamus aspernatur atque
-                delectus numquam quisquam rem repudiandae sapiente sed sequi vero? Asperiores distinctio doloribus eos
-                libero sapiente! Debitis dolor doloremque fugit, optio repellat suscipit.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus excepturi recusandae saepe tempora
-                voluptatum? Ad autem commodi debitis dignissimos ea exercitationem facilis iure libero maiores maxime
-                modi nam nostrum nulla quaerat repellat sequi, tenetur totam voluptatum! Adipisci aperiam debitis,
-                deserunt expedita magnam minima reprehenderit suscipit veniam! Adipisci architecto dicta, dolore dolorem
-                dolores doloribus ducimus et excepturi exercitationem facere facilis fugit harum id illo in ipsam iste
-                nisi numquam obcaecati optio praesentium quasi quibusdam quis quisquam repellendus reprehenderit tempora
-                temporibus totam voluptates voluptatum. Accusantium aut dolorum iusto molestiae nam necessitatibus
-                provident ratione, repellat repellendus sequi. Asperiores commodi consequuntur dicta dolorum eos, error
-                eum id inventore libero magni, maxime natus nostrum obcaecati odio pariatur quae quaerat quod sed ullam
-                veniam! Aspernatur autem iusto reiciendis rerum voluptates voluptatum? Accusamus aspernatur atque
-                delectus numquam quisquam rem repudiandae sapiente sed sequi vero? Asperiores distinctio doloribus eos
-                libero sapiente! Debitis dolor doloremque fugit, optio repellat suscipit.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus excepturi recusandae saepe tempora
-                voluptatum? Ad autem commodi debitis dignissimos ea exercitationem facilis iure libero maiores maxime
-                modi nam nostrum nulla quaerat repellat sequi, tenetur totam voluptatum! Adipisci aperiam debitis,
-                deserunt expedita magnam minima reprehenderit suscipit veniam! Adipisci architecto dicta, dolore dolorem
-                dolores doloribus ducimus et excepturi exercitationem facere facilis fugit harum id illo in ipsam iste
-                nisi numquam obcaecati optio praesentium quasi quibusdam quis quisquam repellendus reprehenderit tempora
-                temporibus totam voluptates voluptatum. Accusantium aut dolorum iusto molestiae nam necessitatibus
-                provident ratione, repellat repellendus sequi. Asperiores commodi consequuntur dicta dolorum eos, error
-                eum id inventore libero magni, maxime natus nostrum obcaecati odio pariatur quae quaerat quod sed ullam
-                veniam! Aspernatur autem iusto reiciendis rerum voluptates voluptatum? Accusamus aspernatur atque
-                delectus numquam quisquam rem repudiandae sapiente sed sequi vero? Asperiores distinctio doloribus eos
-                libero sapiente! Debitis dolor doloremque fugit, optio repellat suscipit.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus excepturi recusandae saepe tempora
-                voluptatum? Ad autem commodi debitis dignissimos ea exercitationem facilis iure libero maiores maxime
-                modi nam nostrum nulla quaerat repellat sequi, tenetur totam voluptatum! Adipisci aperiam debitis,
-                deserunt expedita magnam minima reprehenderit suscipit veniam! Adipisci architecto dicta, dolore dolorem
-                dolores doloribus ducimus et excepturi exercitationem facere facilis fugit harum id illo in ipsam iste
-                nisi numquam obcaecati optio praesentium quasi quibusdam quis quisquam repellendus reprehenderit tempora
-                temporibus totam voluptates voluptatum. Accusantium aut dolorum iusto molestiae nam necessitatibus
-                provident ratione, repellat repellendus sequi. Asperiores commodi consequuntur dicta dolorum eos, error
-                eum id inventore libero magni, maxime natus nostrum obcaecati odio pariatur quae quaerat quod sed ullam
-                veniam! Aspernatur autem iusto reiciendis rerum voluptates voluptatum? Accusamus aspernatur atque
-                delectus numquam quisquam rem repudiandae sapiente sed sequi vero? Asperiores distinctio doloribus eos
-                libero sapiente! Debitis dolor doloremque fugit, optio repellat suscipit.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus excepturi recusandae saepe tempora
-                voluptatum? Ad autem commodi debitis dignissimos ea exercitationem facilis iure libero maiores maxime
-                modi nam nostrum nulla quaerat repellat sequi, tenetur totam voluptatum! Adipisci aperiam debitis,
-                deserunt expedita magnam minima reprehenderit suscipit veniam! Adipisci architecto dicta, dolore dolorem
-                dolores doloribus ducimus et excepturi exercitationem facere facilis fugit harum id illo in ipsam iste
-                nisi numquam obcaecati optio praesentium quasi quibusdam quis quisquam repellendus reprehenderit tempora
-                temporibus totam voluptates voluptatum. Accusantium aut dolorum iusto molestiae nam necessitatibus
-                provident ratione, repellat repellendus sequi. Asperiores commodi consequuntur dicta dolorum eos, error
-                eum id inventore libero magni, maxime natus nostrum obcaecati odio pariatur quae quaerat quod sed ullam
-                veniam! Aspernatur autem iusto reiciendis rerum voluptates voluptatum? Accusamus aspernatur atque
-                delectus numquam quisquam rem repudiandae sapiente sed sequi vero? Asperiores distinctio doloribus eos
-                libero sapiente! Debitis dolor doloremque fugit, optio repellat suscipit.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus excepturi recusandae saepe tempora
-                voluptatum? Ad autem commodi debitis dignissimos ea exercitationem facilis iure libero maiores maxime
-                modi nam nostrum nulla quaerat repellat sequi, tenetur totam voluptatum! Adipisci aperiam debitis,
-                deserunt expedita magnam minima reprehenderit suscipit veniam! Adipisci architecto dicta, dolore dolorem
-                dolores doloribus ducimus et excepturi exercitationem facere facilis fugit harum id illo in ipsam iste
-                nisi numquam obcaecati optio praesentium quasi quibusdam quis quisquam repellendus reprehenderit tempora
-                temporibus totam voluptates voluptatum. Accusantium aut dolorum iusto molestiae nam necessitatibus
-                provident ratione, repellat repellendus sequi. Asperiores commodi consequuntur dicta dolorum eos, error
-                eum id inventore libero magni, maxime natus nostrum obcaecati odio pariatur quae quaerat quod sed ullam
-                veniam! Aspernatur autem iusto reiciendis rerum voluptates voluptatum? Accusamus aspernatur atque
-                delectus numquam quisquam rem repudiandae sapiente sed sequi vero? Asperiores distinctio doloribus eos
-                libero sapiente! Debitis dolor doloremque fugit, optio repellat suscipit.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus excepturi recusandae saepe tempora
-                voluptatum? Ad autem commodi debitis dignissimos ea exercitationem facilis iure libero maiores maxime
-                modi nam nostrum nulla quaerat repellat sequi, tenetur totam voluptatum! Adipisci aperiam debitis,
-                deserunt expedita magnam minima reprehenderit suscipit veniam! Adipisci architecto dicta, dolore dolorem
-                dolores doloribus ducimus et excepturi exercitationem facere facilis fugit harum id illo in ipsam iste
-                nisi numquam obcaecati optio praesentium quasi quibusdam quis quisquam repellendus reprehenderit tempora
-                temporibus totam voluptates voluptatum. Accusantium aut dolorum iusto molestiae nam necessitatibus
-                provident ratione, repellat repellendus sequi. Asperiores commodi consequuntur dicta dolorum eos, error
-                eum id inventore libero magni, maxime natus nostrum obcaecati odio pariatur quae quaerat quod sed ullam
-                veniam! Aspernatur autem iusto reiciendis rerum voluptates voluptatum? Accusamus aspernatur atque
-                delectus numquam quisquam rem repudiandae sapiente sed sequi vero? Asperiores distinctio doloribus eos
-                libero sapiente! Debitis dolor doloremque fugit, optio repellat suscipit.</p>
+        <section className={styles.container}>
+            {skills.map(section => (
+                <div className={styles.stackSection}>
+                    <p className={styles.stackHeader}>
+                        <section.icon className={styles.icon}/>
+                        <span>{section.name}</span></p>
+                    <ul className={styles.stackList}>
+                        {section.stack.map(item => (
+                            <li className={styles.stackListItem}>{item}</li>
+                        ))}
+                    </ul>
+                </div>
+            ))}
         </section>
     );
 };
