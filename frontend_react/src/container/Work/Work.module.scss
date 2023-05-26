@@ -1,0 +1,153 @@
+.work {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+
+.projectCards {
+  margin-top: var(--top-padding);
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+
+
+.card {
+  display: flex;
+  max-width: 900px;
+  gap: 30px;
+}
+
+.card:hover .description {
+  width: 100%;
+  transition: all .3s ease-in-out;
+}
+
+.cardReversed {
+  flex-direction: row-reverse;
+}
+
+.imageContainer {
+  flex: 3;
+}
+
+.image {
+  width: 100%;
+  z-index: -1;
+  opacity: .8;
+}
+
+.descriptionContainer {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-evenly;
+  gap: 20px;
+  position: relative;
+}
+
+.descriptionContainerAlternative {
+  align-items: flex-start;
+
+  .description {
+    text-align: left;
+  }
+}
+
+.title {
+  font-size: 2.4rem;
+}
+
+.description {
+  width: 140%;
+  text-align: right;
+  padding: 20px 10px;
+  line-height: 1.5;
+  position: relative;
+  z-index: 1;
+  color: var(--font-description);
+  transition: all .3s ease-in-out;
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: var(--color-description);
+    opacity: 1;
+    z-index: -1;
+  }
+
+}
+
+.techStack {
+  display: flex;
+  color: var(--font-third);
+  gap: 15px;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.links {
+  display: flex;
+  gap: 20px;
+  font-size: 2.2rem;
+}
+
+.folderContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.projectFolder {
+  max-width: 300px;
+  background: #2f2f2f;
+  padding: 25px 25px 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 20px;
+}
+
+.folderHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 2rem;
+  color: var(--font-third);
+
+}
+
+.folderIcon {
+  font-size: 4rem;
+  color: var(--color-secondary);
+}
+
+.stackList {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  font-size: 1.4rem;
+  color: var(--font-third);
+}
+
+.folderName {
+  font-size: 2rem;
+}
+
+.folderDescription {
+  font-size: 1.5rem;
+  line-height: 1.4;
+}
+
+.projectWrapper {
+  padding-top: var(--top-padding);
+}
