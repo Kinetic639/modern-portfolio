@@ -20,7 +20,9 @@
     --font-tooltip: #4b4b4b;
     --font-dimmed: #c9c9c9;
 
-    --top-whitespace: 50px;
+
+    /* ---spacing---*/
+    --top-padding: 50px;
 }
 
 .darkmode {

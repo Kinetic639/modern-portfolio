@@ -1,10 +1,11 @@
 .work {
   display: flex;
   flex-direction: column;
+  gap: 100px;
 }
 
 .projectCards {
-  margin-top: var(--top-whitespace);
+  margin-top: var(--top-padding);
   display: flex;
   flex-direction: column;
   gap: 100px;
@@ -95,4 +96,58 @@
   display: flex;
   gap: 20px;
   font-size: 2.2rem;
+}
+
+.folderContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.projectFolder {
+  max-width: 300px;
+  background: #2f2f2f;
+  padding: 25px 25px 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 20px;
+}
+
+.folderHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 2rem;
+  color: var(--font-third);
+
+}
+
+.folderIcon {
+  font-size: 4rem;
+  color: var(--color-secondary);
+}
+
+.stackList {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  font-size: 1.4rem;
+  color: var(--font-third);
+}
+
+.folderName {
+  font-size: 2rem;
+}
+
+.folderDescription {
+  font-size: 1.5rem;
+  line-height: 1.4;
+}
+
+.projectWrapper {
+  padding-top: var(--top-padding);
 }
