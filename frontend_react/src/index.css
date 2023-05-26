@@ -34,34 +34,48 @@
 
 .yellow {
     --font-secondary: #eab515;
+    --color-description: #9b7e00;
+    --font-description: #ffffff;
 }
 
 .orange {
     --font-secondary: #ff7338;
     --font-tooltip: #1d1d1d;
+    --color-description: #c43e07;
+    --font-description: #ffffff;
 }
 
 .red {
     --font-secondary: #f31313;
     --font-tooltip: #dbdbdb;
+    --color-description: #aa0707;
+    --font-description: #ffffff;
 }
 
 .blue {
     --font-secondary: #13c5fd;
+    --color-description: #0082aa;
+    --font-description: #ffffff;
 }
 
 .green {
     --font-secondary: #1dc275;
+    --color-description: #0b9052;
+    --font-description: #ffffff;
 }
 
 .pink {
     --font-secondary: #ff99cc;
     --font-tooltip: #3f3f3f;
+    --color-description: #ab0d63;
+    --font-description: #fff;
 }
 
 .purple {
     --font-secondary: #493ee5;
     --font-tooltip: #dbdbdb;
+    --color-description: #493ee5;
+    --font-description: #dbdbdb;
 }
 
 * {
