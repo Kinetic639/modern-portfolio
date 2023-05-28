@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap');
 
-
 :root {
     --font-family-primary: 'Inter', sans-serif;
 
@@ -29,6 +28,13 @@
     --spacing-m: 30px;
     --spacing-s: 20px;
     --spacing-xs: 10px;
+
+    /*    ---responsiveness---*/
+    --mobile-l: 500px;
+    --tablet-portrait: 768px;
+    --tablet: 1024px;
+    --desktop-s: 1200px;
+    --desktop: 1366px;
 }
 
 .darkmode {
