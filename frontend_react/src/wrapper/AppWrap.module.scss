@@ -2,13 +2,9 @@
   padding-top: var(--top-padding);
   display: flex;
   flex-direction: column;
-
-  &:not(:first-child) {
-    margin-bottom: 50px;
-  }
 }
 
-.header {
+.title {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -16,10 +12,7 @@
   border: 1px solid var(--font-secondary);
   width: fit-content;
   border-radius: 50px;
-  margin-bottom: 30px;
-}
-
-.title {
+  margin-bottom: var(--spacing-l);
   color: var(--font-secondary);
   text-decoration: none;
   cursor: pointer;
@@ -27,4 +20,13 @@
 
 .icon {
   color: var(--font-secondary);
+}
+
+.sectionHome {
+  min-height: 100vh;
+}
+
+.sectionAbout,
+.sectionSkills {
+  margin-bottom: var(--spacing-xl);
 }
