@@ -1,6 +1,7 @@
 import React from "react";
 import {AppWrap} from "../../wrapper";
 import {useTranslation} from "react-i18next";
+import {FaRegHandPointRight} from 'react-icons/fa'
 
 import styles from "./Header.module.scss";
 
@@ -18,10 +19,12 @@ const Header = () => {
                     <p>
                         {t('sections.home.header.p3')}
                         <a className={styles.link}
-                           href="#work">{t('sections.home.links.projects')}</a>
+                           href="#work">
+                            <FaRegHandPointRight/> {t('sections.home.links.projects')}</a>
                         {t('sections.home.header.p4')}
                         <a className={styles.link}
-                           href="#skills">{t('sections.home.links.skills')}</a>
+                           href="#skills">
+                            <FaRegHandPointRight/> {t('sections.home.links.skills')}</a>
                         {t('sections.home.header.p5')}
                     </p>
                 </div>

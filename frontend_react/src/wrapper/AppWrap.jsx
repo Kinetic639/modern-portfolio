@@ -17,11 +17,12 @@ export const AppWrap = (Component, idName) =>
         ];
         const link = links.find(link => link.label === idName);
         return (
-            <section className={styles.section} id={idName}>
-                <div className={styles.header}>
+            <section
+                className={`${styles.section} ${styles[`section${idName.charAt(0).toUpperCase() + idName.slice(1)}`]}`}
+                id={idName}>
+                <a href={`#${idName}`} className={styles.title}>
                     <link.icon className={styles.icon}/>
-                    <a href={`#${idName}`} className={styles.title}>{t(`nav.sections.${idName}`)}</a>
-                </div>
+                    {t(`nav.sections.${idName}`)}</a>
                 <Component/>
             </section>
         );

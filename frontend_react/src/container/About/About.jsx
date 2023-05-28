@@ -23,20 +23,18 @@ const About = () => {
             <div className={styles.introduction}>
                 <div className={styles.introductionDescription}>
                     <p>
-                        Przygodę z programowaniem zacząłem od pisania skryptów do arkuszy google spreadsheets w Google
-                        App Script (framework javascript'u). Programowanie stało się moją pasją, której poświęcam swoje
-                        czas i energię. Decyzja, aby zostać
-                        programistą, była naturalnym krokiem w mojej drodze rozwoju. Dzięki temu mogę rozwijać się w tej
-                        dziedzinie, pogłębiać moje
-                        umiejętności i tworzyć nowe, innowacyjne projekty.
+                        Rozpocząłem swoją przygodę z programowaniem, pisząc skrypty do arkuszy Google Spreadsheets w
+                        Google Apps Script, opartych na frameworku JavaScript. Programowanie stało się moją prawdziwą
+                        pasją. Decyzja o zostaniu programistą była naturalnym krokiem na mojej ścieżce rozwoju.
                     </p>
                     <p>
-                        Obecnie mam już prawie roczne doświadczenie komercyjne jako programista, które utwierdziło mnie
-                        w
-                        przekonaniu, że programowanie to moja pasja na całe życie. Mój obecny projekt dobiegł końca,
-                        więc poszukuję nowej pracy, ale widzę to jako okazję do rozwoju i zdobycia nowych umiejętności.
-                        Jestem pełen determinacji, aby znaleźć nowe inspirujące środowisko pracy i kontynuować
-                        rozwijanie się jako programista, wkładając w projekty całe swoje zaangażowanie i pasję.
+                        Posiadam już prawie roczne doświadczenie komercyjne jako programista, które tylko utwierdziło
+                        mnie w przekonaniu, że programowanie to moja pasja na całe życie.
+                    </p>
+                    <p>
+                        Obecnie mój bieżący projekt dobiegł końca, dlatego poszukuję nowej pracy. Jestem pełen
+                        determinacji, aby znaleźć nowe, inspirujące środowisko pracy i kontynuować rozwijanie się jako
+                        programista, wkładając w projekty całe moje zaangażowanie i pasję.
                     </p>
                 </div>
                 <div className={styles.descriptionImage}>

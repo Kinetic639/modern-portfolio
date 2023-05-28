@@ -23,6 +23,12 @@
 
     /* ---spacing---*/
     --top-padding: 50px;
+    --spacing-xxl: 100px;
+    --spacing-xl: 80px;
+    --spacing-l: 50px;
+    --spacing-m: 30px;
+    --spacing-s: 20px;
+    --spacing-xs: 10px;
 }
 
 .darkmode {
