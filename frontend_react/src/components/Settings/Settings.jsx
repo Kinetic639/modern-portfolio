@@ -7,14 +7,14 @@ import styles from "./Settings.module.scss";
 import {useTranslation} from "react-i18next";
 import {ThemeSelect} from "./ThemeSelect/ThemeSelect";
 import {ColorSelect} from "./ColorSelect/ColorSelect";
+import {AppContext} from "../../App";
 
 const container = {
     hidden: {opacity: 0},
     visible: {
         opacity: 1,
-
         transition: {delay: .2},
-    },
+    }
 };
 
 const spinTransition = {
@@ -24,30 +24,30 @@ const spinTransition = {
 };
 
 export const Settings = () => {
+    const themeContext = useContext(AppContext);
+    const {showAsideContact} = themeContext;
     const [isOpen, setIsOpen] = useState(false)
     const {t} = useTranslation('global')
 
     return (
         <motion.div onMouseEnter={() => setIsOpen(true)}
                     onMouseLeave={() => setIsOpen(false)}
-                    className={styles.container}
+                    className={`${styles.container} ${showAsideContact ? styles.containerDesktop : ''}`}
         >
-            <motion.div className={`${styles.iconContainer} icon-container`}>
+            <motion.div
+                onClick={() => setIsOpen(!isOpen)}
+                className={`${styles.iconContainer} ${showAsideContact ? styles.iconContainerDesktop : ''} icon-container`}>
                 <motion.div animate={{rotate: 360}}
                             transition={spinTransition} className={styles.icon}>
                     <RxGear/>
                 </motion.div>
-                <Tooltip
-                    style={{backgroundColor: 'var(--font-secondary)', color: 'var(--font-tooltip)', fontSize: '14px'}}
-                    anchorSelect=".icon-container" place="top">
-                    {t('tooltips.settings.settings')}
-                </Tooltip>
             </motion.div>
             {isOpen && (
-                <motion.div className={styles.settingsContainer}
-                            variants={container}
-                            initial="hidden"
-                            animate="visible"
+                <motion.div
+                    className={`${styles.settingsContainer} ${showAsideContact ? styles.settingsContainerDesktop : ''}`}
+                    variants={container}
+                    initial="hidden"
+                    animate="visible"
                 >
                     <ThemeSelect/>
                     <ColorSelect/>

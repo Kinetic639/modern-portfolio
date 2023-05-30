@@ -1,5 +1,4 @@
 .buttonLang {
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -8,17 +7,35 @@
   border-radius: 50%;
   background: transparent;
   cursor: pointer;
+  width: 30px;
+  height: 30px;
+  border: 1px solid var(--font-third);;
+  transition: all .2s ease-in-out;
+  font-size: 1.2rem;
+
+  &:hover {
+    color: var(--font-secondary);
+    border-color: var(--font-secondary);
+    transition: all .2s ease-in-out;
+
+    &:after {
+      border: 1px solid var(--font-secondary);
+      transition: all .2s ease-in-out;
+    }
+  }
+}
+
+.buttonLangDesktop {
   width: 35px;
   height: 35px;
+  font-size: 1.5rem;
   position: fixed;
   left: 427px;
   top: calc(50% + 25%);
-  font-size: 1.4rem;
-  background: var(--color-primary);
-  border: none;
-  z-index: 4;
   transform: translateY(-50%);
-  transition: all .2s ease-in-out;
+  z-index: 4;
+  border: none;
+  background: var(--color-primary);
 
   &:before {
     content: "";
@@ -47,16 +64,5 @@
     background: none;
     z-index: 3;
     transition: all .2s ease-in-out;
-  }
-
-  &:hover {
-    color: var(--font-secondary);
-    border-color: var(--font-secondary);
-    transition: all .2s ease-in-out;
-
-    &:after {
-      border: 1px solid var(--font-secondary);
-      transition: all .2s ease-in-out;
-    }
   }
 }

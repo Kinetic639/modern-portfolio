@@ -11,7 +11,7 @@ export const MenuCard = () => {
                     animate={{opacity: 1}}
                     transition={{delay: .8}}>
             <div>
-                <h3 className={styles.title}>Loaction</h3>
+                <h3 className={styles.title}>Location</h3>
                 <p className={styles.text}>Poznań, Poland</p>
             </div>
             <div>

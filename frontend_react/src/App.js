@@ -24,6 +24,7 @@ const App = () => {
     const [activeSection, setActiveSection] = useState("home");
     const [selectedColor, setSelectedColor] = useState("green");
     const [showAsideContact, setShowAsideContact] = useState(false);
+    const [showDesktopMenu, setShowDesktopMenu] = useState(false);
 
     const links = [
         {id: 0, label: "home", icon: AiOutlineHome},
@@ -35,7 +36,8 @@ const App = () => {
 
     const checkScreenWidth = () => {
         const screenWidth = window.innerWidth;
-        setShowAsideContact(screenWidth > 1200);
+        setShowAsideContact(screenWidth > 1199);
+        setShowDesktopMenu(screenWidth > 767);
     };
 
     useEffect(() => {
@@ -129,7 +131,8 @@ const App = () => {
                         changeActiveSection,
                         selectedColor,
                         changeSelectedColor,
-                        showAsideContact
+                        showAsideContact,
+                        showDesktopMenu
                     }}
                 >
                     <>
@@ -138,7 +141,7 @@ const App = () => {
                             <>
                                 <VerticalNavbar links={links}/>
                                 <Settings/>
-                                <LanguageSelect/>
+                                <LanguageSelect type='desktop'/>
                                 <Contact/>
                             </>
                         )}

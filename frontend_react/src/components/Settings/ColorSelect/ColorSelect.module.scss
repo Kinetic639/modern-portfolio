@@ -1,6 +1,11 @@
 .colorSelect {
   display: flex;
   gap: 15px;
+  flex-direction: column-reverse;
+}
+
+.colorSelectDesktop {
+  flex-direction: row;
 }
 
 .colorButton {

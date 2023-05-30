@@ -1,7 +1,10 @@
 .section {
-  padding-top: var(--top-padding);
+  padding-top: var(--spacing-m);
   display: flex;
   flex-direction: column;
+  @media screen and (min-width: 500px) {
+    padding-top: var(--spacing-l);
+  }
 }
 
 .title {
