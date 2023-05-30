@@ -1,10 +1,56 @@
 .container {
+  color: var(--font-third);
   position: absolute;
   top: 0;
   right: 0;
   height: 100%;
   background: var(--color-primary-darker);
   display: flex;
-  gap: 30px;
   pointer-events: auto;
+  padding-top: var(--spacing-xl);
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+  }
+}
+
+.infoSection {
+  padding: 0 20px;
+  font-size: 2rem;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 30px;
+}
+
+.socialIcon {
+  color: var(--font-third);
+  padding: 6px;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 1px solid var(--font-third);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all .1s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    border-color: var(--font-secondary);
+    color: var(--font-secondary);
+    transition: all .1s ease-in-out;
+  }
+}
+
+.menuColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.settingsContainer {
+  padding: 15px;
+  gap: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }

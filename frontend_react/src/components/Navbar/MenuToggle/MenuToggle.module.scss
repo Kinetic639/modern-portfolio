@@ -5,8 +5,8 @@
   top: 25px;
   right: 30px;
   border-radius: 50%;
-  width: 5.2rem;
-  height: 5.2rem;
+  width: 4.2rem;
+  height: 4.2rem;
   align-items: center;
   justify-content: center;
   transition: all 0.2s ease-in-out;
@@ -29,15 +29,11 @@
     top: 45px;
     right: 50px;
   }
-  @media screen and (min-width: 768px) {
-    top: 55px;
-    right: 60px;
-  }
 }
 
 .menuToggle span {
   display: flex;
-  width: 2.6rem;
+  width: 2rem;
   height: 2px;
   margin-bottom: 5px;
   position: relative;
@@ -53,17 +49,19 @@
 
 .menuToggle span:nth-last-child(2) {
   transform-origin: 0% 100%;
-  width: 2rem;
+  width: 1.6rem;
   transform: translateX(-3px);
 }
 
 .menuToggle.show {
+  background: var(--color-primary-darker);
+  transition: background-color .2s ease-in-out;
 
   & span {
 
     &:nth-child(1) {
       opacity: 1;
-      transform: rotate(45deg) translate(2px, -3px);
+      transform: rotate(45deg) translate(3px, -2px);
     }
 
     &:nth-child(2) {
@@ -72,7 +70,7 @@
     }
 
     &:nth-child(3) {
-      transform: rotate(-45deg) translate(1px, 1px);
+      transform: rotate(-45deg) translate(2px, -1px);
     }
   }
 }

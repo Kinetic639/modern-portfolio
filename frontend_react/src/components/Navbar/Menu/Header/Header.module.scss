@@ -13,7 +13,7 @@
 }
 
 .titleContainer {
-  flex: 1;
+  flex: 2;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -26,8 +26,12 @@
   text-transform: uppercase;
 }
 
+.titleDesktop {
+  font-size: 2.2rem;
+}
+
 .linkContainer {
-  flex: 1;
+  flex: 3;
   display: flex;
   gap: 10px;
 
@@ -72,9 +76,14 @@
   font-weight: 300;
   margin: 0 auto;
   transition-delay: .4s;
+  overflow: hidden;
 
   &:hover {
     color: var(--font-secondary);
     transition: color 0.1s ease-in-out;
   }
+}
+
+.headerLinkDesktop {
+  font-size: 2rem;
 }

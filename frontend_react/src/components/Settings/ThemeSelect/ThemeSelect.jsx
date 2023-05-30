@@ -19,11 +19,6 @@ export const ThemeSelect = () => {
             <button className={`${styles.buttonTheme} button--theme`} onClick={changeTheme}>
                 {theme === 'light' ? <CgSun/> :
                     <FaMoon/>}
-                <Tooltip
-                    style={{backgroundColor: 'var(--font-secondary)', fontSize: '14px', color: 'var(--font-tooltip)'}}
-                    anchorSelect=".button--theme" place="top">
-                    {t('tooltips.settings.theme')}
-                </Tooltip>
             </button>
         </>
     );

@@ -47,7 +47,7 @@ const iconMotion = {
 export const PageLinks = ({links, toggleNavigation}) => {
     const themeContext = useContext(AppContext);
     const [activeLink, setActiveLink] = useState(null);
-    const {activeSection, changeActiveSection} = themeContext;
+    const {activeSection, changeActiveSection, showAsideContact} = themeContext;
     const {t} = useTranslation('global')
 
     const handleLinkClick = (label) => {
@@ -56,7 +56,7 @@ export const PageLinks = ({links, toggleNavigation}) => {
     };
 
     return (
-        <ul className={styles.links}>
+        <ul className={`${styles.links} ${showAsideContact ? styles.linksDesktop : ""}`}>
             {links.map((link, index) => (
                 <motion.li
                     className={`${styles.link} ${activeSection === link.label ? styles.linkActive : ""} ${activeLink !== null && activeLink !== link.label ? styles.linkDimmed : ""}`}
@@ -72,14 +72,16 @@ export const PageLinks = ({links, toggleNavigation}) => {
                         whileHover="hover"
                         animate="rest"
                     >
-                        <motion.div className={styles.linkIcon} variants={iconMotion}>
+                        {showAsideContact && <motion.div className={styles.linkIcon} variants={iconMotion}>
                             {<link.icon/>}
-                        </motion.div>
+                        </motion.div>}
                         <motion.a href={`#${link.label}`}
                                   variants={textMotion}
                                   transition={{delay: .6 + (index / 6)}}
                                   onClick={() => handleLinkClick(link.label)}
-                        >{t(`nav.sections.${link.label}`)}
+                        >
+                            {!showAsideContact && <link.icon className={styles.mobileIcon}/>}
+                            {t(`nav.sections.${link.label}`)}
                         </motion.a>
                     </motion.div>
 

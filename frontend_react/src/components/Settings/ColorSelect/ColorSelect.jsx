@@ -15,14 +15,14 @@ const container = {
 
 export const ColorSelect = () => {
     const themeContext = useContext(AppContext);
-    const {selectedColor, changeSelectedColor} = themeContext;
+    const {selectedColor, changeSelectedColor, showAsideContact} = themeContext;
     const colors = ['orange', 'yellow', 'blue', 'red', 'purple', 'green', 'pink'];
 
     const changeColor = (color) => {
         changeSelectedColor(color)
     };
     return (
-        <motion.div className={styles.colorSelect}
+        <motion.div className={`${styles.colorSelect} ${showAsideContact ? styles.colorSelectDesktop : ''}`}
                     variants={container}
                     initial="hidden"
                     animate="visible"
