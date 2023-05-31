@@ -10,6 +10,7 @@
 
 .intro {
   color: var(--font-secondary);
+  margin-bottom: 20px;
   font-size: 2rem;
 }
 
@@ -22,7 +23,13 @@
 
 .title,
 .titleSecondary {
-  font-size: 7.8rem;
+  font-size: 4.8rem;
+  @media screen and (min-width: 500px) {
+    font-size: 5.8rem;
+  }
+  @media screen and (min-width: 768px) {
+    font-size: 7.8rem;
+  }
 }
 
 .titleSecondary {
@@ -30,8 +37,11 @@
 }
 
 .subtitle {
-  font-size: 6.8rem;
+  font-size: 3rem;
   margin-bottom: 30px;
+  @media screen and (min-width: 768px) {
+    font-size: 4.8rem;
+  }
 }
 
 .description {
