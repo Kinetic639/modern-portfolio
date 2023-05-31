@@ -23,9 +23,8 @@ const Header = () => {
                             <FaRegHandPointRight/> {t('sections.home.links.projects')}</a>
                         {t('sections.home.header.p4')}
                         <a className={styles.link}
-                           href="#skills">
-                            <FaRegHandPointRight/> {t('sections.home.links.skills')}</a>
-                        {t('sections.home.header.p5')}
+                           href="#skills"> <FaRegHandPointRight/> {t('sections.home.links.skills')}</a>
+                        .
                     </p>
                 </div>
             </div>
