@@ -35,13 +35,13 @@ const Skills = () => {
     return (
         <section className={styles.container}>
             {skills.map(section => (
-                <div className={styles.stackSection}>
+                <div key={section.name} className={styles.stackSection}>
                     <p className={styles.stackHeader}>
                         <section.icon className={styles.icon}/>
                         <span>{section.name}</span></p>
                     <ul className={styles.stackList}>
                         {section.stack.map(item => (
-                            <li className={styles.stackListItem}>{item}</li>
+                            <li key={item} className={styles.stackListItem}>{item}</li>
                         ))}
                     </ul>
                 </div>

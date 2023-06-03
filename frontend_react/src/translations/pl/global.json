@@ -29,6 +29,20 @@
         "skills": "umiejętności",
         "projects": "projektów"
       }
+    },
+    "about": {
+      "description": {
+        "p1": "Rozpocząłem swoją przygodę z programowaniem, pisząc skrypty do arkuszy Google Spreadsheets w Google Apps Script - frameworku JavaScript. Programowanie stało się moją prawdziwą pasją. Decyzja o zostaniu programistą była naturalnym krokiem na mojej ścieżce rozwoju.",
+        "p2": "Posiadam już prawie roczne doświadczenie komercyjne jako programista, które tylko utwierdziło mnie w przekonaniu, że programowanie to moja pasja na całe życie.",
+        "p3": "Obecnie mój bieżący projekt dobiegł końca, dlatego poszukuję nowej pracy. Jestem pełen determinacji, aby znaleźć nowe, inspirujące środowisko pracy i kontynuować rozwijanie się jako programista, wkładając w projekty całe moje zaangażowanie i pasję."
+      },
+      "bootcamps": {
+        "megak": "12-miesięczny kurs nastawiony głównie na opanowanie podstaw technologi backendowych.",
+        "coderscamp": "6-miesięczny, darmowy kurs programowania webowego, organizowany przez Stowarzyszenie CodersCrew.",
+        "youcode": "Rozbudowany kurs frontendu od podstaw.",
+        "codeme": "Stacjonarny 3 miesięczny kurs w Poznańskim oddziale szkoły CODE:ME.",
+        "others": "Ukończyłem również liczne kursy online takich autorów jak:"
+      }
     }
   }
 }

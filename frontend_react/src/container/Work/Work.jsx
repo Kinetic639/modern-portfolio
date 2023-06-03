@@ -100,7 +100,7 @@ const Work = () => {
         <section className={styles.work}>
             <div className={styles.projectCards}>
                 {projects.map((project, index) => (
-                    <div className={`${styles.card} ${index % 2 !== 0 ? styles.cardReversed : ''} `}>
+                    <div key={index} className={`${styles.card} ${index % 2 !== 0 ? styles.cardReversed : ''} `}>
                         <div className={styles.imageContainer}>
                             <img className={styles.image} src={images.about01} alt=""/>
                         </div>
@@ -112,7 +112,8 @@ const Work = () => {
                                 Architecto eligendi excepturi
                                 magnam nisi nostrum. Cum doloribus quasi veniam voluptas. Est.
                             </div>
-                            <div className={styles.techStack}>{project.techStack.map(item => <span>{item}</span>)}</div>
+                            <div className={styles.techStack}>{project.techStack.map(item => <span
+                                key={item}>{item}</span>)}</div>
                             <div className={styles.links}>
                                 <FiGithub/>
                                 <GoLinkExternal/>
@@ -124,8 +125,8 @@ const Work = () => {
             <div className={styles.projectWrapper} id='project-folder'>
                 <a href='#project-folder'>Other projects worth mentioning</a>
                 <div className={styles.folderContainer}>
-                    {smallProjects.map(project => (
-                        <div className={styles.projectFolder}>
+                    {smallProjects.map((project, index) => (
+                        <div key={index} className={styles.projectFolder}>
                             <div className={styles.folderHeader}>
                                 <AiOutlineFolderOpen className={styles.folderIcon}/>
                                 <div>
@@ -139,7 +140,7 @@ const Work = () => {
                                 eaque eligendi excepturi, minus qui recusandae vel velit. Lorem ipsum dolor sit amet,
                                 consectetur adipisicing elit. Doloribus, facere!</p>
                             <ul className={styles.stackList}>
-                                {project.techStack.map(item => <li className={styles.stackItem}>{item}</li>)}
+                                {project.techStack.map(item => <li key={item} className={styles.stackItem}>{item}</li>)}
                             </ul>
                         </div>
                     ))}
