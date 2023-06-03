@@ -1,45 +1,33 @@
 import React, {useState, useEffect} from "react";
-import {motion} from "framer-motion";
 import {VscDebugBreakpointFunction} from 'react-icons/vsc'
-import {urlFor, client} from "../../client";
+import {client} from "../../client";
 
 import styles from "./About.module.scss";
 import {AppWrap} from "../../wrapper";
 import {Bootcamps} from "../../components/Bootcamps/Bootcamps";
 
+import {images} from "../../constants"
+import {useTranslation} from "react-i18next";
+
 const About = () => {
-    const [abouts, setAbouts] = useState([]);
+    const {t} = useTranslation('global')
 
-    useEffect(() => {
-        const query = '*[_type == "abouts"]';
-
-        client.fetch(query).then((data) => {
-            setAbouts(data);
-        });
-    }, []);
 
     return (
         <div className={styles.container}>
             <div className={styles.introduction}>
                 <div className={styles.introductionDescription}>
                     <p>
-                        Rozpocząłem swoją przygodę z programowaniem, pisząc skrypty do arkuszy Google Spreadsheets w
-                        Google Apps Script, opartych na frameworku JavaScript. Programowanie stało się moją prawdziwą
-                        pasją. Decyzja o zostaniu programistą była naturalnym krokiem na mojej ścieżce rozwoju.
+                        {t('sections.about.description.p1')}
                     </p>
                     <p>
-                        Posiadam już prawie roczne doświadczenie komercyjne jako programista, które tylko utwierdziło
-                        mnie w przekonaniu, że programowanie to moja pasja na całe życie.
+                        {t('sections.about.description.p2')}
                     </p>
                     <p>
-                        Obecnie mój bieżący projekt dobiegł końca, dlatego poszukuję nowej pracy. Jestem pełen
-                        determinacji, aby znaleźć nowe, inspirujące środowisko pracy i kontynuować rozwijanie się jako
-                        programista, wkładając w projekty całe moje zaangażowanie i pasję.
+                        {t('sections.about.description.p3')}
                     </p>
                 </div>
-                <div className={styles.descriptionImage}>
-                    photo
-                </div>
+                <img className={styles.descriptionImage} src={images.avatar} alt=""/>
             </div>
             <div id="about-experience" className={styles.aboutSection}>
                 <a href="#about-experience" className={styles.header}>Where I’ve Worked</a>
@@ -146,12 +134,10 @@ const About = () => {
             <div id="about-courses" className={styles.aboutSection}>
                 <a href="#about-courses" className={styles.header}>Bootcamps and courses</a>
                 <div className={styles.bootcampsContainer}>
-                    <div>
-                        <p>
-                            Bootcampy, które ukończyłem w celu rozwoju umiejętności programistycznych:
-                        </p>
-                        <Bootcamps/>
-                    </div>
+                    <p>
+                        Bootcampy, które ukończyłem w celu rozwoju umiejętności programistycznych:
+                    </p>
+                    <Bootcamps/>
                 </div>
             </div>
         </div>
