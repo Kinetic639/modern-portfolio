@@ -31,10 +31,24 @@
   flex: 3;
 }
 
+.imageWrapper {
+  background-color: var(--color-description);
+
+  & .image {
+  }
+
+  &:hover .image {
+    opacity: 1;
+    transition: opacity .2s ease-in-out;
+  }
+}
+
 .image {
+  display: block;
   width: 100%;
   z-index: -1;
-  opacity: .8;
+  opacity: .7;
+  transition: opacity .2s ease-in-out;
 }
 
 .descriptionContainer {
@@ -42,9 +56,10 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  justify-content: space-evenly;
+  justify-content: space-between;
   gap: 20px;
   position: relative;
+  padding: 40px 0;
 }
 
 .descriptionContainerAlternative {
@@ -52,6 +67,10 @@
 
   .description {
     text-align: left;
+  }
+
+  .links {
+    justify-content: flex-start;
   }
 }
 
@@ -68,19 +87,7 @@
   z-index: 1;
   color: var(--font-description);
   transition: all .3s ease-in-out;
-
-  &:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background: var(--color-description);
-    opacity: 1;
-    z-index: -1;
-  }
-
+  background: var(--color-description);
 }
 
 .techStack {
@@ -90,12 +97,22 @@
   align-items: center;
   flex-wrap: wrap;
   justify-content: flex-end;
+  margin-bottom: 20px;
 }
 
 .links {
   display: flex;
-  gap: 20px;
-  font-size: 2.2rem;
+  gap: 25px;
+  font-size: 2.4rem;
+  justify-content: flex-end;
+}
+
+.foldersHeader {
+  font-size: 2.3rem;
+  text-decoration: none;
+  color: var(--font-secondary);
+  margin-bottom: var(--spacing-l);
+  display: block;
 }
 
 .folderContainer {
@@ -104,16 +121,27 @@
   gap: 20px;
   width: fit-content;
   margin: 0 auto;
+  justify-content: center;
+
+  @media screen and (min-width: 1024px) {
+    justify-content: flex-start;
+  }
 }
 
 .projectFolder {
   max-width: 300px;
-  background: #2f2f2f;
+  background: var(--color-primary-darker);
   padding: 25px 25px 35px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   gap: 20px;
+  transition: color .2s ease-in-out;
+
+  &:hover .folderName {
+    color: var(--font-secondary);
+    transition: color .2s ease-in-out;
+  }
 }
 
 .folderHeader {
@@ -127,7 +155,7 @@
 
 .folderIcon {
   font-size: 4rem;
-  color: var(--color-secondary);
+  color: var(--font-third);
 }
 
 .stackList {
@@ -135,7 +163,7 @@
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   color: var(--font-third);
 }
 
@@ -146,8 +174,22 @@
 .folderDescription {
   font-size: 1.5rem;
   line-height: 1.4;
+  color: var(--font-third);
 }
 
 .projectWrapper {
   padding-top: var(--top-padding);
+  min-height: 100vh;
+
+}
+
+.projectLink {
+  text-decoration: none;
+  color: var(--font-secondary);
+  transition: all .2s ease-in-out;
+
+  &:hover {
+    color: var(--font-primary);
+    transition: all .2s ease-in-out;
+  }
 }

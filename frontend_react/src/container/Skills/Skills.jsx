@@ -17,7 +17,7 @@ const Skills = () => {
         },
         {
             name: 'Backend',
-            stack: ['NodeJs', 'Express', 'MySQL', 'GraphQL', 'MongoDB', 'Mongoose'],
+            stack: ['NodeJs', 'Express', 'NestJs', 'MySQL', 'GraphQL', 'MongoDB', 'Mongoose'],
             icon: AiOutlineDatabase
         },
         {

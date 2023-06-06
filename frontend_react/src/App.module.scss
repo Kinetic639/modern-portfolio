@@ -6,12 +6,12 @@
 }
 
 .appWrapper {
-  padding: 0 var(--spacing-s);
+  padding: 0 var(--spacing-s) var(--spacing-s);
   @media screen and (min-width: 500px) {
-    padding: 0 var(--spacing-m);
+    padding: 0 var(--spacing-m) var(--spacing-m);
   }
   @media screen and (min-width: 768px) {
-    padding: 0 var(--spacing-l);
+    padding: 0 var(--spacing-l) var(--spacing-l);
   }
   @media screen and (min-width: 1200px) {
     padding: 0;

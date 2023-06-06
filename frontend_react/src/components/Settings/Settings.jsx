@@ -13,7 +13,6 @@ const container = {
     hidden: {opacity: 0},
     visible: {
         opacity: 1,
-        transition: {delay: .2},
     }
 };
 
@@ -30,14 +29,14 @@ export const Settings = () => {
     const {t} = useTranslation('global')
 
     return (
-        <motion.div onMouseEnter={() => setIsOpen(true)}
-                    onMouseLeave={() => setIsOpen(false)}
-                    className={`${styles.container} ${showAsideContact ? styles.containerDesktop : ''}`}
+        <motion.div
+            onMouseLeave={() => setIsOpen(false)}
+            className={`${styles.container} ${showAsideContact ? styles.containerDesktop : ''}`}
         >
             <motion.div
-                onClick={() => setIsOpen(!isOpen)}
                 className={`${styles.iconContainer} ${showAsideContact ? styles.iconContainerDesktop : ''} icon-container`}>
                 <motion.div animate={{rotate: 360}}
+                            onClick={() => setIsOpen(!isOpen)}
                             transition={spinTransition} className={styles.icon}>
                     <RxGear/>
                 </motion.div>

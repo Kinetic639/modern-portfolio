@@ -30,11 +30,11 @@ const About = () => {
                 <img className={styles.descriptionImage} src={images.avatar} alt=""/>
             </div>
             <div id="about-experience" className={styles.aboutSection}>
-                <a href="#about-experience" className={styles.header}>Where I’ve Worked</a>
+                <a href="#about-experience" className={styles.header}>{t('sections.about.headers.experience')}</a>
                 <div>
                     <div className={styles.experienceItem}>
                         <div className={styles.itemHeader}>
-                            <p className={styles.itemTitle}>Junior software architect <a
+                            <p className={styles.itemTitle}>Junior system architect <a
                                 className={styles.itemLink}
                                 href="https://www.trenujemy.pl"
                                 target="_blank"
@@ -106,13 +106,13 @@ const About = () => {
                                         <VscDebugBreakpointFunction
                                             className={styles.dutyPoint}/> Recoil.js
                                     </li>
-                                </ul>
-                                <ul className={styles.techstackColumn}>
                                     <li className={styles.duty}>
                                         <VscDebugBreakpointFunction
                                             className={styles.dutyPoint}/>
                                         React Testing Library
                                     </li>
+                                </ul>
+                                <ul className={styles.techstackColumn}>
                                     <li className={styles.duty}>
                                         <VscDebugBreakpointFunction
                                             className={styles.dutyPoint}/> Vue
@@ -120,6 +120,10 @@ const About = () => {
                                     <li className={styles.duty}>
                                         <VscDebugBreakpointFunction
                                             className={styles.dutyPoint}/> Node.js
+                                    </li>
+                                    <li className={styles.duty}>
+                                        <VscDebugBreakpointFunction
+                                            className={styles.dutyPoint}/> Express
                                     </li>
                                     <li className={styles.duty}>
                                         <VscDebugBreakpointFunction
@@ -132,10 +136,10 @@ const About = () => {
                 </div>
             </div>
             <div id="about-courses" className={styles.aboutSection}>
-                <a href="#about-courses" className={styles.header}>Bootcamps and courses</a>
+                <a href="#about-courses" className={styles.header}>{t('sections.about.headers.bootcamps')}</a>
                 <div className={styles.bootcampsContainer}>
                     <p>
-                        Bootcampy, które ukończyłem w celu rozwoju umiejętności programistycznych:
+                        {t('sections.about.bootcamps.description')}
                     </p>
                     <Bootcamps/>
                 </div>

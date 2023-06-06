@@ -13,6 +13,7 @@
     --color-primary: hsl(var(--color), var(--l));
     --color-primary-darker: hsl(var(--color), calc(var(--l) - 10%));
     --color-secondary: #1dc275;
+    --color-description: #0b9052;
     --font-primary: #404040;
     --font-secondary: #1dc275;
     --font-third: #727272;
