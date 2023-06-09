@@ -1,101 +1,142 @@
 .work {
   display: flex;
   flex-direction: column;
-  gap: 100px;
+  gap: 50px;
 }
 
-.projectCards {
-  margin-top: var(--top-padding);
+.swiper {
+  width: 100%;
+  height: fit-content;
+  flex: 2;
+  background-color: var(--color-description);
+  transition: background-color .2s ease-in-out;
+}
+
+.cards {
   display: flex;
   flex-direction: column;
   gap: 100px;
 }
-
 
 .card {
   display: flex;
-  max-width: 900px;
-  gap: 30px;
-}
+  flex-direction: column;
+  gap: 10px;
+  margin: -20px;
+  padding: 30px 20px;
+  background-color: var(--color-primary-darker);
 
-.card:hover .description {
-  width: 100%;
-  transition: all .3s ease-in-out;
+  &:hover {
+    & .swiper {
+      background-color: transparent;
+      transition: background-color .2s ease-in-out;
+
+    }
+
+    & .image {
+      opacity: 1;
+      transition: opacity .2s ease-in-out;
+    }
+
+    & .title {
+      color: var(--font-secondary);
+      transition: color .2s ease-in-out;
+    }
+
+    & .description,
+    & .techStack {
+      color: var(--font-primary);
+      transition: color .2s ease-in-out;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+  }
 }
 
 .cardReversed {
-  flex-direction: row-reverse;
-}
-
-.imageContainer {
-  flex: 3;
-}
-
-.image {
-  width: 100%;
-  z-index: -1;
-  opacity: .8;
+  @media screen and (min-width: 768px) {
+    flex-direction: row-reverse;
+  }
 }
 
 .descriptionContainer {
-  flex: 2;
+  flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
   justify-content: space-evenly;
   gap: 20px;
-  position: relative;
 }
 
 .descriptionContainerAlternative {
-  align-items: flex-start;
+  @media screen and (min-width: 768px) {
+    & .title {
+      text-align: right;
+    }
 
-  .description {
-    text-align: left;
+    & .description {
+      text-align: right;
+      padding: 0 0 0 10px;
+    }
+
+    & .techStack {
+      justify-content: flex-end;
+    }
+    & .links {
+      justify-content: flex-end;
+    }
   }
+
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+  opacity: .7;
+  transition: opacity .2s ease-in-out;
 }
 
 .title {
-  font-size: 2.4rem;
+  font-size: 2rem;
+  transition: color .2s ease-in-out;
+  padding: 10px;
+}
+
+.description,
+.techStack {
+  color: var(--font-third);
+  line-height: 1.4;
+  transition: color .2s ease-in-out;
 }
 
 .description {
-  width: 140%;
-  text-align: right;
-  padding: 20px 10px;
-  line-height: 1.5;
-  position: relative;
-  z-index: 1;
-  color: var(--font-description);
-  transition: all .3s ease-in-out;
-
-  &:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background: var(--color-description);
-    opacity: 1;
-    z-index: -1;
-  }
-
+  padding: 0 10px 0 0;
 }
 
 .techStack {
+  padding: 10px;
+  font-size: 1.3rem;
   display: flex;
-  color: var(--font-third);
-  gap: 15px;
-  align-items: center;
+  column-gap: 10px;
   flex-wrap: wrap;
-  justify-content: flex-end;
+  margin-bottom: 20px;
 }
 
 .links {
   display: flex;
-  gap: 20px;
-  font-size: 2.2rem;
+  gap: 25px;
+  font-size: 2.4rem;
+  padding: 10px;
+}
+
+.foldersHeader {
+  font-size: 2.3rem;
+  text-decoration: none;
+  color: var(--font-secondary);
+  margin-bottom: var(--spacing-l);
+  display: block;
 }
 
 .folderContainer {
@@ -104,16 +145,34 @@
   gap: 20px;
   width: fit-content;
   margin: 0 auto;
+  justify-content: center;
+
+  @media screen and (min-width: 1024px) {
+    justify-content: flex-start;
+  }
 }
 
 .projectFolder {
   max-width: 300px;
-  background: #2f2f2f;
+  background: var(--color-primary-darker);
   padding: 25px 25px 35px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   gap: 20px;
+  transition: color .2s ease-in-out;
+
+  &:hover {
+    & .folderName {
+      color: var(--font-secondary);
+      transition: color .2s ease-in-out;
+    }
+
+    .folderDescription {
+      color: var(--font-primary);
+      transition: color .2s ease-in-out;
+    }
+  }
 }
 
 .folderHeader {
@@ -127,7 +186,7 @@
 
 .folderIcon {
   font-size: 4rem;
-  color: var(--color-secondary);
+  color: var(--font-third);
 }
 
 .stackList {
@@ -135,19 +194,37 @@
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   color: var(--font-third);
 }
 
 .folderName {
   font-size: 2rem;
+  transition: color .2s ease-in-out;
 }
 
 .folderDescription {
   font-size: 1.5rem;
   line-height: 1.4;
+  color: var(--font-third);
+  transition: color .2s ease-in-out;
 }
 
 .projectWrapper {
   padding-top: var(--top-padding);
+  min-height: 100vh;
+
 }
+
+.projectLink {
+  text-decoration: none;
+  color: var(--font-secondary);
+  transition: all .2s ease-in-out;
+
+  &:hover {
+    color: var(--font-primary);
+    transition: all .2s ease-in-out;
+  }
+}
+
+

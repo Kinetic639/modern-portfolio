@@ -31,17 +31,38 @@
       }
     },
     "about": {
+      "headers": {
+        "experience": "Doświadczenie",
+        "bootcamps": "Bootcampy i kursy"
+      },
       "description": {
         "p1": "Rozpocząłem swoją przygodę z programowaniem, pisząc skrypty do arkuszy Google Spreadsheets w Google Apps Script - frameworku JavaScript. Programowanie stało się moją prawdziwą pasją. Decyzja o zostaniu programistą była naturalnym krokiem na mojej ścieżce rozwoju.",
         "p2": "Posiadam już prawie roczne doświadczenie komercyjne jako programista, które tylko utwierdziło mnie w przekonaniu, że programowanie to moja pasja na całe życie.",
         "p3": "Obecnie mój bieżący projekt dobiegł końca, dlatego poszukuję nowej pracy. Jestem pełen determinacji, aby znaleźć nowe, inspirujące środowisko pracy i kontynuować rozwijanie się jako programista, wkładając w projekty całe moje zaangażowanie i pasję."
       },
       "bootcamps": {
+        "description": "Bootcampy, które ukończyłem w celu rozwoju umiejętności programistycznych:",
         "megak": "12-miesięczny kurs nastawiony głównie na opanowanie podstaw technologi backendowych.",
         "coderscamp": "6-miesięczny, darmowy kurs programowania webowego, organizowany przez Stowarzyszenie CodersCrew.",
         "youcode": "Rozbudowany kurs frontendu od podstaw.",
         "codeme": "Stacjonarny 3 miesięczny kurs w Poznańskim oddziale szkoły CODE:ME.",
         "others": "Ukończyłem również liczne kursy online takich autorów jak:"
+      }
+    },
+    "work": {
+      "headers": {
+        "folders": "Inne projekty warte pokazania"
+      },
+      "projectsDescriptions": {
+        "trenujemyAdmin": "Inspirowana serwisem Netflix aplikacja z informacjami o filmach. Korzysta z 'The Movie Database' API. Więcej informacji znajdziesz na githubie projektu",
+        "trenujemyUser": "Inspirowana serwisem Netflix aplikacja z informacjami o filmach. Korzysta z 'The Movie Database' API. Więcej informacji znajdziesz na githubie projektu",
+        "megaKRecruitment": "Inspirowana serwisem Netflix aplikacja z informacjami o filmach. Korzysta z 'The Movie Database' API. Więcej informacji znajdziesz na githubie projektu",
+        "movieWatcher": "Inspirowana serwisem Netflix aplikacja z informacjami o filmach. Korzysta z 'The Movie Database' API. Więcej informacji znajdziesz na githubie projektu",
+        "megaKOgłoszenia": "Aplikacja w formie serwisu ogłoszeniowego. Do wyświetlania mapy wykorzystano OpenStreetMap. Więcej informacji znajdziesz na githubie projektu",
+        "prezentyMikołaja": "Aplikacja do tworzenia listy prezentów. Zrobiona w trakcie nauki technologi backendowych i zarządzania bazami danych.",
+        "cookieMaker": "Aplikacja zrobiona w ramach kursu megaK. Zrobiona w celu nauki Server Side Rendering. Do renderowania użyto Handlebars",
+        "randomValuePicker": "Prosta aplikacja wykonująca losowy wybór. Zrobiona podczas nauki React'a. więcej informacji na github.",
+        "kantorYoucode": "Prosta aplikacja do konwertowania walut. Zrobiona w ramach bootcampu Youcode. więcej informacji na github."
       }
     }
   }

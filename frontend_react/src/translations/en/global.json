@@ -31,17 +31,38 @@
       }
     },
     "about": {
+      "headers": {
+        "experience": "Where I’ve Worked",
+        "bootcamps": "Bootcamps and Courses"
+      },
       "description": {
         "p1": "I began my programming journey by writing scripts for Google Spreadsheets using Google Apps Script, which is based on the JavaScript framework. Programming has become my true passion. The decision to become a programmer was a natural step in my development path.",
         "p2": "I already have nearly a year of commercial experience as a programmer, which has only reinforced my belief that programming is my lifelong passion.",
         "p3": "Currently, my current project has come to an end, which is why I am seeking new employment. I am determined to find a new, inspiring work environment and continue to grow as a programmer, dedicating my full commitment and passion to projects."
       },
       "bootcamps": {
+        "description": "Bootcamps I have completed to enhance my programming skills:",
         "megak": "12-months long course aimed mainly at mastering the backend technologies.",
         "coderscamp": "6-months long, free of charge web development course organised by CodersCrew.",
         "youcode": "Comprehensive and well organised course covering all basics of front end development.",
         "codeme": "Stationary 3-month long course in CODE:ME school in their Poznań branch covering basics of javascript and React framework.",
         "others": "I have also finished many online courses by great authors, such as:"
+      }
+    },
+    "work": {
+      "headers": {
+        "folders": "Other projects worth mentioning"
+      },
+      "projectsDescriptions": {
+        "trenujemyAdmin": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit, ipsam.",
+        "trenujemyUser": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit, ipsam.",
+        "megaKRecruitment": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit, ipsam.",
+        "movieWatcher": "A Netflix-inspired movie information app. Uses the 'The Movie Database' API. Find out more on project's github",
+        "megaKOgłoszenia": "Application in the form of an advertisement service. OpenStreetMap was used to display the map. Find out more on project's github",
+        "prezentyMikołaja": "Santa's gift list app. Made while learning backend technologies and database management.",
+        "cookieMaker": "Application made as part of the megaK bootcamp. Made while studying Server Side Rendering. I used Handlebars for rendering",
+        "randomValuePicker": "Simple application that picks random value. Made while studying basics of React with hooks. Visit github for more info.",
+        "kantorYoucode": "Simple app for calculating exchange rates. One of 'Youcode - Front end od podstaw' bootcamp projects. Visit github for more info."
       }
     }
   }

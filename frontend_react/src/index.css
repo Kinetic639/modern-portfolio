@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap');
 
 :root {
+    --swiper-navigation-color: #1dc275 !important;
+    --swiper-theme-color: #1dc275 !important;
     --font-family-primary: 'Inter', sans-serif;
 
     --font-size-base: 1.6rem;
@@ -13,6 +15,7 @@
     --color-primary: hsl(var(--color), var(--l));
     --color-primary-darker: hsl(var(--color), calc(var(--l) - 10%));
     --color-secondary: #1dc275;
+    --color-description: #0b9052;
     --font-primary: #404040;
     --font-secondary: #1dc275;
     --font-third: #727272;
@@ -30,6 +33,7 @@
     --spacing-xs: 10px;
 
     /*    ---responsiveness---*/
+    
     --mobile-l: 500px;
     --tablet-portrait: 768px;
     --tablet: 1024px;
@@ -50,6 +54,8 @@
     --font-secondary: #eab515;
     --color-description: #9b7e00;
     --font-description: #ffffff;
+    --swiper-navigation-color: #9b7e00 !important;
+    --swiper-theme-color: #9b7e00 !important;
 }
 
 .orange {
@@ -57,6 +63,8 @@
     --font-tooltip: #1d1d1d;
     --color-description: #c43e07;
     --font-description: #ffffff;
+    --swiper-navigation-color: #c43e07 !important;
+    --swiper-theme-color: #c43e07 !important;
 }
 
 .red {
@@ -64,18 +72,24 @@
     --font-tooltip: #dbdbdb;
     --color-description: #aa0707;
     --font-description: #ffffff;
+    --swiper-navigation-color: #aa0707 !important;
+    --swiper-theme-color: #aa0707 !important;
 }
 
 .blue {
     --font-secondary: #13c5fd;
     --color-description: #0082aa;
     --font-description: #ffffff;
+    --swiper-navigation-color: #0082aa !important;
+    --swiper-theme-color: #0082aa !important;
 }
 
 .green {
     --font-secondary: #1dc275;
     --color-description: #0b9052;
     --font-description: #ffffff;
+    --swiper-navigation-color: #0b9052 !important;
+    --swiper-theme-color: #0b9052 !important;
 }
 
 .pink {
@@ -83,6 +97,8 @@
     --font-tooltip: #3f3f3f;
     --color-description: #ab0d63;
     --font-description: #fff;
+    --swiper-navigation-color: #ab0d63 !important;
+    --swiper-theme-color: #ab0d63 !important;
 }
 
 .purple {
@@ -90,6 +106,8 @@
     --font-tooltip: #dbdbdb;
     --color-description: #493ee5;
     --font-description: #dbdbdb;
+    --swiper-navigation-color: #493ee5 !important;
+    --swiper-theme-color: #493ee5 !important;
 }
 
 * {
@@ -116,3 +134,4 @@ body {
     transition: all .1s ease-in-out;
     font-size: var(--font-size-base);
 }
+
