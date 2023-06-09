@@ -54,9 +54,9 @@
         "folders": "Inne projekty warte pokazania"
       },
       "projectsDescriptions": {
-        "trenujemyAdmin": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit, ipsam.",
-        "trenujemyUser": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit, ipsam.",
-        "megaKRecruitment": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit, ipsam.",
+        "trenujemyAdmin": "Inspirowana serwisem Netflix aplikacja z informacjami o filmach. Korzysta z 'The Movie Database' API. Więcej informacji znajdziesz na githubie projektu",
+        "trenujemyUser": "Inspirowana serwisem Netflix aplikacja z informacjami o filmach. Korzysta z 'The Movie Database' API. Więcej informacji znajdziesz na githubie projektu",
+        "megaKRecruitment": "Inspirowana serwisem Netflix aplikacja z informacjami o filmach. Korzysta z 'The Movie Database' API. Więcej informacji znajdziesz na githubie projektu",
         "movieWatcher": "Inspirowana serwisem Netflix aplikacja z informacjami o filmach. Korzysta z 'The Movie Database' API. Więcej informacji znajdziesz na githubie projektu",
         "megaKOgłoszenia": "Aplikacja w formie serwisu ogłoszeniowego. Do wyświetlania mapy wykorzystano OpenStreetMap. Więcej informacji znajdziesz na githubie projektu",
         "prezentyMikołaja": "Aplikacja do tworzenia listy prezentów. Zrobiona w trakcie nauki technologi backendowych i zarządzania bazami danych.",

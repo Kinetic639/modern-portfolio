@@ -1,6 +1,11 @@
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import styles from "./Work.module.scss"
+
 import React from "react";
 import {AppWrap} from "../../wrapper";
-import styles from "./Work.module.scss"
 import {FiGithub} from "react-icons/fi"
 import {GoLinkExternal} from "react-icons/go"
 import {AiOutlineFolderOpen} from "react-icons/ai"
@@ -8,6 +13,11 @@ import {AiOutlineFolderOpen} from "react-icons/ai"
 import {images} from "../../constants";
 import {useTranslation} from "react-i18next";
 import {motion} from "framer-motion";
+
+
+import {Swiper, SwiperSlide} from "swiper/react";
+
+import {Pagination, Navigation} from "swiper";
 
 const textMotion = {
     rest: {
@@ -44,7 +54,7 @@ const Work = () => {
             translation: "trenujemyUser",
             link: "https://trenujemy.pl",
             live: null,
-            images: ['about01', 'about02'],
+            images: ['about01', 'about02', 'about03', 'about04'],
             techStack: ['Vue', 'VueX', 'Sass', 'Express']
         },
         {
@@ -109,23 +119,39 @@ const Work = () => {
 
     return (
         <section className={styles.work}>
-            <div className={styles.projectCards}>
+            <div className={styles.cards}>
                 {projects.map((project, index) => (
                     <div key={index} className={`${styles.card} ${index % 2 !== 0 ? styles.cardReversed : ''} `}>
-                        <div className={styles.imageContainer}>
-                            <div className={styles.imageWrapper}>
-                                <img className={styles.image} src={images.about01} alt=""/>
-                            </div>
-                        </div>
+
+                        <Swiper
+                            id="swiper"
+                            spaceBetween={20}
+                            pagination={{
+                                clickable: true,
+                            }}
+                            loop={true}
+                            navigation={true}
+                            modules={[Navigation, Pagination]}
+                            className={styles.swiper}
+                        >
+                            {
+                                project.images.map((image, index) => (
+                                    <SwiperSlide key={index}><img className={styles.image} src={images[image]}
+                                                                  alt=""/></SwiperSlide>
+                                ))
+                            }
+
+                        </Swiper>
+
                         <div
-                            className={`${styles.descriptionContainer} ${index % 2 !== 0 ? styles.descriptionContainerAlternative : ''} `}>
+                            className={`${styles.descriptionContainer} ${index % 2 === 0 ? styles.descriptionContainerAlternative : ''} `}>
                             <div className={styles.title}>{project.name}</div>
                             <div className={styles.description}>
                                 {t(`sections.work.projectsDescriptions.${project.translation}`)}
                             </div>
                             <div>
-                                <div className={styles.techStack}>{project.techStack.map(item => <span
-                                    key={item}>{item}</span>)}</div>
+                                <div className={styles.techStack}>{project.techStack.map((item, index) => <span
+                                    key={index}>{item}</span>)}</div>
                                 <div className={styles.links}>
                                     {project.github &&
                                         <a href={`${project.github}`} className={styles.projectLink} target="_blank"
