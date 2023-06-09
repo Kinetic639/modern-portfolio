@@ -7,6 +7,8 @@
 
 .appWrapper {
   padding: 0 var(--spacing-s) var(--spacing-s);
+  display: flex;
+  flex-direction: column;
   @media screen and (min-width: 500px) {
     padding: 0 var(--spacing-m) var(--spacing-m);
   }
@@ -14,10 +16,11 @@
     padding: 0 var(--spacing-l) var(--spacing-l);
   }
   @media screen and (min-width: 1200px) {
+    max-width: 950px;
     padding: 0;
-    margin: 0 50px 0 500px;
+    margin: 0 50px 0 520px;
   }
   @media screen and (min-width: 1366px) {
-    margin: 0 150px 0 550px;
+    margin: 0 150px 0 600px;
   }
 }
