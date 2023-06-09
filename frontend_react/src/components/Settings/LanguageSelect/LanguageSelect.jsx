@@ -5,7 +5,7 @@ import {Tooltip} from "react-tooltip";
 import styles from "./LanguageSelect.module.scss";
 import {AppContext} from "../../../App";
 
-export const LanguageSelect = ({type}) => {
+export const LanguageSelect = () => {
     const themeContext = useContext(AppContext);
     const {showAsideContact} = themeContext;
     const {t, i18n} = useTranslation('global')
@@ -17,10 +17,10 @@ export const LanguageSelect = ({type}) => {
     }
     return (<div>
             <button
-                className={`${styles.buttonLang} ${showAsideContact ? styles.buttonLangDesktop : ''}  button--lang`}
+                className={`${styles.buttonLang} ${i18n.language === 'pl' ? styles.buttonLangPl : styles.buttonLangEn}  ${showAsideContact ? styles.buttonLangDesktop : ''}  button--lang`}
                 onClick={changeLanguage}>
-                {i18n.language === 'pl' ? 'PL' :
-                    'EN'}
+                {/*{i18n.language === 'pl' ? 'PL' :*/}
+                {/*    'EN'}*/}
             </button>
             <Tooltip style={{backgroundColor: 'var(--font-secondary)', color: 'var(--font-tooltip)'}}
                      anchorSelect=".settings-button--lang" place="right">

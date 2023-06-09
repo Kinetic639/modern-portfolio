@@ -1,4 +1,4 @@
-import React, {createContext, useEffect, useState} from "react";
+import React, {createContext, useEffect, useMemo, useState} from "react";
 import {GridLoader} from "react-spinners";
 import Header from "./container/Header/Header";
 import About from "./container/About/About";
@@ -26,13 +26,13 @@ const App = () => {
     const [showAsideContact, setShowAsideContact] = useState(false);
     const [showDesktopMenu, setShowDesktopMenu] = useState(false);
 
-    const links = [
+    const links = useMemo(() => [
         {id: 0, label: "home", icon: AiOutlineHome},
         {id: 1, label: "about", icon: RxPerson},
         {id: 2, label: "skills", icon: IoFileTrayStackedOutline},
         {id: 3, label: "work", icon: IoBriefcaseOutline},
         {id: 4, label: "contact", icon: AiOutlineMessage},
-    ]
+    ], []);
 
     const checkScreenWidth = () => {
         const screenWidth = window.innerWidth;
@@ -141,7 +141,7 @@ const App = () => {
                             <>
                                 <VerticalNavbar links={links}/>
                                 <Settings/>
-                                <LanguageSelect type='desktop'/>
+                                <LanguageSelect/>
                                 <Contact/>
                             </>
                         )}
