@@ -33,7 +33,7 @@
     --spacing-xs: 10px;
 
     /*    ---responsiveness---*/
-    
+
     --mobile-l: 500px;
     --tablet-portrait: 768px;
     --tablet: 1024px;
@@ -48,6 +48,8 @@
     --color-primary-darker: hsl(var(--color), calc(var(--l) - 1%));
     --font-primary: #eaeaea;
     --font-dimmed: #383838;
+    --swiper-navigation-color: #1dc275 !important;
+    --swiper-theme-color: #1dc275 !important;
 }
 
 .yellow {
@@ -135,3 +137,10 @@ body {
     font-size: var(--font-size-base);
 }
 
+.swiper-button-next {
+    color: var(--color-description) !important;
+}
+
+.swiper-button-prev {
+    color: var(--color-description) !important;
+}
