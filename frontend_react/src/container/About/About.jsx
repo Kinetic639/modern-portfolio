@@ -1,6 +1,5 @@
-import React, {useState, useEffect} from "react";
+import React from "react";
 import {VscDebugBreakpointFunction} from 'react-icons/vsc'
-import {client} from "../../client";
 
 import styles from "./About.module.scss";
 import {AppWrap} from "../../wrapper";
