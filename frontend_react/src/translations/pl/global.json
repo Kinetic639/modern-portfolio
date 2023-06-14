@@ -35,6 +35,21 @@
         "experience": "Doświadczenie",
         "bootcamps": "Bootcampy i kursy"
       },
+      "experience": {
+        "trenujemy": {
+          "position": "Junior System Architect",
+          "from": "Wrzesień 2022",
+          "to": "Maj 2023",
+          "duties": {
+            "duty1": "Tworzenie warstwy front-endowej panelu administratora przy użyciu React.js oraz Recoil.js.",
+            "duty2": "Przetwarzanie otrzymanych projektów w formacie PSD na interaktywne widoki użytkownika wykorzystując Vue.js.",
+            "duty3": "Optymalizacja wydajności aplikacji oraz tworzenie testów jednostkowych dla React przy użyciu React Testing Library.",
+            "duty4": "Utrzymywanie czystego i czytelnego kodu, stosowanie najlepszych praktyk programistycznych oraz przestrzeganie standardów projektowych.",
+            "duty5": "Współpraca z zespołem i udział w spotkaniach z klientem, aby zrozumieć wymagania dotyczące interfejsu użytkownika i funkcjonalności aplikacji.",
+            "duty6": "Dokumentowanie wprowadzonych zmian i udokumentowanie postępów w projekcie."
+          }
+        }
+      },
       "description": {
         "p1": "Rozpocząłem swoją przygodę z programowaniem, pisząc skrypty do arkuszy Google Spreadsheets w Google Apps Script - frameworku JavaScript. Programowanie stało się moją prawdziwą pasją. Decyzja o zostaniu programistą była naturalnym krokiem na mojej ścieżce rozwoju.",
         "p2": "Posiadam już prawie roczne doświadczenie komercyjne jako programista, które tylko utwierdziło mnie w przekonaniu, że programowanie to moja pasja na całe życie.",

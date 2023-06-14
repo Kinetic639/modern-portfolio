@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import {VscDebugBreakpointFunction} from 'react-icons/vsc'
 
 import styles from "./About.module.scss";
@@ -7,131 +7,188 @@ import {Bootcamps} from "../../components/Bootcamps/Bootcamps";
 
 import {images} from "../../constants"
 import {useTranslation} from "react-i18next";
+import {motion} from "framer-motion";
+
+const textMotion = {
+    rest: {
+        x: 0,
+        transition: {
+            duration: .2,
+            ease: "easeInOut"
+        }
+    },
+    hover: {
+        x: 10,
+        transition: {
+            duration: 0.2,
+            ease: "easeInOut"
+        }
+    },
+    exit: {
+        opacity: 0,
+        transition: {
+            ease: "easeInOut",
+            delay: 1
+        }
+    }
+
+};
+
+const descriptionContainer = {
+    whileInView: (i = 1) => ({
+        opacity: [0, 1],
+        transition: {staggerChildren: 0.2, delayChildren: .2 * i, duration: .5}
+    }),
+};
+
+const child = {
+    whileInView: {
+        opacity: [0, 1],
+        x: [10, 0],
+        transition: {duration: .3}
+    },
+};
 
 const About = () => {
     const {t} = useTranslation('global')
+    const [activeDuty, setActiveDuty] = useState(null)
+    const experience = [{
+        name: "trenujemy",
+        employerName: "trenujemy.pl",
+        link: 'https://www.trenujemy.pl',
+        duties: 6,
+        techStack: {
+            column01: [
+                "JavaScript (ES6+)",
+                "TypeScript",
+                "React",
+                "Recoil.js",
+                "React Testing Library",],
+            column02: [
+                "Vue",
+                "Node.js",
+                "Express",
+                "GraphQL",
+            ]
+        }
+    }]
 
 
     return (
         <div className={styles.container}>
             <div className={styles.introduction}>
-                <div className={styles.introductionDescription}>
-                    <p>
+                <motion.img initial={{opacity: 0, x: -10}}
+                            whileInView={{opacity: 1, x: 0, transition: {delay: .2, duration: .3}}}
+                            className={styles.descriptionImage}
+                            src={images.avatar}
+                            alt=""/>
+                <motion.div
+                    variants={descriptionContainer}
+                    whileInView="whileInView" className={styles.introductionDescription}>
+                    <motion.p variants={child}>
                         {t('sections.about.description.p1')}
-                    </p>
-                    <p>
+                    </motion.p>
+                    <motion.p variants={child}>
                         {t('sections.about.description.p2')}
-                    </p>
-                    <p>
+                    </motion.p>
+                    <motion.p variants={child}>
                         {t('sections.about.description.p3')}
-                    </p>
-                </div>
-                <img className={styles.descriptionImage} src={images.avatar} alt=""/>
+                    </motion.p>
+                </motion.div>
+
             </div>
             <div id="about-experience" className={styles.aboutSection}>
-                <a href="#about-experience" className={styles.header}>{t('sections.about.headers.experience')}</a>
+                <motion.a initial={{opacity: 0, y: -10}}
+                          whileInView={{opacity: 1, y: 0, transition: {delay: .3, duration: .3}}}
+                          href="#about-experience"
+                          className={styles.header}>{t('sections.about.headers.experience')}</motion.a>
                 <div>
-                    <div className={styles.experienceItem}>
-                        <div className={styles.itemHeader}>
-                            <p className={styles.itemTitle}>Junior system architect <a
-                                className={styles.itemLink}
-                                href="https://www.trenujemy.pl"
-                                target="_blank"
-                                rel="noreferrer">@
-                                trenujemy.pl</a>
-                            </p>
-                            <p className={styles.itemSubtitle}>Wrzesień 2022 - Maj 2023</p>
-                        </div>
-                        <ul className={styles.duties}>
-                            <li className={styles.duty}>
-                                <VscDebugBreakpointFunction className={styles.dutyPoint}/>
-                                <p className={styles.dutyDescription}>
-                                    Tworzenie warstwy front-endowej panelu administratora przy użyciu React.js oraz
-                                    Recoil.js.
-                                </p>
-                            </li>
-                            <li className={styles.duty}>
-                                <VscDebugBreakpointFunction className={styles.dutyPoint}/>
-                                <p className={styles.dutyDescription}>
-                                    Przetwarzanie otrzymanych projektów w formacie PSD na interaktywne widoki
-                                    użytkownika wykorzystując Vue.js.
-                                </p>
-                            </li>
-                            <li className={styles.duty}>
-                                <VscDebugBreakpointFunction className={styles.dutyPoint}/>
-                                <p className={styles.dutyDescription}>
-                                    Optymalizacja wydajności aplikacji oraz tworzenie testów jednostkowych dla React
-                                    przy użyciu React Testing Library.
-                                </p>
-                            </li>
-                            <li className={styles.duty}>
-                                <VscDebugBreakpointFunction className={styles.dutyPoint}/>
-                                <p className={styles.dutyDescription}>
-                                    Utrzymywanie czystego i czytelnego kodu, stosowanie najlepszych praktyk
-                                    programistycznych oraz przestrzeganie standardów projektowych.
-                                </p>
-                            </li>
-                            <li className={styles.duty}>
-                                <VscDebugBreakpointFunction className={styles.dutyPoint}/>
-                                <p className={styles.dutyDescription}>
-                                    Współpraca z zespołem i udział w spotkaniach z klientem, aby zrozumieć wymagania
-                                    dotyczące interfejsu użytkownika i funkcjonalności aplikacji.
-                                </p>
-                            </li>
-                            <li className={styles.duty}>
-                                <VscDebugBreakpointFunction className={styles.dutyPoint}/>
-                                <p className={styles.dutyDescription}>
-                                    Dokumentowanie wprowadzonych zmian i udokumentowanie postępów w projekcie.
-                                </p>
-                            </li>
-                        </ul>
-                        <div>
-                            Few technologies I’ve been working with:
-                            <div className={styles.techstackListsContainer}>
-                                <ul className={styles.techstackColumn}>
-                                    <li className={styles.duty}>
-                                        <VscDebugBreakpointFunction
-                                            className={styles.dutyPoint}/> JavaScript (ES6+)
-                                    </li>
-                                    <li className={styles.duty}>
-                                        <VscDebugBreakpointFunction
-                                            className={styles.dutyPoint}/> TypeScript
-                                    </li>
-                                    <li className={styles.duty}>
-                                        <VscDebugBreakpointFunction
-                                            className={styles.dutyPoint}/> React
-                                    </li>
-                                    <li className={styles.duty}>
-                                        <VscDebugBreakpointFunction
-                                            className={styles.dutyPoint}/> Recoil.js
-                                    </li>
-                                    <li className={styles.duty}>
-                                        <VscDebugBreakpointFunction
-                                            className={styles.dutyPoint}/>
-                                        React Testing Library
-                                    </li>
+                    {
+                        experience.map(job => (
+                            <motion.div className={styles.experienceItem}>
+                                <motion.div initial={{opacity: 0, y: -10}}
+                                            whileInView={{opacity: 1, y: 0, transition: {delay: .5, duration: .3}}}>
+                                    <p className={styles.itemTitle}>{t(`sections.about.experience.${job.name}.position`)}
+                                        <a
+                                            className={styles.itemLink}
+                                            href={job.link}
+                                            target="_blank"
+                                            rel="noreferrer"> @ {job.employerName}</a>
+                                    </p>
+                                    <p className={styles.itemSubtitle}>{t(`sections.about.experience.${job.name}.from`)} - {t(`sections.about.experience.${job.name}.to`)}</p>
+                                </motion.div>
+                                <ul className={styles.duties}>
+                                    {Array.from({length: job.duties}).map((duty, index) => (
+                                        <motion.li initial={{opacity: 0, y: -10}}
+                                                   whileInView={{
+                                                       opacity: 1,
+                                                       y: 0,
+                                                       transition: {delay: .6 + (index / 10), duration: .3}
+                                                   }}
+                                                   className={styles.duty}>
+                                            <VscDebugBreakpointFunction className={styles.dutyPoint}/>
+                                            <motion.p initial="initial"
+                                                      whileHover="hover"
+                                                      animate="rest"
+                                                      variants={textMotion} className={styles.dutyDescription}>
+                                                {t(`sections.about.experience.${job.name}.duties.duty${index + 1}`)}
+                                            </motion.p>
+                                        </motion.li>
+                                    ))}
                                 </ul>
-                                <ul className={styles.techstackColumn}>
-                                    <li className={styles.duty}>
-                                        <VscDebugBreakpointFunction
-                                            className={styles.dutyPoint}/> Vue
-                                    </li>
-                                    <li className={styles.duty}>
-                                        <VscDebugBreakpointFunction
-                                            className={styles.dutyPoint}/> Node.js
-                                    </li>
-                                    <li className={styles.duty}>
-                                        <VscDebugBreakpointFunction
-                                            className={styles.dutyPoint}/> Express
-                                    </li>
-                                    <li className={styles.duty}>
-                                        <VscDebugBreakpointFunction
-                                            className={styles.dutyPoint}/> GraphQL
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+                                <div>
+                                    <motion.p initial={{opacity: 0, y: -10}}
+                                              whileInView={{
+                                                  opacity: 1,
+                                                  y: 0,
+                                                  transition: {delay: .6, duration: .3}
+                                              }}>Few technologies I’ve been working with:
+                                    </motion.p>
+                                    <div className={styles.techstackListsContainer}>
+                                        <ul className={styles.techstackColumn}>
+                                            {job.techStack.column01.map((item, index) => (
+                                                <motion.li initial={{opacity: 0, y: -10}}
+                                                           whileInView={{
+                                                               opacity: 1,
+                                                               y: 0,
+                                                               transition: {delay: .6 + (index / 10), duration: .3}
+                                                           }} className={styles.duty}>
+                                                    <VscDebugBreakpointFunction
+                                                        className={styles.dutyPoint}/>
+                                                    <motion.p initial="initial"
+                                                              whileHover="hover"
+                                                              animate="rest"
+                                                              variants={textMotion} className={styles.dutyDescription}>
+                                                        {item}
+                                                    </motion.p>
+                                                </motion.li>
+                                            ))}
+
+                                        </ul>
+                                        <ul className={styles.techstackColumn}>
+                                            {job.techStack.column02.map((item, index) => (
+                                                <motion.li initial={{opacity: 0, y: -10}}
+                                                           whileInView={{
+                                                               opacity: 1,
+                                                               y: 0,
+                                                               transition: {delay: .6 + (index / 10), duration: .3}
+                                                           }} className={styles.duty}>
+                                                    <VscDebugBreakpointFunction
+                                                        className={styles.dutyPoint}/>
+                                                    <motion.p initial="initial"
+                                                              whileHover="hover"
+                                                              animate="rest"
+                                                              variants={textMotion} className={styles.dutyDescription}>
+                                                        {item}
+                                                    </motion.p>
+                                                </motion.li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                </div>
+                            </motion.div>
+                        ))
+                    }
                 </div>
             </div>
             <div id="about-courses" className={styles.aboutSection}>

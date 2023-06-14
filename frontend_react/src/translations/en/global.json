@@ -35,6 +35,21 @@
         "experience": "Where I’ve Worked",
         "bootcamps": "Bootcamps and Courses"
       },
+      "experience": {
+        "trenujemy": {
+          "position": "Junior System Architect",
+          "from": "September 2022",
+          "to": "May 2023",
+          "duties": {
+            "duty1": "Creating the front-end layer of the admin panel using React.js and Recoil.js.",
+            "duty2": "Converting received PSD projects into interactive user views using Vue.js.",
+            "duty3": "Optimizing application performance and creating unit tests for React using React Testing Library.",
+            "duty4": "Maintaining clean and readable code, adhering to best programming practices and design standards.",
+            "duty5": "Collaborating with the team and participating in client meetings to understand user interface requirements and application functionality.",
+            "duty6": "Documenting implemented changes and documenting project progress."
+          }
+        }
+      },
       "description": {
         "p1": "I began my programming journey by writing scripts for Google Spreadsheets using Google Apps Script, which is based on the JavaScript framework. Programming has become my true passion. The decision to become a programmer was a natural step in my development path.",
         "p2": "I already have nearly a year of commercial experience as a programmer, which has only reinforced my belief that programming is my lifelong passion.",

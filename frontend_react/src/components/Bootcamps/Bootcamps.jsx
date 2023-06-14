@@ -3,6 +3,7 @@ import styles from "./Bootcamps.module.scss";
 import {VscDebugBreakpointFunction} from "react-icons/vsc";
 import {useTranslation} from "react-i18next";
 import {AppContext} from "../../App";
+import {AnimatePresence, motion} from "framer-motion";
 
 export const Bootcamps = () => {
     const themeContext = useContext(AppContext);
@@ -55,6 +56,7 @@ export const Bootcamps = () => {
         transform: `translateX(${(activeLink) * 100}px)`,
         transition: 'transform 0.3s ease',
     };
+
     return (
         <div className={`${styles.container} ${showDesktopMenu ? styles.containerDesktop : ''}`}>
             <div className={`${styles.menu} ${showDesktopMenu ? styles.menuDesktop : ''}`}>
@@ -73,54 +75,75 @@ export const Bootcamps = () => {
             </div>
             {
                 activeLink < bootcampsList.length ?
-                    <div className={styles.bootcamp}>
-                        <div className={styles.header}>
-                            <p>{bootcampsList[activeLink].title} <a
-                                className={styles.link}
-                                href={bootcampsList[activeLink].link} target="_blank"
-                                rel="noreferrer">@ {bootcampsList[activeLink].name}</a>
-                            </p>
-                            <p className={styles.subHeader}>{bootcampsList[activeLink].date}</p>
-                        </div>
-                        <p className={styles.description}>
-                            {t(`sections.about.bootcamps.${bootcampsList[activeLink].translation}`)}
-                        </p>
-                    </div> : (
+                    <motion.div initial={{opacity: 0}}
+                                animate={{opacity: 1, transition: {duration: .2, ease: "easeIn"}}}
+                                exit={{opacity: 0}} className={styles.bootcamp}>
 
-                        <div>
-                            <p>
-                                {t('sections.about.bootcamps.others')}
-                            </p>
-                            <ul className={styles.techstackColumn}>
-                                <li className={styles.duty}><VscDebugBreakpointFunction
-                                    className={styles.dutyPoint}/> Brad Traversy
-                                </li>
-                                <li className={styles.duty}><VscDebugBreakpointFunction
-                                    className={styles.dutyPoint}/>
-                                    Maximilian Schwarzmuller
-                                </li>
-                                <li className={styles.duty}><VscDebugBreakpointFunction
-                                    className={styles.dutyPoint}/> Andrew Mead
-                                </li>
-                                <li className={styles.duty}><VscDebugBreakpointFunction
-                                    className={styles.dutyPoint}/>
-                                    Jonas Schmedtmann
-                                </li>
-                                <li className={styles.duty}><VscDebugBreakpointFunction
-                                    className={styles.dutyPoint}/> Bartłomiej Borowczyk (Samuraj
-                                    Programowania)
-                                </li>
-                                <li className={styles.duty}><VscDebugBreakpointFunction
-                                    className={styles.dutyPoint}/>
-                                    Krzysztof Dąbrowski - Youcode
-                                </li>
-                                <li className={styles.duty}><VscDebugBreakpointFunction
-                                    className={styles.dutyPoint}/> Adam Romański (hello roman)
-                                </li>
-                            </ul>
-                        </div>
+                        <AnimatePresence mode="wait">
+                            <motion.div key={activeLink}
+                                        initial={{opacity: 0}}
+                                        animate={{opacity: 1, transition: {duration: .2, ease: "easeIn"}}}
+                                        exit={{opacity: 0}}
+                                        className={styles.header}>
+                                <p>
+                                    {bootcampsList[activeLink].title} <a
+                                    className={styles.link}
+                                    href={bootcampsList[activeLink].link} target="_blank"
+                                    rel="noreferrer">@ {bootcampsList[activeLink].name}</a>
+                                </p>
+
+                                <p className={styles.subHeader}>{bootcampsList[activeLink].date}</p>
+                            </motion.div>
+                        </AnimatePresence>
+                        <AnimatePresence mode="wait">
+                            <motion.p
+                                key={activeLink}
+                                initial={{opacity: 0}}
+                                animate={{opacity: 1, transition: {delay: .1, duration: .2, ease: "easeIn"}}}
+                                exit={{opacity: 0}} className={styles.description}>
+                                {t(`sections.about.bootcamps.${bootcampsList[activeLink].translation}`)}
+                            </motion.p>
+                        </AnimatePresence>
+                    </motion.div> : (
+                        <AnimatePresence mode="wait">
+                            <motion.div initial={{opacity: 0}}
+                                        animate={{opacity: 1, transition: {duration: .2, ease: "easeIn"}}}
+                                        exit={{opacity: 0}}>
+                                <p>
+                                    {t('sections.about.bootcamps.others')}
+                                </p>
+                                <ul className={styles.techstackColumn}>
+                                    <li className={styles.duty}><VscDebugBreakpointFunction
+                                        className={styles.dutyPoint}/> Brad Traversy
+                                    </li>
+                                    <li className={styles.duty}><VscDebugBreakpointFunction
+                                        className={styles.dutyPoint}/>
+                                        Maximilian Schwarzmuller
+                                    </li>
+                                    <li className={styles.duty}><VscDebugBreakpointFunction
+                                        className={styles.dutyPoint}/> Andrew Mead
+                                    </li>
+                                    <li className={styles.duty}><VscDebugBreakpointFunction
+                                        className={styles.dutyPoint}/>
+                                        Jonas Schmedtmann
+                                    </li>
+                                    <li className={styles.duty}><VscDebugBreakpointFunction
+                                        className={styles.dutyPoint}/> Bartłomiej Borowczyk (Samuraj
+                                        Programowania)
+                                    </li>
+                                    <li className={styles.duty}><VscDebugBreakpointFunction
+                                        className={styles.dutyPoint}/>
+                                        Krzysztof Dąbrowski - Youcode
+                                    </li>
+                                    <li className={styles.duty}><VscDebugBreakpointFunction
+                                        className={styles.dutyPoint}/> Adam Romański (hello roman)
+                                    </li>
+                                </ul>
+                            </motion.div>
+                        </AnimatePresence>
                     )
             }
+
         </div>
     );
 };
