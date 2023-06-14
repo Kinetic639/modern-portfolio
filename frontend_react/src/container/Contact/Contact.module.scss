@@ -30,6 +30,8 @@
   width: 100%;
   border-radius: 25px;
   display: none;
+  background: var(--color-description);
+  transition: background-color .2s ease-in-out;
   @media screen and (min-height: 900px) {
     display: block;
   }

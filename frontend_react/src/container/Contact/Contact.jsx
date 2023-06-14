@@ -16,7 +16,7 @@ export const Contact = ({links}) => {
                 <h2>Michał Stępień</h2>
                 <p className={styles.subheader}>Junior web developer</p>
             </div>
-            <img className={styles.img} src={images.about01} alt="profile_bg"/>
+            <img className={styles.img} src={images.avatar02} alt="profile_bg"/>
             <div className={styles.infoContainer}>
                 <div className={`${styles.infoSection} ${styles.locationSection}`}>
                     <div>

@@ -35,8 +35,14 @@ import nb from "../assets/nb.png";
 import skype from "../assets/skype.png";
 import spotify from "../assets/spotify.png";
 import avatar from "../assets/avatar.png";
+import avatar02 from "../assets/avatar02.png";
+import avatar03 from "../assets/avatar03.png";
+import avatar04 from "../assets/avatar04.png";
 
 export default {
+    avatar02,
+    avatar03,
+    avatar04,
     avatar,
     email,
     mobile,
