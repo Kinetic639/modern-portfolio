@@ -57,8 +57,23 @@ export const Bootcamps = () => {
         transition: 'transform 0.3s ease',
     };
 
+    const child = {
+        visible: {
+            opacity: 1,
+            x: 0,
+
+        },
+        hidden: {
+            opacity: 0,
+            x: 20,
+        },
+    };
+
+
     return (
-        <div className={`${styles.container} ${showDesktopMenu ? styles.containerDesktop : ''}`}>
+        <motion.div
+            variants={child}
+            className={`${styles.container} ${showDesktopMenu ? styles.containerDesktop : ''}`}>
             <div className={`${styles.menu} ${showDesktopMenu ? styles.menuDesktop : ''}`}>
                 {bootcampsList.map((bootcamp, index) => (
                     <button
@@ -144,6 +159,6 @@ export const Bootcamps = () => {
                     )
             }
 
-        </div>
+        </motion.div>
     );
 };

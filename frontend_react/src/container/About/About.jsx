@@ -7,7 +7,7 @@ import {Bootcamps} from "../../components/Bootcamps/Bootcamps";
 
 import {images} from "../../constants"
 import {useTranslation} from "react-i18next";
-import {motion} from "framer-motion";
+import {motion, stagger} from "framer-motion";
 
 const textMotion = {
     rest: {
@@ -34,18 +34,63 @@ const textMotion = {
 
 };
 
-const descriptionContainer = {
-    whileInView: (i = 1) => ({
-        opacity: [0, 1],
-        transition: {staggerChildren: 0.2, delayChildren: .2 * i, duration: .5}
-    }),
-};
+// const container = {
+//     whileInView: (i = 1) => ({
+//         opacity: [0, 1],
+//         y: [10, 0],
+//         transition: {duration: .5, delay: .3}
+//     }),
+// };
+// const child = {
+//     animate: {
+//         transition: {delay: stagger(0.5)}
+//     }
+// }
+
+// const child = {
+//     whileInView: {
+//         opacity: [0, 1],
+//         y: [0, 20],
+//         transition: {duration: .3}
+//     },
+// };
+
+// const container = {
+//     whileInView: (i = 1) => ({
+//         opacity: [0, 1],
+//         y: [10, 0],
+//         transition: {staggerChildren: 1.2, delayChildren: .2 * i, duration: .5, delay: .3}
+//     }),
+// };
+//
+// const child = {
+//     whileInView: {
+//         opacity: [0, 1],
+//         y: [0, 20],
+//         transition: {duration: .3}
+//     },
+// };
+
+const container = {
+    hidden: {opacity: 0},
+    visible: {
+        opacity: 1,
+        transition: {
+            staggerChildren: 0.15,
+            delayChildren: .3
+        },
+    }
+}
 
 const child = {
-    whileInView: {
-        opacity: [0, 1],
-        x: [10, 0],
-        transition: {duration: .3}
+    visible: {
+        opacity: 1,
+        x: 0,
+
+    },
+    hidden: {
+        opacity: 0,
+        x: 20,
     },
 };
 
@@ -77,37 +122,48 @@ const About = () => {
     return (
         <div className={styles.container}>
             <div className={styles.introduction}>
-                <motion.img initial={{opacity: 0, x: -10}}
-                            whileInView={{opacity: 1, x: 0, transition: {delay: .2, duration: .3}}}
-                            className={styles.descriptionImage}
-                            src={images.avatar}
-                            alt=""/>
-                <motion.div
-                    variants={descriptionContainer}
-                    whileInView="whileInView" className={styles.introductionDescription}>
-                    <motion.p variants={child}>
+                <motion.img
+                    initial={{opacity: 0, x: -20}}
+                    whileInView={{opacity: 1, x: 0, transition: {duration: .5, delay: .3}}}
+                    className={styles.descriptionImage}
+                    src={images.avatar}
+                    alt=""/>
+                <motion.div variants={container}
+                            initial="hidden"
+                            whileInView="visible"
+                            className={styles.introductionDescription}>
+                    <motion.p variants={child}
+
+                    >
                         {t('sections.about.description.p1')}
                     </motion.p>
-                    <motion.p variants={child}>
+                    <motion.p variants={child}
+                    >
                         {t('sections.about.description.p2')}
                     </motion.p>
-                    <motion.p variants={child}>
+                    <motion.p variants={child}
+                    >
                         {t('sections.about.description.p3')}
                     </motion.p>
                 </motion.div>
-
             </div>
             <div id="about-experience" className={styles.aboutSection}>
-                <motion.a initial={{opacity: 0, y: -10}}
-                          whileInView={{opacity: 1, y: 0, transition: {delay: .3, duration: .3}}}
+                <motion.a variants={container}
+                          initial="hidden"
+                          whileInView={{opacity: 1, x: 0, transition: {duration: .5, delay: .3}}}
                           href="#about-experience"
-                          className={styles.header}>{t('sections.about.headers.experience')}</motion.a>
+                          className={styles.header}
+                >
+                    {t('sections.about.headers.experience')}
+                </motion.a>
                 <div>
                     {
                         experience.map(job => (
-                            <motion.div className={styles.experienceItem}>
-                                <motion.div initial={{opacity: 0, y: -10}}
-                                            whileInView={{opacity: 1, y: 0, transition: {delay: .5, duration: .3}}}>
+                            <motion.div
+                                variants={container}
+                                initial="hidden"
+                                whileInView="visible" className={styles.experienceItem}>
+                                <motion.div variants={child}>
                                     <p className={styles.itemTitle}>{t(`sections.about.experience.${job.name}.position`)}
                                         <a
                                             className={styles.itemLink}
@@ -117,14 +173,12 @@ const About = () => {
                                     </p>
                                     <p className={styles.itemSubtitle}>{t(`sections.about.experience.${job.name}.from`)} - {t(`sections.about.experience.${job.name}.to`)}</p>
                                 </motion.div>
-                                <ul className={styles.duties}>
+                                <motion.ul
+                                    variants={container}
+                                    initial="hidden"
+                                    whileInView="visible" className={styles.duties}>
                                     {Array.from({length: job.duties}).map((duty, index) => (
-                                        <motion.li initial={{opacity: 0, y: -10}}
-                                                   whileInView={{
-                                                       opacity: 1,
-                                                       y: 0,
-                                                       transition: {delay: .6 + (index / 10), duration: .3}
-                                                   }}
+                                        <motion.li variants={child}
                                                    className={styles.duty}>
                                             <VscDebugBreakpointFunction className={styles.dutyPoint}/>
                                             <motion.p initial="initial"
@@ -135,24 +189,18 @@ const About = () => {
                                             </motion.p>
                                         </motion.li>
                                     ))}
-                                </ul>
-                                <div>
-                                    <motion.p initial={{opacity: 0, y: -10}}
-                                              whileInView={{
-                                                  opacity: 1,
-                                                  y: 0,
-                                                  transition: {delay: .6, duration: .3}
-                                              }}>Few technologies I’ve been working with:
+                                </motion.ul>
+                                <motion.div variants={container}
+                                            initial="hidden"
+                                            whileInView="visible">
+                                    <motion.p variants={child}>Few technologies I’ve been working with:
                                     </motion.p>
-                                    <div className={styles.techstackListsContainer}>
-                                        <ul className={styles.techstackColumn}>
+                                    <motion.div variants={child} className={styles.techstackListsContainer}>
+                                        <motion.ul variants={container}
+                                                   initial="hidden"
+                                                   whileInView="visible" className={styles.techstackColumn}>
                                             {job.techStack.column01.map((item, index) => (
-                                                <motion.li initial={{opacity: 0, y: -10}}
-                                                           whileInView={{
-                                                               opacity: 1,
-                                                               y: 0,
-                                                               transition: {delay: .6 + (index / 10), duration: .3}
-                                                           }} className={styles.duty}>
+                                                <motion.li variants={child} className={styles.duty}>
                                                     <VscDebugBreakpointFunction
                                                         className={styles.dutyPoint}/>
                                                     <motion.p initial="initial"
@@ -164,15 +212,12 @@ const About = () => {
                                                 </motion.li>
                                             ))}
 
-                                        </ul>
-                                        <ul className={styles.techstackColumn}>
+                                        </motion.ul>
+                                        <motion.ul variants={container}
+                                                   initial="hidden"
+                                                   whileInView="visible" className={styles.techstackColumn}>
                                             {job.techStack.column02.map((item, index) => (
-                                                <motion.li initial={{opacity: 0, y: -10}}
-                                                           whileInView={{
-                                                               opacity: 1,
-                                                               y: 0,
-                                                               transition: {delay: .6 + (index / 10), duration: .3}
-                                                           }} className={styles.duty}>
+                                                <motion.li variants={child} className={styles.duty}>
                                                     <VscDebugBreakpointFunction
                                                         className={styles.dutyPoint}/>
                                                     <motion.p initial="initial"
@@ -183,23 +228,30 @@ const About = () => {
                                                     </motion.p>
                                                 </motion.li>
                                             ))}
-                                        </ul>
-                                    </div>
-                                </div>
+                                        </motion.ul>
+                                    </motion.div>
+                                </motion.div>
                             </motion.div>
                         ))
                     }
                 </div>
             </div>
-            <div id="about-courses" className={styles.aboutSection}>
-                <a href="#about-courses" className={styles.header}>{t('sections.about.headers.bootcamps')}</a>
-                <div className={styles.bootcampsContainer}>
-                    <p>
+            <motion.div variants={container}
+                        initial="hidden"
+                        whileInView="visible" id="about-courses"
+                        className={styles.aboutSection}
+            >
+                <motion.a variants={child} href="#about-courses"
+                          className={styles.header}>{t('sections.about.headers.bootcamps')}</motion.a>
+                <motion.div variants={container}
+                            initial="hidden"
+                            whileInView="visible" className={styles.bootcampsContainer}>
+                    <motion.p variants={child}>
                         {t('sections.about.bootcamps.description')}
-                    </p>
+                    </motion.p>
                     <Bootcamps/>
-                </div>
-            </div>
+                </motion.div>
+            </motion.div>
         </div>
     );
 };
