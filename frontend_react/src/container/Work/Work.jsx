@@ -37,6 +37,37 @@ const textMotion = {
 
 };
 
+const containerRight = {
+    visible: {
+        opacity: 1, x: 0, transition: {
+            staggerChildren: 0.15,
+            delayChildren: .5, delay: .2
+        }
+    },
+    hidden: {opacity: 0, x: 20}
+}
+
+const containerLeft = {
+    visible: {
+        opacity: 1, x: 0, transition: {
+            staggerChildren: 0.15,
+            delayChildren: .5,
+            delay: .2
+        }
+    },
+    hidden: {opacity: 0, x: -20}
+}
+const containerTop = {
+    visible: {
+        opacity: 1, y: 0, transition: {
+            staggerChildren: 0.15,
+            delayChildren: .5,
+            delay: .2
+        }
+    },
+    hidden: {opacity: 0, y: -20}
+}
+
 const Work = () => {
     const {t} = useTranslation('global')
 
@@ -121,7 +152,11 @@ const Work = () => {
         <section className={styles.work}>
             <div className={styles.cards}>
                 {projects.map((project, index) => (
-                    <div key={index} className={`${styles.card} ${index % 2 !== 0 ? styles.cardReversed : ''} `}>
+                    <motion.div initial="hidden"
+                                whileInView="visible"
+                                viewport={{once: true}} variants={index % 2 !== 0 ? containerLeft : containerRight}
+                                key={index}
+                                className={`${styles.card} ${index % 2 !== 0 ? styles.cardReversed : ''} `}>
 
                         <Swiper
                             id="swiper"
@@ -167,13 +202,15 @@ const Work = () => {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </motion.div>
                 ))}
             </div>
             <div className={styles.projectWrapper} id='project-folder'>
                 <a href='#project-folder' className={styles.foldersHeader}>
                     {t(`sections.work.headers.folders`)}</a>
-                <div className={styles.folderContainer}>
+                <motion.div initial="hidden"
+                            whileInView="visible"
+                            viewport={{once: true}} variants={containerTop} className={styles.folderContainer}>
                     {smallProjects.map((project, index) => (
                         <motion.div key={index} className={styles.projectFolder}
                                     variants={textMotion}
@@ -204,7 +241,7 @@ const Work = () => {
                             </ul>
                         </motion.div>
                     ))}
-                </div>
+                </motion.div>
             </div>
         </section>
     );

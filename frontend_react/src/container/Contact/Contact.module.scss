@@ -118,13 +118,13 @@
   font-size: 16px;
   text-transform: uppercase;
   background: var(--font-secondary);
-  transition: all .1s ease-in-out;
   color: var(--font-tooltip);
   display: flex;
   align-items: center;
   gap: 10px;
   justify-content: center;
   cursor: pointer;
+  transition: all .3s ease-in-out;
 
   &:hover {
     color: var(--font-secondary);
