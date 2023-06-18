@@ -27,7 +27,7 @@ const Header = () => {
     return (
         <motion.div
             variants={container}
-            whileInView="whileInView"
+            animate="whileInView"
             className={styles.container}>
             <motion.p variants={child} className={styles.intro}>{t('sections.home.header.p1')}</motion.p>
             <motion.h1 variants={child} className={styles.title}>Michał <span
