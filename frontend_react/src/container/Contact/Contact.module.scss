@@ -16,6 +16,7 @@
 }
 
 .header {
+  font-size: 2rem;
   display: flex;
   flex-direction: column;
   gap: 5px;
@@ -23,6 +24,7 @@
 }
 
 .subheader {
+  font-size: 1.6rem;
   color: var(--font-secondary);
 }
 
@@ -30,6 +32,8 @@
   width: 100%;
   border-radius: 25px;
   display: none;
+  background: var(--color-description);
+  transition: background-color .2s ease-in-out;
   @media screen and (min-height: 900px) {
     display: block;
   }
@@ -114,13 +118,13 @@
   font-size: 16px;
   text-transform: uppercase;
   background: var(--font-secondary);
-  transition: all .1s ease-in-out;
   color: var(--font-tooltip);
   display: flex;
   align-items: center;
   gap: 10px;
   justify-content: center;
   cursor: pointer;
+  transition: all .3s ease-in-out;
 
   &:hover {
     color: var(--font-secondary);
