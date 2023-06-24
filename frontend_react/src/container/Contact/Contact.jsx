@@ -91,8 +91,8 @@ export const Contact = (props) => {
                         variants={container} className={styles.infoContainer}>
                 <motion.div variants={child} className={`${styles.infoSection} ${styles.locationSection}`}>
                     <div>
-                        <p>Lokalizacja: Poznań</p>
-                        <p className={styles.textSecondary}>z możliwością relokacji</p>
+                        <p>{t(`sections.contact.location`)}: Poznań</p>
+                        <p className={styles.textSecondary}>{t(`sections.contact.relocation`)}</p>
                     </div>
                     <div className={styles.locationIcon}>
                         <RiRouteLine/>
@@ -116,19 +116,21 @@ export const Contact = (props) => {
                     <motion.div variants={buttonChild} className={styles.buttonResume}
                                 onMouseEnter={() => setShowResumeButtons(true)}
                                 onMouseLeave={() => setShowResumeButtons(false)}>
-                        {!showResumeButtons && <div className={styles.buttonDownload}>Resume</div>}
+                        {!showResumeButtons &&
+                            <div className={styles.buttonDownload}>{t(`sections.contact.resume`)}</div>}
                         {showResumeButtons && (
                             <>
-                                <button className={styles.buttonDownload}>polish</button>
-                                <button className={styles.buttonDownload}>english</button>
+                                <button className={styles.buttonDownload}>{t(`sections.contact.polish`)}</button>
+                                <button className={styles.buttonDownload}>{t(`sections.contact.english`)}</button>
                             </>
                         )}
                     </motion.div>
-                    <motion.button variants={buttonChild} className={styles.buttonHire}><BsEnvelope/> Ask me anything!
+                    <motion.button variants={buttonChild} className={styles.buttonHire}>
+                        <BsEnvelope/> {t(`sections.contact.ama`)}
                     </motion.button>
                 </motion.div>
             </motion.div>
-            <footer className={styles.footer}>© 2023 Michał Stępień. All Rights Reserved</footer>
+            <footer className={styles.footer}>{t(`sections.contact.copyrights`)}</footer>
         </motion.div>
     );
 };

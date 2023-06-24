@@ -82,6 +82,15 @@
         "randomValuePicker": "Prosta aplikacja wykonująca losowy wybór. Zrobiona podczas nauki React'a. więcej informacji na github.",
         "kantorYoucode": "Prosta aplikacja do konwertowania walut. Zrobiona w ramach bootcampu Youcode. więcej informacji na github."
       }
+    },
+    "contact": {
+      "location": "Lokalizacja",
+      "relocation": "z możliwością relokacji",
+      "resume": "Pobierz CV",
+      "polish": "j. polski",
+      "english": "j. angielski",
+      "ama": "Zadaj mi pytanie!",
+      "copyrights": "© 2023 Michał Stępień"
     }
   }
 }

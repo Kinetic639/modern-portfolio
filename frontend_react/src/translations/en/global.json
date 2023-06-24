@@ -82,6 +82,15 @@
         "randomValuePicker": "Simple application that picks random value. Made while studying basics of React with hooks. Visit github for more info.",
         "kantorYoucode": "Simple app for calculating exchange rates. One of 'Youcode - Front end od podstaw' bootcamp projects. Visit github for more info."
       }
+    },
+    "contact": {
+      "location": "Location",
+      "relocation": "Can relocate if necessary",
+      "resume": "download resume",
+      "polish": "polish",
+      "english": "english",
+      "ama": "Ask me anything!",
+      "copyrights": "© 2023 Michał Stępień. All Rights Reserved"
     }
   }
 }
