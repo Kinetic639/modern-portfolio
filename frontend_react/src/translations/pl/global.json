@@ -42,8 +42,8 @@
           "to": "Maj 2023",
           "duties": {
             "duty1": "Tworzenie warstwy front-endowej panelu administratora przy użyciu React.js oraz Recoil.js.",
-            "duty2": "Przetwarzanie otrzymanych projektów w formacie PSD na interaktywne widoki użytkownika wykorzystując Vue.js.",
-            "duty3": "Optymalizacja wydajności aplikacji oraz tworzenie testów jednostkowych dla React przy użyciu React Testing Library.",
+            "duty2": "Optymalizacja wydajności aplikacji oraz tworzenie testów jednostkowych dla React przy użyciu React Testing Library.",
+            "duty3": "Przetwarzanie otrzymanych projektów w formacie PSD na interaktywne widoki użytkownika wykorzystując Vue.js.",
             "duty4": "Utrzymywanie czystego i czytelnego kodu, stosowanie najlepszych praktyk programistycznych oraz przestrzeganie standardów projektowych.",
             "duty5": "Współpraca z zespołem i udział w spotkaniach z klientem, aby zrozumieć wymagania dotyczące interfejsu użytkownika i funkcjonalności aplikacji.",
             "duty6": "Dokumentowanie wprowadzonych zmian i udokumentowanie postępów w projekcie."
@@ -66,12 +66,15 @@
     },
     "work": {
       "headers": {
-        "folders": "Inne projekty warte pokazania"
+        "folders": "Inne projekty własne warte pokazania"
       },
+      "hint": "Kliknij w zdjęcie dwukrotnie aby przybliżyć / oddalić obraz",
       "projectsDescriptions": {
-        "trenujemyAdmin": "Inspirowana serwisem Netflix aplikacja z informacjami o filmach. Korzysta z 'The Movie Database' API. Więcej informacji znajdziesz na githubie projektu",
-        "trenujemyUser": "Inspirowana serwisem Netflix aplikacja z informacjami o filmach. Korzysta z 'The Movie Database' API. Więcej informacji znajdziesz na githubie projektu",
-        "megaKRecruitment": "Inspirowana serwisem Netflix aplikacja z informacjami o filmach. Korzysta z 'The Movie Database' API. Więcej informacji znajdziesz na githubie projektu",
+        "commercial": "Projekt komercyjny",
+        "personal": "Projekt prywatny",
+        "trenujemyAdmin": "Panel admina aplikacji trenujemy.pl. Umożliwia dodawanie posiłków, suplementów oraz ćwiczeń, a także tworzenie spersonalizowanych planów dietetycznych i treningowych dla użytkowników. Byłem odpowiedzialny za implementację interfejsu admina, zapewnienie responsywności oraz funkcjonalności.",
+        "trenujemyUser": "Moja praca polegała na tworzeniu z otrzymanych projektów atrakcyjnych i funkcjonalnych widoków, które zapewniały wygodne i satysfakcjonujące doświadczenie użytkownikom aplikacji trenujemy.pl. Widoki użytkowników obejmowały przeglądanie posiłków, suplementów i ćwiczeń, spersonalizowanych planów dietetycznych i treningowych oraz monitorowanie postępów.",
+        "megaKRecruitment": "Końcowy projekt grupowy bootcampu MegaK. Był okazją do nauki pracy zespołowej i zarządzania projektem. Celem było stworzenie serwisu rekrutacyjnego dla rekruterów, umożliwiającego oferowanie pracy absolwentom bootcampu MegaK. Odpowiedzialni byliśmy za projektowanie i implementację interfejsu użytkownika, systemu rejestracji i logowania oraz bazy danych.",
         "movieWatcher": "Inspirowana serwisem Netflix aplikacja z informacjami o filmach. Korzysta z 'The Movie Database' API. Więcej informacji znajdziesz na githubie projektu",
         "megaKOgłoszenia": "Aplikacja w formie serwisu ogłoszeniowego. Do wyświetlania mapy wykorzystano OpenStreetMap. Więcej informacji znajdziesz na githubie projektu",
         "prezentyMikołaja": "Aplikacja do tworzenia listy prezentów. Zrobiona w trakcie nauki technologi backendowych i zarządzania bazami danych.",

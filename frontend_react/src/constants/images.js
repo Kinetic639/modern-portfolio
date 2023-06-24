@@ -1,80 +1,47 @@
-import email from "../assets/email.png";
-import mobile from "../assets/mobile.png";
-import api from "../assets/api.png";
-import cpp from "../assets/cpp.png";
-import css from "../assets/css.png";
-import figma from "../assets/figma.png";
-import flutter from "../assets/flutter.png";
-import git from "../assets/git.png";
-import graphql from "../assets/graphql.png";
-import html from "../assets/html.png";
-import javascript from "../assets/javascript.png";
-import mu5 from "../assets/mu5.png";
-import node from "../assets/node.png";
-import python from "../assets/python.png";
-import react from "../assets/react.png";
-import redux from "../assets/redux.png";
-import sass from "../assets/sass.png";
-import typescript from "../assets/typescript.png";
-import vue from "../assets/vue.png";
+import about01 from "../assets/about01.webp";
+import about02 from "../assets/about02.webp";
+import about03 from "../assets/about03.webp";
+import about04 from "../assets/about04.webp";
 
-import about01 from "../assets/about01.png";
-import about02 from "../assets/about02.png";
-import about03 from "../assets/about03.png";
-import about04 from "../assets/about04.png";
+import avatar01 from "../assets/avatar01.webp";
+import avatar02 from "../assets/avatar02.webp";
 
-import profile from "../assets/profile.png";
-import circle from "../assets/circle.svg";
-import logo from "../assets/logo.png";
-
-import adidas from "../assets/adidas.png";
-import amazon from "../assets/amazon.png";
-import asus from "../assets/asus.png";
-import bolt from "../assets/bolt.png";
-import nb from "../assets/nb.png";
-import skype from "../assets/skype.png";
-import spotify from "../assets/spotify.png";
-import avatar from "../assets/avatar.png";
-import avatar02 from "../assets/avatar02.png";
-import avatar03 from "../assets/avatar03.png";
-import avatar04 from "../assets/avatar04.png";
+import admin01 from "../assets/admin01.webp";
+import admin02 from "../assets/admin02.webp";
+import admin03 from "../assets/admin03.webp";
+import admin04 from "../assets/admin04.webp";
+import client01 from "../assets/client01.webp";
+import client02 from "../assets/client02.webp";
+import client03 from "../assets/client03.webp";
+import project0301 from "../assets/project0301.webp";
+import project0302 from "../assets/project0302.webp";
+import project0303 from "../assets/project0303.webp";
+import project0304 from "../assets/project0304.webp";
+import project0401 from "../assets/project0401.webp";
+import project0402 from "../assets/project0402.webp";
+import project0403 from "../assets/project0403.webp";
+import project0404 from "../assets/project0404.webp";
 
 export default {
+    client01,
+    client02,
+    client03,
+    project0301,
+    project0302,
+    project0303,
+    project0304,
+    project0401,
+    project0402,
+    project0403,
+    project0404,
+    admin01,
+    admin02,
+    admin03,
+    admin04,
     avatar02,
-    avatar03,
-    avatar04,
-    avatar,
-    email,
-    mobile,
-    api,
-    cpp,
-    css,
-    figma,
-    flutter,
-    git,
-    graphql,
-    html,
-    javascript,
-    mu5,
-    node,
-    python,
-    react,
-    redux,
-    sass,
-    typescript,
-    vue,
+    avatar01,
     about01,
     about02,
     about03,
     about04,
-    profile,
-    circle,
-    logo,
-    adidas,
-    amazon,
-    asus,
-    bolt,
-    nb,
-    skype,
-    spotify,
 };

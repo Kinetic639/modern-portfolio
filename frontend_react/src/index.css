@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap');
 
 :root {
+    display: block;
+    box-sizing: border-box;
     --swiper-navigation-color: #1dc275 !important;
     --swiper-theme-color: #1dc275 !important;
     --font-family-primary: 'Inter', sans-serif;

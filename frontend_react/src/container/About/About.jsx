@@ -8,6 +8,13 @@ import {Bootcamps} from "../../components/Bootcamps/Bootcamps";
 import {images} from "../../constants"
 import {useTranslation} from "react-i18next";
 import {motion} from "framer-motion";
+import {Swiper, SwiperSlide} from "swiper/react";
+import {Navigation, Pagination, Zoom} from "swiper";
+
+import "swiper/css";
+import "swiper/css/zoom";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 const textMotion = {
     rest: {
@@ -93,19 +100,47 @@ const About = () => {
             ]
         }
     }]
-
+    const avatars = ['about01', 'about02', 'about03', 'about04',]
 
     return (
         <div className={styles.container}>
             <div className={styles.introduction}>
-                <motion.img
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{once: true}}
-                    variants={elementLeft}
-                    className={styles.descriptionImage}
-                    src={images.avatar}
-                    alt=""/>
+                <Swiper
+                    id="swiper"
+                    spaceBetween={20}
+                    pagination={{
+                        clickable: true,
+                    }}
+                    loop={true}
+                    zoom={{
+                        maxRatio: 2,
+                        minRatio: 1
+                    }}
+                    navigation={true}
+                    modules={[Zoom, Navigation, Pagination]}
+                    className={styles.swiper}
+                >
+                    {
+                        avatars.map((avatar, index) => (
+                            <SwiperSlide key={index}>
+
+                                <div className="swiper-zoom-container"><img
+                                    className={styles.image} src={images[avatar]}
+                                    alt=""/>
+                                </div>
+                            </SwiperSlide>
+                        ))
+                    }
+
+                </Swiper>
+                {/*<motion.img*/}
+                {/*    initial="hidden"*/}
+                {/*    whileInView="visible"*/}
+                {/*    viewport={{once: true}}*/}
+                {/*    variants={elementLeft}*/}
+                {/*    className={styles.descriptionImage}*/}
+                {/*    src={images.avatar01}*/}
+                {/*    alt=""/>*/}
                 <motion.div initial="hidden"
                             whileInView="visible"
                             viewport={{once: true}}
@@ -141,6 +176,7 @@ const About = () => {
                 {
                     experience.map(job => (
                         <motion.div
+                            key={job.name}
                             initial="hidden"
                             whileInView="visible"
                             viewport={{once: true}}
@@ -160,7 +196,7 @@ const About = () => {
                             <motion.ul
                                 variants={containerLeft} className={styles.duties}>
                                 {Array.from({length: job.duties}).map((duty, index) => (
-                                    <motion.li variants={child}
+                                    <motion.li key={index} variants={child}
                                                className={styles.duty}>
                                         <VscDebugBreakpointFunction className={styles.dutyPoint}/>
                                         <motion.p initial="initial"
@@ -178,7 +214,7 @@ const About = () => {
                                 <div className={styles.techstackListsContainer}>
                                     <ul className={styles.techstackColumn}>
                                         {job.techStack.column01.map((item, index) => (
-                                            <motion.li variants={child} className={styles.duty}>
+                                            <motion.li key={item} variants={child} className={styles.duty}>
                                                 <VscDebugBreakpointFunction
                                                     className={styles.dutyPoint}/>
                                                 <motion.p initial="initial"
@@ -193,7 +229,7 @@ const About = () => {
                                     </ul>
                                     <ul className={styles.techstackColumn}>
                                         {job.techStack.column02.map((item, index) => (
-                                            <motion.li variants={child} className={styles.duty}>
+                                            <motion.li key={item} variants={child} className={styles.duty}>
                                                 <VscDebugBreakpointFunction
                                                     className={styles.dutyPoint}/>
                                                 <motion.p initial="initial"
