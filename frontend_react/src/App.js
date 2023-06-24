@@ -112,7 +112,7 @@ const App = () => {
         };
 
         window.addEventListener("load", handleLoad);
-
+        window.data = window.data;
         return () => {
             window.removeEventListener("load", handleLoad);
         };
@@ -142,7 +142,7 @@ const App = () => {
                                 <VerticalNavbar links={links}/>
                                 <Settings/>
                                 <LanguageSelect/>
-                                <Contact/>
+                                <Contact type='aside'/>
                             </>
                         )}
                         <div className={styles.appWrapper}>
@@ -150,6 +150,7 @@ const App = () => {
                             <About/>
                             <Skills/>
                             <Work/>
+                            {!showAsideContact && (<Contact type='desktop'/>)}
                         </div>
                     </>
                 </AppContext.Provider>

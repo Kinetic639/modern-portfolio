@@ -5,11 +5,25 @@
 }
 
 .swiper {
-  width: 100%;
-  height: fit-content;
-  flex: 2;
   background-color: var(--color-description);
   transition: background-color .2s ease-in-out;
+}
+
+.swiperContainer {
+  flex: 2;
+  max-width: 600px;
+  transition: background-color .2s ease-in-out;
+}
+
+.swiperHint {
+  padding: 15px 10px 0;
+  color: var(--font-third);
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 07px;
+  transition: color .2s ease-in-out;
 }
 
 .cards {
@@ -43,7 +57,17 @@
       transition: color .2s ease-in-out;
     }
 
+    & .projectType {
+      color: var(--font-primary);
+      transition: color .2s ease-in-out;
+    }
+
     & .description {
+      color: var(--font-primary);
+      transition: color .2s ease-in-out;
+    }
+
+    .swiperHint {
       color: var(--font-primary);
       transition: color .2s ease-in-out;
     }
@@ -58,6 +82,10 @@
 }
 
 .cardReversed {
+  & .swiperHint {
+    justify-content: flex-end;
+  }
+
   @media screen and (min-width: 768px) {
     flex-direction: row-reverse;
   }
@@ -105,6 +133,13 @@
   font-size: 2rem;
   transition: color .2s ease-in-out;
   padding: 10px;
+}
+
+.projectType {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: var(--font-third);
+  transition: color .2s ease-in-out;
 }
 
 .description,

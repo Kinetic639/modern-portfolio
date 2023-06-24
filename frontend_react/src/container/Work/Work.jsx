@@ -1,5 +1,5 @@
-// Import Swiper styles
 import "swiper/css";
+import "swiper/css/zoom";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import styles from "./Work.module.scss"
@@ -8,7 +8,7 @@ import React from "react";
 import {AppWrap} from "../../wrapper";
 import {FiGithub} from "react-icons/fi"
 import {GoLinkExternal} from "react-icons/go"
-import {AiOutlineFolderOpen} from "react-icons/ai"
+import {AiOutlineFolderOpen, AiOutlineInfoCircle} from "react-icons/ai"
 
 import {images} from "../../constants";
 import {useTranslation} from "react-i18next";
@@ -17,7 +17,7 @@ import {motion} from "framer-motion";
 
 import {Swiper, SwiperSlide} from "swiper/react";
 
-import {Pagination, Navigation} from "swiper";
+import {Pagination, Navigation, Zoom} from "swiper";
 
 const textMotion = {
     rest: {
@@ -77,32 +77,36 @@ const Work = () => {
             translation: "trenujemyAdmin",
             link: null,
             live: null,
-            images: ['about01', 'about02'],
-            techStack: ['React', 'Recoil', 'React Test Library', 'Sass', 'Express']
+            images: ['admin01', 'admin04', 'admin02', 'admin03'],
+            techStack: ['React', 'Recoil', 'React Test Library', 'Sass', 'Express'],
+            type: "commercial"
         },
         {
             name: 'trenujemy.pl - aplikacja',
             translation: "trenujemyUser",
             link: "https://trenujemy.pl",
             live: null,
-            images: ['about01', 'about02', 'about03', 'about04'],
-            techStack: ['Vue', 'VueX', 'Sass', 'Express']
+            images: ['client01', 'client02', 'client03'],
+            techStack: ['Vue', 'VueX', 'Sass', 'Express'],
+            type: "commercial"
         },
         {
             name: 'MegaK Rekrutacja',
             translation: "megaKRecruitment",
             github: "https://bit.ly/43Ing9V",
             live: null,
-            images: ['about01', 'about02'],
-            techStack: ['Typescript', 'React', 'Redux', 'Bootstrap', 'NodeJs', 'NestJs', 'MariaDB']
+            images: ['project0403', 'project0401', 'project0404', 'project0402'],
+            techStack: ['Typescript', 'React', 'Redux', 'Bootstrap', 'NodeJs', 'NestJs', 'MariaDB'],
+            type: "commercial"
         },
         {
             name: 'Movie Watcher',
             translation: "movieWatcher",
             github: "https://bit.ly/3P9RueV",
             live: "https://bit.ly/3R7mcXX",
-            images: ['about01', 'about02'],
-            techStack: ['Typescript', 'React', 'Redux', 'Material UI', 'Sass', "Netlify"]
+            images: ['project0304', 'project0303', 'project0302', 'project0301'],
+            techStack: ['Typescript', 'React', 'Redux', 'Material UI', 'Sass', "Netlify"],
+            type: "personal"
         },
     ]
     const smallProjects = [
@@ -158,29 +162,50 @@ const Work = () => {
                                 key={index}
                                 className={`${styles.card} ${index % 2 !== 0 ? styles.cardReversed : ''} `}>
 
-                        <Swiper
-                            id="swiper"
-                            spaceBetween={20}
-                            pagination={{
-                                clickable: true,
-                            }}
-                            loop={true}
-                            navigation={true}
-                            modules={[Navigation, Pagination]}
-                            className={styles.swiper}
-                        >
-                            {
-                                project.images.map((image, index) => (
-                                    <SwiperSlide key={index}><img className={styles.image} src={images[image]}
-                                                                  alt=""/></SwiperSlide>
-                                ))
-                            }
+                        <div
+                            className={styles.swiperContainer}>
+                            <Swiper
+                                id="swiper"
+                                spaceBetween={20}
+                                pagination={{
+                                    clickable: true,
+                                }}
+                                loop={true}
+                                zoom={{
+                                    maxRatio: 2,
+                                    minRatio: 1
+                                }}
+                                navigation={true}
+                                modules={[Zoom, Navigation, Pagination]}
+                                className={styles.swiper}
+                            >
+                                {
+                                    project.images.map((image, index) => (
+                                        <SwiperSlide key={index}>
 
-                        </Swiper>
+                                            <div className="swiper-zoom-container"><img
+                                                className={styles.image} src={images[image]}
+                                                alt=""/>
+                                            </div>
+                                        </SwiperSlide>
+                                    ))
+                                }
+
+                            </Swiper>
+                            <p
+                                className={styles.swiperHint}><AiOutlineInfoCircle/> {t(`sections.work.hint`)}</p>
+                        </div>
 
                         <div
                             className={`${styles.descriptionContainer} ${index % 2 === 0 ? styles.descriptionContainerAlternative : ''} `}>
-                            <div className={styles.title}>{project.name}</div>
+                            <div className={styles.title}>
+                                <div className={styles.projectType}>
+                                    {t(`sections.work.projectsDescriptions.${project.type}`)}
+                                </div>
+                                <div>
+                                    {project.name}
+                                </div>
+                            </div>
                             <div className={styles.description}>
                                 {t(`sections.work.projectsDescriptions.${project.translation}`)}
                             </div>
