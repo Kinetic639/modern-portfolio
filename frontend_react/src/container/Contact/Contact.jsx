@@ -89,25 +89,27 @@ export const Contact = (props) => {
                         whileInView="visible"
                         viewport={{once: true}}
                         variants={container} className={styles.infoContainer}>
-                <motion.div variants={child} className={`${styles.infoSection} ${styles.locationSection}`}>
-                    <div>
-                        <p>{t(`sections.contact.location`)}: Poznań</p>
-                        <p className={styles.textSecondary}>{t(`sections.contact.relocation`)}</p>
-                    </div>
-                    <div className={styles.locationIcon}>
-                        <RiRouteLine/>
-                    </div>
-                </motion.div>
-                <motion.div variants={child} className={styles.infoSection}>
-                    <a className={styles.socialIcon} href="https://bit.ly/3P6vzpt" target='_blank' rel="noreferrer">
-                        <RiLinkedinFill/>
-                    </a>
-                    <a className={styles.socialIcon} href="https://bit.ly/3FpbAxS" target='_blank' rel="noreferrer">
-                        <RiGithubFill/>
-                    </a>
-                    <a className={styles.socialIcon} href="https://bit.ly/3wd0F6n" target='_blank' rel="noreferrer">
-                        <RiFacebookFill/>
-                    </a>
+                <motion.div className={`${styles.sectionsContainer}`}>
+                    <motion.div variants={child} className={`${styles.infoSection} ${styles.locationSection}`}>
+                        <div>
+                            <p>{t(`sections.contact.location`)}: Poznań</p>
+                            <p className={styles.textSecondary}>{t(`sections.contact.relocation`)}</p>
+                        </div>
+                        <div className={styles.locationIcon}>
+                            <RiRouteLine/>
+                        </div>
+                    </motion.div>
+                    <motion.div variants={child} className={styles.infoSection}>
+                        <a className={styles.socialIcon} href="https://bit.ly/3P6vzpt" target='_blank' rel="noreferrer">
+                            <RiLinkedinFill/>
+                        </a>
+                        <a className={styles.socialIcon} href="https://bit.ly/3FpbAxS" target='_blank' rel="noreferrer">
+                            <RiGithubFill/>
+                        </a>
+                        <a className={styles.socialIcon} href="https://bit.ly/3wd0F6n" target='_blank' rel="noreferrer">
+                            <RiFacebookFill/>
+                        </a>
+                    </motion.div>
                 </motion.div>
                 <motion.div initial="hidden"
                             whileInView="visible"
