@@ -100,7 +100,7 @@ const About = () => {
             ]
         }
     }]
-    const avatars = ['about01', 'about02', 'about03', 'about04',]
+    const avatars = ['about02', 'about01', 'about03', 'about04',]
 
     return (
         <div className={styles.container}>
@@ -131,16 +131,7 @@ const About = () => {
                             </SwiperSlide>
                         ))
                     }
-
                 </Swiper>
-                {/*<motion.img*/}
-                {/*    initial="hidden"*/}
-                {/*    whileInView="visible"*/}
-                {/*    viewport={{once: true}}*/}
-                {/*    variants={elementLeft}*/}
-                {/*    className={styles.descriptionImage}*/}
-                {/*    src={images.avatar01}*/}
-                {/*    alt=""/>*/}
                 <motion.div initial="hidden"
                             whileInView="visible"
                             viewport={{once: true}}
