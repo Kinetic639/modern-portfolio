@@ -5,6 +5,10 @@ import {RiFacebookFill, RiGithubFill, RiLinkedinFill, RiRouteLine} from 'react-i
 
 import {images} from "../../constants";
 import styles from "./Contact.module.scss";
+import { saveAs } from 'file-saver';
+
+import cvPl from '../../assets/michal-stepien_pl.pdf';
+import cvEn from '../../assets/michal-stepien_en.pdf';
 
 import {motion,} from "framer-motion";
 
@@ -57,10 +61,16 @@ const image = {
     },
 };
 
+
+
 export const Contact = (props) => {
     const {type} = props
     const {t} = useTranslation('global')
     const [showResumeButtons, setShowResumeButtons] = useState(false)
+
+    const handleDownload = (language) => {
+        saveAs(language === 'pl' ? cvPl : cvEn, `michal_stepien_${language}.pdf`);
+    };
 
     return (
         <motion.div id='contact' className={`${styles.contact} ${type === 'desktop' ? styles.contactDesktop : ''}`}>
@@ -122,8 +132,8 @@ export const Contact = (props) => {
                             <div className={styles.buttonDownload}>{t(`sections.contact.resume`)}</div>}
                         {showResumeButtons && (
                             <>
-                                <button className={styles.buttonDownload}>{t(`sections.contact.polish`)}</button>
-                                <button className={styles.buttonDownload}>{t(`sections.contact.english`)}</button>
+                                <button onClick={()=>{ handleDownload('pl')}} className={styles.buttonDownload}>{t(`sections.contact.polish`)}</button>
+                                <button onClick={()=>{ handleDownload('en')}} className={styles.buttonDownload}>{t(`sections.contact.english`)}</button>
                             </>
                         )}
                     </motion.div>
