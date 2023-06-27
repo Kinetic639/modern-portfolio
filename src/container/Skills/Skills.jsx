@@ -40,7 +40,7 @@ const Skills = () => {
     const skills = [
         {
             name: 'frontend',
-            stack: ['HTML5', 'Javascript / Typescript', 'SASS / SCSS', "React + Recoil / Redux", 'Vue', 'Material UI'],
+            stack: ['HTML5', 'Javascript / Typescript', 'SASS / SCSS', "React + Recoil / Redux", 'Vue', 'Material UI', t(`sections.skills.skill.wordpress`), t(`sections.skills.skill.php`)],
             icon: BsDisplay
         },
         {
