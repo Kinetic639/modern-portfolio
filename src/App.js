@@ -1,5 +1,4 @@
 import React, {createContext, useEffect, useMemo, useState} from "react";
-import {GridLoader} from "react-spinners";
 import Header from "./container/Header/Header";
 import About from "./container/About/About";
 import Skills from "./container/Skills/Skills";
@@ -19,7 +18,7 @@ import styles from "./App.module.scss";
 export const AppContext = createContext(null);
 
 const App = () => {
-    const [loading, setLoading] = useState(true);
+    const [loading, setLoading] = useState(false);
     const [theme, setTheme] = useState("dark");
     const [activeSection, setActiveSection] = useState("home");
     const [selectedColor, setSelectedColor] = useState("green");
@@ -106,23 +105,7 @@ const App = () => {
         setActiveSection(section);
     };
 
-    useEffect(() => {
-        const handleLoad = () => {
-            setLoading(false);
-        };
-
-        window.addEventListener("load", handleLoad);
-   
-        return () => {
-            window.removeEventListener("load", handleLoad);
-        };
-    }, []);
-
     return (
-        <>
-            {loading ? (
-                <GridLoader className={styles.spinner} color="#27e98b"/>
-            ) : (
                 <AppContext.Provider
                     value={{
                         theme,
@@ -154,8 +137,6 @@ const App = () => {
                         </div>
                     </>
                 </AppContext.Provider>
-            )}
-        </>
     );
 };
 

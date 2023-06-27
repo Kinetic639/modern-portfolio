@@ -16,6 +16,7 @@
     "react-i18next": "^12.2.2",
     "react-icons": "^4.8.0",
     "react-image-gallery": "^1.2.11",
+    "react-loader-spinner": "^5.3.4",
     "react-scripts": "5.0.1",
     "react-tooltip": "^5.11.2",
     "swiper": "^9.3.2",
@@ -48,7 +49,6 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^5.0.0",
-    "react-spinners": "^0.13.8"
+    "gh-pages": "^5.0.0"
   }
 }

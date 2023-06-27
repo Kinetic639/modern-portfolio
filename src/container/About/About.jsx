@@ -60,7 +60,8 @@ const containerLeft = {
     visible: {
         opacity: 1, x: 0, transition: {
             staggerChildren: 0.15,
-            delayChildren: .3
+            delayChildren: .3,
+            delay: .3
         }
     },
     hidden: {opacity: 0, x: -20}
@@ -101,7 +102,7 @@ const About = () => {
         },
 
     }]
-    const avatars = ['about02', 'about01', 'about03', 'about04',]
+    const avatars = ['about01','about02',  'about03', 'about04',]
 
     const prevPositions =  [
             'supervisorsAssistant',
@@ -114,33 +115,38 @@ const About = () => {
     return (
         <div className={styles.container}>
             <div className={styles.introduction}>
-                <Swiper
-                    id="swiper"
-                    spaceBetween={20}
-                    pagination={{
-                        clickable: true,
-                    }}
-                    loop={true}
-                    zoom={{
-                        maxRatio: 2,
-                        minRatio: 1
-                    }}
-                    navigation={true}
-                    modules={[Zoom, Navigation, Pagination]}
-                    className={styles.swiper}
-                >
-                    {
-                        avatars.map((avatar, index) => (
-                            <SwiperSlide key={index}>
+<motion.div initial="hidden"
+            whileInView="visible"
+            viewport={{once: true}}
+            variants={containerLeft}>
+    <Swiper
+        id="swiper"
+        spaceBetween={20}
+        pagination={{
+            clickable: true,
+        }}
+        loop={true}
+        zoom={{
+            maxRatio: 2,
+            minRatio: 1
+        }}
+        navigation={true}
+        modules={[Zoom, Navigation, Pagination]}
+        className={styles.swiper}
+    >
+        {
+            avatars.map((avatar, index) => (
+                <SwiperSlide key={index}>
 
-                                <div className="swiper-zoom-container"><img
-                                    className={styles.image} src={images[avatar]}
-                                    alt=""/>
-                                </div>
-                            </SwiperSlide>
-                        ))
-                    }
-                </Swiper>
+                    <div className="swiper-zoom-container"><img
+                        className={styles.image} src={images[avatar]}
+                        alt=""/>
+                    </div>
+                </SwiperSlide>
+            ))
+        }
+    </Swiper>
+</motion.div>
                 <motion.div initial="hidden"
                             whileInView="visible"
                             viewport={{once: true}}
