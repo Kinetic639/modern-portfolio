@@ -11,7 +11,10 @@
 
 .swiper {
   width: 100%;
-  max-width: 400px;
+  max-width: 320px;
+  @media screen and (min-width: 768px) {
+    max-width: 400px;
+  }
 }
 
 .header {

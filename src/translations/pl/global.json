@@ -34,7 +34,8 @@
       "headers": {
         "experience": "Doświadczenie",
         "bootcamps": "Bootcampy i kursy",
-        "positions": "Wcześniejsze stanowiska"
+        "positions": "Wcześniejsze stanowiska",
+        "usedTech": "Technologie, z których korzystałem:"
       },
       "experience": {
         "trenujemy": {
