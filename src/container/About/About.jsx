@@ -98,9 +98,18 @@ const About = () => {
                 "Express",
                 "GraphQL",
             ]
-        }
+        },
+
     }]
     const avatars = ['about02', 'about01', 'about03', 'about04',]
+
+    const prevPositions =  [
+            'supervisorsAssistant',
+            'Salesman',
+            'Cashier',
+            'Buffer',
+            'ShiftCoordinator',
+            ]
 
     return (
         <div className={styles.container}>
@@ -262,25 +271,28 @@ const About = () => {
                         className={styles.aboutSection}
             >
                 <motion.a variants={child} href="#about-postions"
-                          className={styles.header}>{t('sections.about.headers.bootcamps')}</motion.a>
+                          className={styles.header}>{t('sections.about.headers.positions')}</motion.a>
 
                 <motion.p variants={child}>
-                    {t('sections.about.bootcamps.description')}
+                    {t('sections.about.experience.previousPositionsDescription')}
                 </motion.p>
-                <ul className={styles.techstackColumn}>
-                    {avatars.map((item) => (
-                        <motion.li key={item} variants={child} className={styles.duty}>
-                            <VscDebugBreakpointFunction
-                                className={styles.dutyPoint}/>
-                            <motion.p initial="initial"
-                                      whileHover="hover"
-                                      animate="rest"
-                                      variants={textMotion} className={styles.dutyDescription}>
-                                {item}
-                            </motion.p>
-                        </motion.li>
-                    ))}
-                </ul>
+                <div className={styles.techstackListsContainer}>
+                    <ul className={styles.techstackColumn}>
+                        {prevPositions.map((item) => (
+                            <motion.li key={item} variants={child} className={styles.duty}>
+                                <VscDebugBreakpointFunction
+                                    className={styles.dutyPoint}/>
+                                <motion.p initial="initial"
+                                          whileHover="hover"
+                                          animate="rest"
+                                          variants={textMotion} className={styles.dutyDescription}>
+                                    {t(`sections.about.experience.prevPositions.${item}`)}
+                                </motion.p>
+                            </motion.li>
+                        ))}
+
+                    </ul>
+                </div>
             </motion.div>
         </div>
     );
