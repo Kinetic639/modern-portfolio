@@ -60,7 +60,7 @@ const Skills = () => {
         },
         {
             name: 'other',
-            stack: [t(`sections.skills.language`), 'B cat. driving license'],
+            stack: [t(`sections.skills.language`), t(`sections.skills.drivingLicense`)],
             icon: VscTools
         },
     ]
