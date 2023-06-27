@@ -139,7 +139,7 @@ const About = () => {
                 <SwiperSlide key={index}>
 
                     <div className="swiper-zoom-container"><img
-                        className={styles.image} src={images[avatar]}
+                        src={images[avatar]}
                         alt=""/>
                     </div>
                 </SwiperSlide>
