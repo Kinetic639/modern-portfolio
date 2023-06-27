@@ -11,7 +11,19 @@
 
 .swiper {
   width: 100%;
-  max-width: 400px
+  max-width: 400px;
+  background-color: var(--color-description);
+  transition: background-color .2s ease-in-out;
+  &:hover {
+    & .image {
+      opacity: 1;
+      transition: opacity .2s ease-in-out;
+    }
+  }
+}
+.image {
+  opacity: .7;
+  transition: opacity .2s ease-in-out;
 }
 
 .header {
