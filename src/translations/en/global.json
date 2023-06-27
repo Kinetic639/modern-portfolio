@@ -77,6 +77,10 @@
     "skills": {
       "language": "I have gained a lot of experience in communicating in the English language during my 6-year stay in Northern Ireland. I also attended an in-person language course where I practiced with a native speaker. My current level of communication, both in speaking and writing, is C1.",
       "drivingLicense": "driving license cat. B",
+      "skill": {
+        "wordpress": "Podstawy Wordpress",
+        "php": "Podstawy php"
+      },
       "sections": {
         "frontend": "Frontend",
         "backend": "Backend",
