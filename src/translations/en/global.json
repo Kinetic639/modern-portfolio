@@ -1,0 +1,107 @@
+{
+  "tooltips": {
+    "settings": {
+      "settings": "settings",
+      "language": "select language",
+      "theme": "select theme",
+      "light": "light",
+      "dark": "dark"
+    }
+  },
+  "nav": {
+    "sections": {
+      "home": "Hello",
+      "about": "About Me",
+      "skills": "Skills",
+      "work": "Work",
+      "contact": "Contact"
+    }
+  },
+  "sections": {
+    "home": {
+      "header": {
+        "p1": "Hi, my name is",
+        "p2": "I am a junior web developer with nearly a year of commercial experience.",
+        "p3": "Feel free to explore my ",
+        "p4": " for a comprehensive understanding of my "
+      },
+      "links": {
+        "skills": "skills",
+        "projects": "projects"
+      }
+    },
+    "about": {
+      "headers": {
+        "experience": "Where I’ve Worked",
+        "bootcamps": "Bootcamps and Courses"
+      },
+      "experience": {
+        "trenujemy": {
+          "position": "Junior System Architect",
+          "from": "September 2022",
+          "to": "May 2023",
+          "duties": {
+            "duty1": "Creating the front-end layer of the admin panel using React.js and Recoil.js.",
+            "duty2": "Optimizing application performance and creating unit tests for React using React Testing Library.",
+            "duty3": "Converting received PSD projects into interactive user views using Vue.js.",
+            "duty4": "Maintaining clean and readable code, adhering to best programming practices and design standards.",
+            "duty5": "Collaborating with the team and participating in client meetings to understand user interface requirements and application functionality.",
+            "duty6": "Documenting implemented changes and documenting project progress."
+          }
+        }
+      },
+      "description": {
+        "p1": "I began my programming journey by writing scripts for Google Spreadsheets using Google Apps Script, which is based on the JavaScript framework. Programming has became my true passion. The decision to become a programmer was a natural step in my development path.",
+        "p2": "I already have nearly a year of commercial experience as a programmer, which has only reinforced my belief that programming is my lifelong passion.",
+        "p3": "Currently, my current project has come to an end, which is why I am seeking new employment. I am determined to find a new, inspiring work environment and continue to grow as a programmer, dedicating my full commitment and passion to projects."
+      },
+      "bootcamps": {
+        "description": "Bootcamps I have completed to enhance my programming skills:",
+        "megak": "12-months long course aimed mainly at mastering the backend technologies.",
+        "coderscamp": "6-months long, free of charge web development course organised by CodersCrew.",
+        "youcode": "Comprehensive and well organised course covering all basics of front end development.",
+        "codeme": "Stationary 3-month long course in CODE:ME school in their Poznań branch covering basics of javascript and React framework.",
+        "others": "I have also finished many online courses by great authors, such as:"
+      }
+    },
+    "skills": {
+      "language": "I have gained a lot of experience in communicating in the English language during my 6-year stay in Northern Ireland. I also attended an in-person language course where I practiced with a native speaker. My current level of communication, both in speaking and writing, is C1.",
+      "drivingLicense": "driving license cat. B",
+      "sections": {
+        "frontend": "Frontend",
+        "backend": "Backend",
+        "design": "Design",
+        "devtools": "Tools",
+        "other": "Others"
+      }
+    },
+    "work": {
+      "headers": {
+        "folders": "Other personal projects worth mentioning"
+      },
+      "hint": "Double click image to zoom in and out",
+      "projectsDescriptions": {
+        "commercial": "Commercial Project",
+        "personal": "Personal Project",
+        "trenujemyAdmin": "Admin panel of the trenujemy.pl application. It allows you to add meals, supplements and exercises, as well as create personalized diet and training plans for users. I was responsible for implementing the admin interface, ensuring responsiveness and functionality.",
+        "trenujemyUser": "My job was to create from the received designs an attractive and functional views, which provided a comfortable and satisfying experience to the users of the trenujemy.pl app. User views included viewing meals, supplements and exercise, personalized diet and training plans, and monitoring progress.",
+        "megaKRecruitment": "The final group project of the MegaK bootcamp. It was an opportunity to learn teamwork and project management. The goal was to create a recruitment website for recruiters, enabling job offers to graduates of the MegaK bootcamp. We were responsible for the design and implementation of the user interface, the registration and login system and the database.",
+        "movieWatcher": "A Netflix-inspired movie information app. Uses the 'The Movie Database' API. Find out more on project's github",
+        "megaKOgłoszenia": "Application in the form of an advertisement service. OpenStreetMap was used to display the map. Find out more on project's github",
+        "prezentyMikołaja": "Santa's gift list app. Made while learning backend technologies and database management.",
+        "cookieMaker": "Application made as part of the megaK bootcamp. Made while studying Server Side Rendering. I used Handlebars for rendering",
+        "randomValuePicker": "Simple application that picks random value. Made while studying basics of React with hooks. Visit github for more info.",
+        "kantorYoucode": "Simple app for calculating exchange rates. One of 'Youcode - Front end od podstaw' bootcamp projects. Visit github for more info."
+      }
+    },
+    "contact": {
+      "location": "Location",
+      "relocation": "Can relocate if necessary",
+      "resume": "download resume",
+      "polish": "polish",
+      "english": "english",
+      "ama": "Ask me anything!",
+      "copyrights": "© 2023 Michał Stępień. All Rights Reserved"
+    }
+  }
+}
