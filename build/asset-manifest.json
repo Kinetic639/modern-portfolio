@@ -1,0 +1,36 @@
+{
+  "files": {
+    "main.css": "/modern-portfolio/static/css/main.32649c12.css",
+    "main.js": "/modern-portfolio/static/js/main.a77dbdf6.js",
+    "static/media/about02.webp": "/modern-portfolio/static/media/about02.9863da8e22a063abea60.webp",
+    "static/media/about03.webp": "/modern-portfolio/static/media/about03.c644467f689ce7bee60e.webp",
+    "static/media/about01.webp": "/modern-portfolio/static/media/about01.9b9872d05fb9b307d86e.webp",
+    "static/media/project0304.webp": "/modern-portfolio/static/media/project0304.c299288c116d6b54dcdb.webp",
+    "static/media/project0302.webp": "/modern-portfolio/static/media/project0302.69f95d4546c5cd3543e7.webp",
+    "static/media/project0303.webp": "/modern-portfolio/static/media/project0303.f99e0c7ae251360f79d6.webp",
+    "static/media/project0301.webp": "/modern-portfolio/static/media/project0301.9e2fc0ede290b2c06a6d.webp",
+    "static/media/client01.webp": "/modern-portfolio/static/media/client01.099a8c57e024f333656a.webp",
+    "static/media/client03.webp": "/modern-portfolio/static/media/client03.e3b145b29a5e76ef14ce.webp",
+    "static/media/admin01.webp": "/modern-portfolio/static/media/admin01.004d3b0d4046b2fe7d7b.webp",
+    "static/media/admin04.webp": "/modern-portfolio/static/media/admin04.74ce6191a5f225d95dae.webp",
+    "static/media/admin02.webp": "/modern-portfolio/static/media/admin02.c49e0edd645acf229909.webp",
+    "static/media/client02.webp": "/modern-portfolio/static/media/client02.c64bc12571982d878aa3.webp",
+    "static/media/admin03.webp": "/modern-portfolio/static/media/admin03.20567cca3d074c1d22e9.webp",
+    "static/media/project0401.webp": "/modern-portfolio/static/media/project0401.26f6f8547a1d0089fd80.webp",
+    "static/media/about04.webp": "/modern-portfolio/static/media/about04.6d47a180f5e40c6fc7d0.webp",
+    "static/media/project0402.webp": "/modern-portfolio/static/media/project0402.62422be09ca716f20ed8.webp",
+    "static/media/avatar01.webp": "/modern-portfolio/static/media/avatar01.962c9062050ea6e4bf61.webp",
+    "static/media/avatar02.webp": "/modern-portfolio/static/media/avatar02.eaf5f4cf9d3580d0756f.webp",
+    "static/media/project0403.webp": "/modern-portfolio/static/media/project0403.73a84deb83e2ffddead7.webp",
+    "static/media/project0404.webp": "/modern-portfolio/static/media/project0404.6dd5cee403e6e8dc4793.webp",
+    "static/media/flag-en.webp": "/modern-portfolio/static/media/flag-en.528d891cf6c4fd7ec347.webp",
+    "index.html": "/modern-portfolio/index.html",
+    "static/media/flag-pl.webp": "/modern-portfolio/static/media/flag-pl.c163cbb07d2507630024.webp",
+    "main.32649c12.css.map": "/modern-portfolio/static/css/main.32649c12.css.map",
+    "main.a77dbdf6.js.map": "/modern-portfolio/static/js/main.a77dbdf6.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.32649c12.css",
+    "static/js/main.a77dbdf6.js"
+  ]
+}
