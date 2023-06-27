@@ -33,7 +33,8 @@
     "about": {
       "headers": {
         "experience": "Doświadczenie",
-        "bootcamps": "Bootcampy i kursy"
+        "bootcamps": "Bootcampy i kursy",
+        "positions": "Wcześniejsze stanowiska"
       },
       "experience": {
         "trenujemy": {
@@ -48,6 +49,14 @@
             "duty5": "Współpraca z zespołem i udział w spotkaniach z klientem, aby zrozumieć wymagania dotyczące interfejsu użytkownika i funkcjonalności aplikacji.",
             "duty6": "Dokumentowanie wprowadzonych zmian i udokumentowanie postępów w projekcie."
           }
+        },
+        "previousPositionsDescription": "Zanim zająłem się programowaniem pracowałem na stanowiskach takich jak:",
+        "prevPositions": {
+          "supervisorsAssistant": "Asystent kierownika sklepu",
+          "Salesman": "Sprzedawca",
+          "Cashier": "Kasjer walutowy na lotnisku",
+          "Buffer": "Buforowy",
+          "ShiftCoordinator": "Koordynator zmiany"
         }
       },
       "description": {

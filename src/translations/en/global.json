@@ -33,7 +33,8 @@
     "about": {
       "headers": {
         "experience": "Where I’ve Worked",
-        "bootcamps": "Bootcamps and Courses"
+        "bootcamps": "Bootcamps and Courses",
+        "positions": "Previous positions"
       },
       "experience": {
         "trenujemy": {
@@ -48,7 +49,16 @@
             "duty5": "Collaborating with the team and participating in client meetings to understand user interface requirements and application functionality.",
             "duty6": "Documenting implemented changes and documenting project progress."
           }
+        },
+        "previousPositionsDescription": "Before I started programming, I worked in positions such as:",
+        "prevPositions": {
+          "supervisorsAssistant": "Supervisors assistant",
+          "Salesman": "Salesman",
+          "Cashier": "Airport cashier",
+          "Buffer": "Buffer",
+          "ShiftCoordinator": "Shift coordinator"
         }
+
       },
       "description": {
         "p1": "I began my programming journey by writing scripts for Google Spreadsheets using Google Apps Script, which is based on the JavaScript framework. Programming has became my true passion. The decision to become a programmer was a natural step in my development path.",
