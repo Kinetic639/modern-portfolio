@@ -49,7 +49,7 @@ export const Header = () => {
                     initial="hidden"
                     animate="visible"
                     className={`${styles.headerLink} ${showAsideContact ? styles.headerLinkDesktop : ""}`}
-                    href="mailto:example@example.com">
+                    href="mailto:michal.stepien36@gmail.com">
                     {letters.map((letter, index) => (
                         <motion.span variants={child} key={index}>
                             {letter === " " ? "\u00A0" : letter}
