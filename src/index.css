@@ -3,8 +3,8 @@
 :root {
     display: block;
     box-sizing: border-box;
-    --swiper-navigation-color: #1dc275 !important;
-    --swiper-theme-color: #1dc275 !important;
+    --swiper-navigation-color: white !important;
+    --swiper-theme-color: white !important;
     --font-family-primary: 'Inter', sans-serif;
 
     --font-size-base: 1.6rem;

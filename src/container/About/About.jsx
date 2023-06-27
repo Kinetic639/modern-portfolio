@@ -215,7 +215,7 @@ const About = () => {
                                 ))}
                             </motion.ul>
                             <div>
-                                <motion.p variants={child}>Few technologies I’ve been working with:
+                                <motion.p variants={child}> {t(`sections.about.headers.usedTech`)}
                                 </motion.p>
                                 <div className={styles.techstackListsContainer}>
                                     <ul className={styles.techstackColumn}>

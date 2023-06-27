@@ -34,7 +34,8 @@
       "headers": {
         "experience": "Where I’ve Worked",
         "bootcamps": "Bootcamps and Courses",
-        "positions": "Previous positions"
+        "positions": "Previous positions",
+        "usedTech": "Few technologies I’ve been working with:"
       },
       "experience": {
         "trenujemy": {
