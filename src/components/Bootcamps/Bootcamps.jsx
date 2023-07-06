@@ -83,7 +83,8 @@ export const Bootcamps = () => {
                 ))}
                 <button
                     className={`${styles['menuButton']} ${showDesktopMenu ? styles.menuButtonDesktop : ''} ${activeLink === bootcampsList.length ? styles['menuButtonActive'] : ''}`}
-                    onClick={() => handleLinkClick(bootcampsList.length)}>Others
+                    onClick={() => handleLinkClick(bootcampsList.length)}>
+                    {t(`sections.skills.sections.other`)}
                 </button>
                 <div className={`${styles.indicator} ${showDesktopMenu ? styles.indicatorDesktop : ''}`}
                      style={showDesktopMenu ? indicatorVertical : indicatorHorizontal}></div>

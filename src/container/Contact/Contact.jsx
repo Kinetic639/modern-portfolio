@@ -137,9 +137,13 @@ export const Contact = (props) => {
                             </>
                         )}
                     </motion.div>
-                    <motion.button variants={buttonChild} className={styles.buttonHire}>
+                    <motion.a variants={buttonChild}
+                        initial="hidden"
+                        animate="visible"
+                        className={styles.buttonHire}
+                        href="mailto:michal.stepien36@gmail.com">
                         <BsEnvelope/> {t(`sections.contact.ama`)}
-                    </motion.button>
+                    </motion.a>
                 </motion.div>
             </motion.div>
             <footer className={styles.footer}>{t(`sections.contact.copyrights`)}</footer>
