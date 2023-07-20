@@ -94,6 +94,17 @@
         "folders": "Inne projekty własne warte pokazania"
       },
       "hint": "Kliknij w zdjęcie dwukrotnie aby przybliżyć / oddalić obraz",
+      "projectsTitles": {
+        "trenujemyAdmin": "Trenujemy.pl - Panel Admina",
+        "trenujemyUser": "Trenujemy.pl - Panele Użytkowników",
+        "megaKRecruitment": "MegaK Rekrutacja",
+        "movieWatcher": "Movie Watcher",
+        "megaKOgłoszenia": "MegaK Ogłoszenia",
+        "prezentyMikołaja": "Prezenty Mikołaja",
+        "cookieMaker": "Cookie Maker",
+        "randomValuePicker": "Random Value Picker",
+        "kantorYoucode": "Youcode Kantor"
+      },
       "projectsDescriptions": {
         "commercial": "Projekt komercyjny",
         "personal": "Projekt prywatny",
@@ -101,7 +112,7 @@
         "trenujemyUser": "Moja praca polegała na tworzeniu z otrzymanych projektów atrakcyjnych i funkcjonalnych widoków, które zapewniały wygodne i satysfakcjonujące doświadczenie użytkownikom aplikacji trenujemy.pl. Widoki użytkowników obejmowały przeglądanie posiłków, suplementów i ćwiczeń, spersonalizowanych planów dietetycznych i treningowych oraz monitorowanie postępów.",
         "megaKRecruitment": "Końcowy projekt grupowy bootcampu MegaK. Był okazją do nauki pracy zespołowej i zarządzania projektem. Celem było stworzenie serwisu rekrutacyjnego dla rekruterów, umożliwiającego oferowanie pracy absolwentom bootcampu MegaK. Odpowiedzialni byliśmy za projektowanie i implementację interfejsu użytkownika, systemu rejestracji i logowania oraz bazy danych.",
         "movieWatcher": "Inspirowana serwisem Netflix aplikacja z informacjami o filmach. Korzysta z 'The Movie Database' API. Więcej informacji znajdziesz na githubie projektu",
-        "megaKOgłoszenia": "Aplikacja w formie serwisu ogłoszeniowego. Do wyświetlania mapy wykorzystano OpenStreetMap. Więcej informacji znajdziesz na githubie projektu",
+        "megaKOgłoszenia": "Aplikacja w formie serwisu ogłoszeniowego. Do wyświetlania mapy wykorzystano OpenStreetMap.",
         "prezentyMikołaja": "Aplikacja do tworzenia listy prezentów. Zrobiona w trakcie nauki technologi backendowych i zarządzania bazami danych.",
         "cookieMaker": "Aplikacja zrobiona w ramach kursu megaK. Zrobiona w celu nauki Server Side Rendering. Do renderowania użyto Handlebars",
         "randomValuePicker": "Prosta aplikacja wykonująca losowy wybór. Zrobiona podczas nauki React'a. więcej informacji na github.",
