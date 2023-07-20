@@ -95,6 +95,17 @@
         "folders": "Other personal projects worth mentioning"
       },
       "hint": "Double click image to zoom in and out",
+      "projectsTitles": {
+        "trenujemyAdmin": "Trenujemy.pl - Admin Panel",
+        "trenujemyUser": "Trenujemy.pl - Users Panels",
+        "megaKRecruitment": "MegaK Recruitment",
+        "movieWatcher": "Movie Watcher",
+        "megaKOgłoszenia": "MegaK Announcements",
+        "prezentyMikołaja": "Santa's Gifts",
+        "cookieMaker": "Cookie Maker",
+        "randomValuePicker": "Random Value Picker",
+        "kantorYoucode": "Youcode Currency Exchange"
+      },
       "projectsDescriptions": {
         "commercial": "Commercial Project",
         "personal": "Personal Project",
@@ -102,7 +113,7 @@
         "trenujemyUser": "My job was to create from the received designs an attractive and functional views, which provided a comfortable and satisfying experience to the users of the trenujemy.pl app. User views included viewing meals, supplements and exercise, personalized diet and training plans, and monitoring progress.",
         "megaKRecruitment": "The final group project of the MegaK bootcamp. It was an opportunity to learn teamwork and project management. The goal was to create a recruitment website for recruiters, enabling job offers to graduates of the MegaK bootcamp. We were responsible for the design and implementation of the user interface, the registration and login system and the database.",
         "movieWatcher": "A Netflix-inspired movie information app. Uses the 'The Movie Database' API. Find out more on project's github",
-        "megaKOgłoszenia": "Application in the form of an advertisement service. OpenStreetMap was used to display the map. Find out more on project's github",
+        "megaKOgłoszenia": "Application in the form of an advertisement service. OpenStreetMap was used to display the map.",
         "prezentyMikołaja": "Santa's gift list app. Made while learning backend technologies and database management.",
         "cookieMaker": "Application made as part of the megaK bootcamp. Made while studying Server Side Rendering. I used Handlebars for rendering",
         "randomValuePicker": "Simple application that picks random value. Made while studying basics of React with hooks. Visit github for more info.",

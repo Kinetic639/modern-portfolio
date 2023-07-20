@@ -203,7 +203,7 @@ const Work = () => {
                                     {t(`sections.work.projectsDescriptions.${project.type}`)}
                                 </div>
                                 <div>
-                                    {project.name}
+                                    {t(`sections.work.projectsTitles.${project.translation}`)}
                                 </div>
                             </div>
                             <div className={styles.description}>
@@ -257,7 +257,8 @@ const Work = () => {
                                         </a>}
                                 </div>
                             </div>
-                            <p className={styles.folderName}>{project.name}</p>
+                            <p className={styles.folderName}>
+                                {t(`sections.work.projectsTitles.${project.translation}`)}</p>
                             <p className={styles.folderDescription}>
                                 {t(`sections.work.projectsDescriptions.${project.translation}`)}
                             </p>
