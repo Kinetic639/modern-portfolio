@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.735c19ce.css",
-    "main.js": "/static/js/main.9d780b4b.js",
+    "main.js": "/static/js/main.73e9b96c.js",
     "static/media/about02.webp": "/static/media/about02.9863da8e22a063abea60.webp",
     "static/media/michal_stepien_cv_it_pl.pdf": "/static/media/michal_stepien_cv_it_pl.ed9dc0355281b40fffb3.pdf",
     "static/media/michal_stepien_cv_it_en.pdf": "/static/media/michal_stepien_cv_it_en.d2d977c06dd05cba5eef.pdf",
@@ -29,10 +29,10 @@
     "index.html": "/index.html",
     "static/media/flag-pl.webp": "/static/media/flag-pl.c163cbb07d2507630024.webp",
     "main.735c19ce.css.map": "/static/css/main.735c19ce.css.map",
-    "main.9d780b4b.js.map": "/static/js/main.9d780b4b.js.map"
+    "main.73e9b96c.js.map": "/static/js/main.73e9b96c.js.map"
   },
   "entrypoints": [
     "static/css/main.735c19ce.css",
-    "static/js/main.9d780b4b.js"
+    "static/js/main.73e9b96c.js"
   ]
 }
