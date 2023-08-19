@@ -7,8 +7,8 @@ import {images} from "../../constants";
 import styles from "./Contact.module.scss";
 import { saveAs } from 'file-saver';
 
-import cvPl from '../../assets/michal-stepien_pl.pdf';
-import cvEn from '../../assets/michal-stepien_en.pdf';
+import cvPl from '../../assets/michal_stepien_cv_it_en.pdf';
+import cvEn from '../../assets/michal_stepien_cv_it_pl.pdf';
 
 import {motion,} from "framer-motion";
 
