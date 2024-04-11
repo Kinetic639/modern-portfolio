@@ -73,6 +73,15 @@ const Work = () => {
 
     const projects = [
         {
+            name: 'Shiftana',
+            translation: "Shiftana",
+            link: "www.shiftana.com",
+            live: null,
+            images: ['shiftana01'],
+            techStack: ['React', 'Recoil', 'React Test Library', 'Sass', 'Express'],
+            type: "commercial"
+        },
+        {
             name: 'trenujemy.pl - panel admina',
             translation: "trenujemyAdmin",
             link: null,

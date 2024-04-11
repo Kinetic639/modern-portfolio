@@ -21,7 +21,7 @@
     "home": {
       "header": {
         "p1": "Cześć! Nazywam się",
-        "p2": "Jestem junior web developerem z prawie rocznym doświadczeniem komercyjnym.",
+        "p2": "Jestem web developerem z prawie dwuletnim doświadczeniem komercyjnym.",
         "p3": "Zapraszam Cię do dalszego poznania moich ",
         "p4": ", aby uzyskać kompleksowy obraz moich "
       },
@@ -38,6 +38,18 @@
         "usedTech": "Technologie, z których korzystałem:"
       },
       "experience": {
+        "shiftana": {
+          "position": "Junior Frontend developer",
+          "from": "Wrzesień 2023",
+          "to": "obecnie",
+          "duties": {
+            "duty1": "Budowanie warstwy front-end aplikacji umożliwiającej szczegółowe zarządzanie harmonogramem pracy, dostępnością pracowników oraz raportowaniem wykonanej pracy. ",
+            "duty2": "Tworzenie z otrzymanych w Figmie projektów w pełni funkcjonalnych widoków i komponentów, dbając o perfekcyjne odwzorowanie i jakość użytkowania aplikacji.",
+            "duty3": "Tworzenie testów jednostkowych przy użyciu React Testing Library i Jest, ",
+            "duty4": "Automatyzowałem proces wdrażania standardów kodowania za pomocą GitLab CI/CD i ESLint, co przyczyniało się do usprawnienia przepływów pracy.",
+            "duty5": "Praca w środowisku opartym na metodologii Agile, aktywne uczestniczenie w przeglądach kodu, planowaniu sprintów i ciągłym rozwijaniu funkcji aplikacji."
+          }
+        },
         "trenujemy": {
           "position": "Junior System Architect",
           "from": "Wrzesień 2022",
@@ -67,6 +79,7 @@
       },
       "bootcamps": {
         "description": "Bootcampy, które ukończyłem w celu rozwoju umiejętności programistycznych:",
+        "nextjsmasters": "Bootcamp o tworzeniu wydajnych i kompleksowych aplikacji przy użyciu Next.js oraz narzędzi takich jak Docker, AWS, GraphQL, Stripe , ze szczególnym naciskiem na e-commerce.",
         "megak": "12-miesięczny kurs nastawiony głównie na opanowanie podstaw technologi backendowych.",
         "coderscamp": "6-miesięczny, darmowy kurs programowania webowego, organizowany przez Stowarzyszenie CodersCrew.",
         "youcode": "Rozbudowany kurs frontendu od podstaw.",
@@ -95,6 +108,7 @@
       },
       "hint": "Kliknij w zdjęcie dwukrotnie aby przybliżyć / oddalić obraz",
       "projectsTitles": {
+        "Shiftana": "Shiftana",
         "trenujemyAdmin": "Trenujemy.pl - Panel Admina",
         "trenujemyUser": "Trenujemy.pl - Panele Użytkowników",
         "megaKRecruitment": "MegaK Rekrutacja",
@@ -108,6 +122,7 @@
       "projectsDescriptions": {
         "commercial": "Projekt komercyjny",
         "personal": "Projekt prywatny",
+        "Shiftana": "Shiftana to aplikacja umożliwiająca szczegółowe zarządzanie harmonogramem pracy, dostępnością pracowników oraz raportowaniem wykonanej pracy.",
         "trenujemyAdmin": "Panel admina aplikacji trenujemy.pl. Umożliwia dodawanie posiłków, suplementów oraz ćwiczeń, a także tworzenie spersonalizowanych planów dietetycznych i treningowych dla użytkowników. Byłem odpowiedzialny za implementację interfejsu admina, zapewnienie responsywności oraz funkcjonalności.",
         "trenujemyUser": "Moja praca polegała na tworzeniu z otrzymanych projektów atrakcyjnych i funkcjonalnych widoków, które zapewniały wygodne i satysfakcjonujące doświadczenie użytkownikom aplikacji trenujemy.pl. Widoki użytkowników obejmowały przeglądanie posiłków, suplementów i ćwiczeń, spersonalizowanych planów dietetycznych i treningowych oraz monitorowanie postępów.",
         "megaKRecruitment": "Końcowy projekt grupowy bootcampu MegaK. Był okazją do nauki pracy zespołowej i zarządzania projektem. Celem było stworzenie serwisu rekrutacyjnego dla rekruterów, umożliwiającego oferowanie pracy absolwentom bootcampu MegaK. Odpowiedzialni byliśmy za projektowanie i implementację interfejsu użytkownika, systemu rejestracji i logowania oraz bazy danych.",
@@ -121,7 +136,7 @@
     },
     "contact": {
       "location": "Lokalizacja",
-      "relocation": "z możliwością relokacji",
+      "relocation": "Polska",
       "resume": "Pobierz CV",
       "polish": "j. polski",
       "english": "j. angielski",

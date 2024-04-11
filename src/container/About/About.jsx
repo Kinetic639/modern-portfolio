@@ -82,6 +82,26 @@ const child = {
 const About = () => {
     const {t} = useTranslation('global')
     const experience = [{
+        name: "shiftana",
+        employerName: "Nicman Group LLC",
+        link: 'https://www.nicmangroup.com/',
+        duties: 5,
+        techStack: {
+            column01: [
+                "JavaScript (ES6+)",
+                "TypeScript",
+                "React","Tanstack Query",
+                "Material UI",
+                "TailwindCSS"],
+            column02: [
+                "Node.js",
+                "Express",
+                "React Testing Library",
+                "Gitlab"
+            ]
+        },
+
+    },{
         name: "trenujemy",
         employerName: "trenujemy.pl",
         link: 'https://www.trenujemy.pl',
@@ -214,7 +234,7 @@ const About = () => {
                                     </motion.li>
                                 ))}
                             </motion.ul>
-                            <div>
+                            <div  className={styles.techstackContainer}>
                                 <motion.p variants={child}> {t(`sections.about.headers.usedTech`)}
                                 </motion.p>
                                 <div className={styles.techstackListsContainer}>

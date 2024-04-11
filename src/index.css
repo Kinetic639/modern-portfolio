@@ -15,12 +15,14 @@
     --color: 0, 0%; /*the base color*/
     --l: 100%; /*the initial lightness*/
     --color-primary: hsl(var(--color), var(--l));
+    --color-primary-lighter: hsl(var(--color), calc(var(--l) - 10%));
     --color-primary-darker: hsl(var(--color), calc(var(--l) - 10%));
     --color-secondary: #1dc275;
     --color-description: #0b9052;
     --font-primary: #404040;
     --font-secondary: #1dc275;
     --font-third: #727272;
+    --menu-toggle: #7d7d7d;
     --font-tooltip: #4b4b4b;
     --font-dimmed: #c9c9c9;
 
@@ -47,11 +49,13 @@
     --color: 0, 0%; /*the base color*/
     --l: 12%; /*the initial lightness*/
     --color-primary: hsl(var(--color), var(--l));
+    --color-primary-lighter: hsl(var(--color), calc(var(--l) + 7%));
     --color-primary-darker: hsl(var(--color), calc(var(--l) - 1%));
     --font-primary: #eaeaea;
     --font-dimmed: #383838;
     --swiper-navigation-color: #1dc275 !important;
     --swiper-theme-color: #1dc275 !important;
+    --menu-toggle: #ffffff;
 }
 
 .yellow {
@@ -133,7 +137,6 @@ html::-webkit-scrollbar {
 }
 
 body {
-    background: var(--color-primary);
     color: var(--font-primary);
     transition: all .1s ease-in-out;
     font-size: var(--font-size-base);

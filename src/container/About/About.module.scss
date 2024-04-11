@@ -21,12 +21,18 @@
   font-size: 2.3rem;
   text-decoration: none;
   color: var(--font-secondary);
-  margin-bottom: var(--spacing-m);
   display: block;
+}
+
+.techstackContainer {
+  padding-left: 50px;
 }
 
 .aboutSection {
   padding-top: var(--top-padding);
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 
 .introduction {
@@ -98,7 +104,10 @@
 .experienceItem {
   display: flex;
   flex-direction: column;
-  gap: 35px;
+  gap: 25px;
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
 
   @media screen and (min-width: 768px) {
     padding-left: 20px;

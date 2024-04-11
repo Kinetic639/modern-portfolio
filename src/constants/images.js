@@ -21,6 +21,7 @@ import project0401 from "../assets/project0401.webp";
 import project0402 from "../assets/project0402.webp";
 import project0403 from "../assets/project0403.webp";
 import project0404 from "../assets/project0404.webp";
+import shiftana01 from "../assets/shiftana01.webp";
 
 
 const images = {
@@ -45,5 +46,6 @@ const images = {
     about02,
     about03,
     about04,
+    shiftana01
 };
 export default images

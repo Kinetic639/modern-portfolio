@@ -3,7 +3,7 @@ import Header from "./container/Header/Header";
 import About from "./container/About/About";
 import Skills from "./container/Skills/Skills";
 import Work from "./container/Work/Work";
-import {Navbar} from "./components";
+import {AppBackground, Navbar} from "./components";
 import {Settings} from "./components/Settings/Settings";
 import {VerticalNavbar} from "./components";
 import {AiOutlineHome} from "react-icons/ai";
@@ -18,7 +18,6 @@ import styles from "./App.module.scss";
 export const AppContext = createContext(null);
 
 const App = () => {
-    const [loading, setLoading] = useState(false);
     const [theme, setTheme] = useState("dark");
     const [activeSection, setActiveSection] = useState("home");
     const [selectedColor, setSelectedColor] = useState("green");
@@ -118,7 +117,8 @@ const App = () => {
                         showDesktopMenu
                     }}
                 >
-                    <>
+
+                      <AppBackground />
                         <Navbar links={links}/>
                         {showAsideContact && (
                             <>
@@ -135,7 +135,6 @@ const App = () => {
                             <Work/>
                             {!showAsideContact && (<Contact type='desktop'/>)}
                         </div>
-                    </>
                 </AppContext.Provider>
     );
 };

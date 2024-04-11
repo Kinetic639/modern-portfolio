@@ -10,7 +10,7 @@
   align-items: center;
   justify-content: center;
   transition: all 0.2s ease-in-out;
-  border: 1px solid var(--font-third);
+  border: 1px solid var(--menu-toggle);
   pointer-events: auto;
   z-index: 999;
   background: var(--color-primary);
@@ -37,7 +37,7 @@
   height: 2px;
   margin-bottom: 5px;
   position: relative;
-  background: var(--font-third);
+  background: var(--menu-toggle);
   transform-origin: 5px 0;
   transition: all 0.2s ease-in-out;
 }
