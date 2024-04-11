@@ -66,7 +66,7 @@ export const AppBackground = memo(() => {
                 },
                 links: {
                     color: colorPrimary,
-                    distance: 150,
+                    distance: 120,
                     enable: true,
                     opacity: 0.3,
                     width: 1,
@@ -85,10 +85,10 @@ export const AppBackground = memo(() => {
                     density: {
                         enable: true,
                     },
-                    value: 140,
+                    value: 160,
                 },
                 opacity: {
-                    value: 0.5,
+                    value: 0.3,
                 },
                 shape: {
                     type: "circle",
