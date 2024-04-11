@@ -21,7 +21,7 @@
     "home": {
       "header": {
         "p1": "Hi, my name is",
-        "p2": "I am a junior web developer with nearly a year of commercial experience.",
+        "p2": "I am a junior web developer with nearly 2 years of commercial experience.",
         "p3": "Feel free to explore my ",
         "p4": " for a comprehensive understanding of my "
       },
@@ -38,6 +38,18 @@
         "usedTech": "Few technologies I’ve been working with:"
       },
       "experience": {
+        "shiftana": {
+          "position": "Junior Frontend developer",
+          "from": "September 2023",
+          "to": "Currently",
+          "duties": {
+            "duty1": "Built front-end layer of application for detailed management of employee work shifts, availability, and scheduling conflicts.",
+            "duty2": "Translated Figma designs into functional and responsive web components, ensuring pixel-perfect implementation and seamless user experience across the application.",
+            "duty3": "Implementing unit tests with React Testing Library and Jest, maintaining high code quality and reliability.",
+            "duty4": "Collaborated in an Agile environment, contributing to code reviews, sprint planning, and continuous feature development.",
+            "duty5": "Automated deployment and enforced coding standards with GitLab CI/CD and ESLint, streamlining workflows."
+          }
+        },
         "trenujemy": {
           "position": "Junior System Architect",
           "from": "September 2022",
@@ -68,6 +80,7 @@
       },
       "bootcamps": {
         "description": "Bootcamps I have completed to enhance my programming skills:",
+        "nextjsmasters": "Bootcamp covering creating e commerce applications using Next.js and other technologies such as Docker, AWS, GraphQL, Stripe and others.",
         "megak": "12-months long course aimed mainly at mastering the backend technologies.",
         "coderscamp": "6-months long, free of charge web development course organised by CodersCrew.",
         "youcode": "Comprehensive and well organised course covering all basics of front end development.",
@@ -96,6 +109,7 @@
       },
       "hint": "Double click image to zoom in and out",
       "projectsTitles": {
+        "Shiftana": "Shiftana",
         "trenujemyAdmin": "Trenujemy.pl - Admin Panel",
         "trenujemyUser": "Trenujemy.pl - Users Panels",
         "megaKRecruitment": "MegaK Recruitment",
@@ -109,6 +123,7 @@
       "projectsDescriptions": {
         "commercial": "Commercial Project",
         "personal": "Personal Project",
+        "Shiftana": "Shiftana is an application that allows for detailed management of work schedules, employee availability, and reporting of work performed.",
         "trenujemyAdmin": "Admin panel of the trenujemy.pl application. It allows you to add meals, supplements and exercises, as well as create personalized diet and training plans for users. I was responsible for implementing the admin interface, ensuring responsiveness and functionality.",
         "trenujemyUser": "My job was to create from the received designs an attractive and functional views, which provided a comfortable and satisfying experience to the users of the trenujemy.pl app. User views included viewing meals, supplements and exercise, personalized diet and training plans, and monitoring progress.",
         "megaKRecruitment": "The final group project of the MegaK bootcamp. It was an opportunity to learn teamwork and project management. The goal was to create a recruitment website for recruiters, enabling job offers to graduates of the MegaK bootcamp. We were responsible for the design and implementation of the user interface, the registration and login system and the database.",
@@ -122,7 +137,7 @@
     },
     "contact": {
       "location": "Location",
-      "relocation": "Can relocate if necessary",
+      "relocation": "Poland",
       "resume": "download resume",
       "polish": "polish",
       "english": "english",

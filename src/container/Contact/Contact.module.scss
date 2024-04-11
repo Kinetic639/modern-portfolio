@@ -1,5 +1,5 @@
 .contact {
-  border: 1px solid var(--font-third);
+  //border: 1px solid var(--font-third);
   border-radius: 50px;
   padding: 30px 55px 30px 35px;
   position: fixed;
@@ -13,6 +13,9 @@
   align-items: flex-start;
   justify-content: space-between;
   gap: 30px;
+  @media screen and (min-width: 1200px) {
+    background-color: var(--color-primary-lighter);
+  }
 }
 
 .contactDesktop {

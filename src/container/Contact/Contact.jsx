@@ -1,14 +1,14 @@
 import React, {useState} from "react";
 import {useTranslation} from "react-i18next";
 import {BsEnvelope} from 'react-icons/bs'
-import {RiFacebookFill, RiGithubFill, RiLinkedinFill, RiRouteLine} from 'react-icons/ri';
+import {RiFacebookFill, RiGithubFill, RiLinkedinFill} from 'react-icons/ri';
 
 import {images} from "../../constants";
 import styles from "./Contact.module.scss";
 import { saveAs } from 'file-saver';
 
-import cvPl from '../../assets/michal_stepien_cv_it_pl.pdf';
-import cvEn from '../../assets/michal_stepien_cv_it_en.pdf';
+import cvPl from '../../assets/michal_stepien_cv_pl.pdf';
+import cvEn from '../../assets/michal_stepien_cv_en.pdf';
 
 import {motion,} from "framer-motion";
 
@@ -102,11 +102,7 @@ export const Contact = (props) => {
                 <motion.div className={`${styles.sectionsContainer}`}>
                     <motion.div variants={child} className={`${styles.infoSection} ${styles.locationSection}`}>
                         <div>
-                            <p>{t(`sections.contact.location`)}: Poznań</p>
-                            <p className={styles.textSecondary}>{t(`sections.contact.relocation`)}</p>
-                        </div>
-                        <div className={styles.locationIcon}>
-                            <RiRouteLine/>
+                            <p>{t(`sections.contact.location`)}: Poznań, <span className={styles.textSecondary}>{t(`sections.contact.relocation`)}</span></p>
                         </div>
                     </motion.div>
                     <motion.div variants={child} className={styles.infoSection}>

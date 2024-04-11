@@ -27,22 +27,18 @@
   align-items: center;
   color: var(--font-third);
   font-size: 2.6rem;
-  border: none;
   transition: color .2s ease-in-out;
 
 }
 
 .iconContainerDesktop {
-  background: var(--color-primary);
-
   &:before {
     content: "";
-    border: 1px solid var(--font-third);
     position: absolute;
     top: 5px;
-    left: -12px;
+    left: -10px;
     height: 50px;
-    width: 25px;
+    width: 24px;
     background: var(--color-primary);
     border-top-left-radius: 150px;
     border-bottom-left-radius: 150px;
@@ -61,14 +57,14 @@
   display: flex;
   gap: 35px;
   padding: 15px;
-  background: var(--color-primary);
+  background: var(--color-primary-lighter);
   border-radius: 50px;
   flex-direction: column-reverse;
   align-items: flex-end;
 }
 
 .settingsContainerDesktop {
-  background: var(--color-primary-darker);
+  background: var(--color-primary-lighter);
   position: relative;
   top: auto;
   flex-direction: row;

@@ -32,7 +32,7 @@ const Header = () => {
             <motion.p variants={child} className={styles.intro}>{t('sections.home.header.p1')}</motion.p>
             <motion.h1 variants={child} className={styles.title}>Michał <span
                 className={styles.titleSecondary}>Stępień</span></motion.h1>
-            <motion.h1 variants={child} className={styles.subtitle}>Junior Web Developer</motion.h1>
+            <motion.h1 variants={child} className={styles.subtitle}>Web Developer</motion.h1>
             <motion.div variants={child} className={styles.description}>
                 <p>{t('sections.home.header.p2')}</p>
                 <p>

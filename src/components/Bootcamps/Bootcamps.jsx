@@ -12,6 +12,13 @@ export const Bootcamps = () => {
 
     const bootcampsList = [
         {
+            name: 'NEXT.JS MASTERS',
+            translation: "nextjsmasters",
+            title: 'NEXT.JS MASTERS',
+            link: 'https://www.nextjsmasters.pl/',
+            date: '2024'
+        },
+        {
             name: 'MegaK',
             translation: "megak",
             title: 'Mega kurs javascriptu',
