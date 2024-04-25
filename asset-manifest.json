@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.2a925403.css",
-    "main.js": "/static/js/main.d1a77c20.js",
+    "main.js": "/static/js/main.80f00bfa.js",
     "static/js/1927.d81dd3b4.chunk.js": "/static/js/1927.d81dd3b4.chunk.js",
     "static/js/7590.fbe6e9c8.chunk.js": "/static/js/7590.fbe6e9c8.chunk.js",
     "static/js/6725.58727793.chunk.js": "/static/js/6725.58727793.chunk.js",
@@ -84,8 +84,8 @@
     "static/media/givemeart04.webp": "/static/media/givemeart04.e17f4cd679c57fe23614.webp",
     "static/media/givemeart05.webp": "/static/media/givemeart05.6419f7c55bcdb2d96bd3.webp",
     "static/media/client01.webp": "/static/media/client01.099a8c57e024f333656a.webp",
-    "static/media/michal_stepien_cv_pl.pdf": "/static/media/michal_stepien_cv_pl.8fb08f519148cd36b3dc.pdf",
-    "static/media/michal_stepien_cv_en.pdf": "/static/media/michal_stepien_cv_en.393a249ddaaa3a0870e2.pdf",
+    "static/media/michal_stepien_cv_pl.pdf": "/static/media/michal_stepien_cv_pl.c9805f35bfd2e8c56f4b.pdf",
+    "static/media/michal_stepien_cv_en.pdf": "/static/media/michal_stepien_cv_en.b4356002a179471a3f63.pdf",
     "static/media/client03.webp": "/static/media/client03.e3b145b29a5e76ef14ce.webp",
     "static/media/admin01.webp": "/static/media/admin01.004d3b0d4046b2fe7d7b.webp",
     "static/media/admin04.webp": "/static/media/admin04.74ce6191a5f225d95dae.webp",
@@ -103,7 +103,7 @@
     "index.html": "/index.html",
     "static/media/flag-pl.webp": "/static/media/flag-pl.c163cbb07d2507630024.webp",
     "main.2a925403.css.map": "/static/css/main.2a925403.css.map",
-    "main.d1a77c20.js.map": "/static/js/main.d1a77c20.js.map",
+    "main.80f00bfa.js.map": "/static/js/main.80f00bfa.js.map",
     "1927.d81dd3b4.chunk.js.map": "/static/js/1927.d81dd3b4.chunk.js.map",
     "7590.fbe6e9c8.chunk.js.map": "/static/js/7590.fbe6e9c8.chunk.js.map",
     "6725.58727793.chunk.js.map": "/static/js/6725.58727793.chunk.js.map",
@@ -175,6 +175,6 @@
   },
   "entrypoints": [
     "static/css/main.2a925403.css",
-    "static/js/main.d1a77c20.js"
+    "static/js/main.80f00bfa.js"
   ]
 }
