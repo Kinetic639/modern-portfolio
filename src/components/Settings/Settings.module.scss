@@ -27,8 +27,7 @@
   align-items: center;
   color: var(--font-third);
   font-size: 2.6rem;
-  transition: color .2s ease-in-out;
-
+  transition: color 0.2s ease-in-out;
 }
 
 .iconContainerDesktop {
@@ -47,7 +46,7 @@
 
   &:hover {
     color: var(--font-secondary);
-    transition: color .2s ease-in-out;
+    transition: color 0.2s ease-in-out;
   }
 }
 

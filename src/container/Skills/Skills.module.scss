@@ -12,12 +12,12 @@
 
   & .stackHeaderDimmed {
     color: var(--font-third);
-    transition: color .2s ease-in-out;
+    transition: color 0.2s ease-in-out;
   }
 
   & .stackListDimmed {
     color: var(--font-third);
-    transition: color .2s ease-in-out;
+    transition: color 0.2s ease-in-out;
   }
 }
 
@@ -30,16 +30,15 @@
   align-items: center;
   color: var(--font-secondary);
   gap: 15px;
-  transition: color .2s ease-in-out;
+  transition: color 0.2s ease-in-out;
 }
-
 
 .stackList {
   color: var(--font-primary);
   list-style: none;
   display: grid;
   gap: 0;
-  transition: color .2s ease-in-out;
+  transition: color 0.2s ease-in-out;
 }
 
 .stackListItem {
@@ -49,14 +48,13 @@
 
 .itemDimmed {
   color: var(--font-third);
-  transition: color .2s ease-in-out;
+  transition: color 0.2s ease-in-out;
 }
 
 .itemActive {
-  color: red
+  color: red;
 }
 
 .icon {
   font-size: 4rem;
 }
-

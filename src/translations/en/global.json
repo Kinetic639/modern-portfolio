@@ -39,7 +39,7 @@
       },
       "experience": {
         "shiftana": {
-          "position": "Junior Frontend developer",
+          "position": "Junior Frontend Developer",
           "from": "September 2023",
           "to": "Currently",
           "duties": {
@@ -48,6 +48,18 @@
             "duty3": "Implementing unit tests with React Testing Library and Jest, maintaining high code quality and reliability.",
             "duty4": "Collaborated in an Agile environment, contributing to code reviews, sprint planning, and continuous feature development.",
             "duty5": "Automated deployment and enforced coding standards with GitLab CI/CD and ESLint, streamlining workflows."
+          }
+        },
+        "givemeart": {
+          "position": "Junior Frontend Developer / Designer - Freelance",
+          "from": "July 2023",
+          "to": "October 2023",
+          "duties": {
+            "duty1": "Designing UX/UI for applications: Creating intuitive and aesthetically pleasing user interfaces to ensure maximum functionality and ease of use.",
+            "duty2": "Developing a design system in Figma, which enabled UI elements standardization and ensured visual and technical consistency of the product.",
+            "duty3": "Building responsive user interfaces using Next.js and Tailwind CSS, which includes managing application state, routing, and SEO optimization.",
+            "duty4": "Collaborating with the team and participating in client meetings to understand the requirements for user interface and application functionality.",
+            "duty5": "Creating and maintaining technical documentation to facilitate project management and future development of the application."
           }
         },
         "trenujemy": {
@@ -71,7 +83,6 @@
           "Buffer": "Buffer",
           "ShiftCoordinator": "Shift coordinator"
         }
-
       },
       "description": {
         "p1": "I began my programming journey by writing scripts for Google Spreadsheets using Google Apps Script, which is based on the JavaScript framework. Programming has became my true passion. The decision to become a programmer was a natural step in my development path.",
@@ -110,6 +121,7 @@
       "hint": "Double click image to zoom in and out",
       "projectsTitles": {
         "Shiftana": "Shiftana",
+        "givemeart": "GiveMeArt",
         "trenujemyAdmin": "Trenujemy.pl - Admin Panel",
         "trenujemyUser": "Trenujemy.pl - Users Panels",
         "megaKRecruitment": "MegaK Recruitment",
@@ -123,6 +135,7 @@
       "projectsDescriptions": {
         "commercial": "Commercial Project",
         "personal": "Personal Project",
+        "givemeart": "This project marked my debut as a freelancer and was my first professional experience as a Web Designer and Next.js Developer. I was responsible for designing the entire user interface, developing the front end using Next.js and Tailwind CSS, and establishing a comprehensive design system in Figma. GiveMeArt ia a project designed to integrate AI-powered graphic generation with a print-on-demand service for a US clients.",
         "Shiftana": "Shiftana is an application that allows for detailed management of work schedules, employee availability, and reporting of work performed.",
         "trenujemyAdmin": "Admin panel of the trenujemy.pl application. It allows you to add meals, supplements and exercises, as well as create personalized diet and training plans for users. I was responsible for implementing the admin interface, ensuring responsiveness and functionality.",
         "trenujemyUser": "My job was to create from the received designs an attractive and functional views, which provided a comfortable and satisfying experience to the users of the trenujemy.pl app. User views included viewing meals, supplements and exercise, personalized diet and training plans, and monitoring progress.",

@@ -61,11 +61,10 @@
   border-radius: 25px;
   background: var(--color-description);
   display: none;
-  transition: background-color .2s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
   @media screen and (min-height: 900px) and (min-width: 1200px) {
-    display: block;;
+    display: block;
   }
-
 }
 
 .footer {
@@ -73,7 +72,6 @@
   font-size: 1.4rem;
   align-self: center;
 }
-
 
 .infoContainer {
   align-self: stretch;
@@ -100,7 +98,6 @@
   justify-content: space-evenly;
   gap: 30px;
 }
-
 
 .locationSection {
   padding-left: 25px;
@@ -137,13 +134,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all .1s ease-in-out;
+  transition: all 0.1s ease-in-out;
   cursor: pointer;
 
   &:hover {
     border-color: var(--font-secondary);
     color: var(--font-secondary);
-    transition: all .1s ease-in-out;
+    transition: all 0.1s ease-in-out;
   }
 }
 
@@ -169,12 +166,12 @@
   gap: 10px;
   justify-content: center;
   cursor: pointer;
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 
   &:hover {
     color: var(--font-secondary);
     background: transparent;
-    transition: all .1s ease-in-out;
+    transition: all 0.1s ease-in-out;
   }
 }
 
@@ -186,7 +183,7 @@
   padding: 5px;
   text-transform: uppercase;
   background: var(--font-secondary);
-  transition: all .1s ease-in-out;
+  transition: all 0.1s ease-in-out;
   color: var(--font-tooltip);
   display: flex;
   align-items: center;
@@ -197,7 +194,7 @@
   &:hover {
     color: var(--font-secondary);
     background: transparent;
-    transition: all .1s ease-in-out;
+    transition: all 0.1s ease-in-out;
   }
 }
 
@@ -209,7 +206,7 @@
   font-size: 14px;
   text-transform: uppercase;
   background: var(--font-secondary);
-  transition: all .1s ease-in-out;
+  transition: all 0.1s ease-in-out;
   color: var(--font-tooltip);
   display: flex;
   align-items: center;
@@ -219,8 +216,6 @@
   &:hover {
     color: var(--font-secondary);
     background: transparent;
-    transition: all .1s ease-in-out;
+    transition: all 0.1s ease-in-out;
   }
 }
-
-

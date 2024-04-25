@@ -4,7 +4,7 @@
   cursor: pointer;
   width: 30px;
   height: 30px;
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
   position: relative;
   background: transparent;
 
@@ -18,17 +18,17 @@
     height: 30px;
     width: 30px;
     z-index: 3;
-    transition: all .2s ease-in-out;
+    transition: all 0.2s ease-in-out;
   }
 
   &:hover {
     color: var(--font-secondary);
     border-color: var(--font-secondary);
-    transition: all .2s ease-in-out;
+    transition: all 0.2s ease-in-out;
 
     &:after {
       border: 1px solid var(--font-secondary);
-      transition: all .2s ease-in-out;
+      transition: all 0.2s ease-in-out;
     }
   }
 

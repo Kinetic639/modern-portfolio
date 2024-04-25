@@ -4,7 +4,6 @@
   align-items: center;
   justify-content: space-evenly;
   padding: 0 0 0 30px;
-
 }
 
 .container > * {
@@ -34,7 +33,6 @@
   flex: 3;
   display: flex;
   gap: 10px;
-
 }
 
 .linkLine {
@@ -48,7 +46,7 @@
     top: 0;
     height: 100%;
     width: 1px;
-    background: var(--font-third);;
+    background: var(--font-third);
   }
 
   &:after {
@@ -59,7 +57,7 @@
     height: 0;
     width: 1px;
     background: var(--font-secondary);
-    transition: height .4s ease-in-out;
+    transition: height 0.4s ease-in-out;
   }
 }
 
@@ -75,7 +73,7 @@
   text-decoration: none;
   font-weight: 300;
   margin: 0 auto;
-  transition-delay: .4s;
+  transition-delay: 0.4s;
   overflow: hidden;
 
   &:hover {
