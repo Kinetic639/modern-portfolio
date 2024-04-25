@@ -50,6 +50,18 @@
             "duty5": "Praca w środowisku opartym na metodologii Agile, aktywne uczestniczenie w przeglądach kodu, planowaniu sprintów i ciągłym rozwijaniu funkcji aplikacji."
           }
         },
+        "givemeart": {
+          "position": "Junior Frontend Developer / Designer - Freelance",
+          "from": "Lipiec 2023",
+          "to": "Październik 2023",
+          "duties": {
+            "duty1": "Projektowanie UX/UI aplikacji: Tworzenie intuicyjnych i estetycznych interfejsów użytkownika w celu zapewnienia maksymalnej funkcjonalności i łatwości obsługi aplikacji.",
+            "duty2": "Tworzenie design systemu w Figmie, który umożliwiał standaryzację elementów UI i zapewniał spójność wizualną i techniczną produktu.",
+            "duty3": "Budowanie responsywnych interfejsów użytkownika przy użyciu Next.js i Tailwind CSS, co obejmuje zarządzanie stanem aplikacji, routing oraz optymalizację pod kątem SEO.",
+            "duty4": "Współpraca z zespołem i udział w spotkaniach z klientem, aby zrozumieć wymagania dotyczące interfejsu użytkownika i funkcjonalności aplikacji.",
+            "duty5": "Tworzenie i utrzymanie dokumentacji technicznej w celu ułatwienia zarządzania projektem oraz przyszłych prac nad aplikacją"
+          }
+        },
         "trenujemy": {
           "position": "Junior System Architect",
           "from": "Wrzesień 2022",
@@ -109,6 +121,7 @@
       "hint": "Kliknij w zdjęcie dwukrotnie aby przybliżyć / oddalić obraz",
       "projectsTitles": {
         "Shiftana": "Shiftana",
+        "givemeart": "GiveMeArt",
         "trenujemyAdmin": "Trenujemy.pl - Panel Admina",
         "trenujemyUser": "Trenujemy.pl - Panele Użytkowników",
         "megaKRecruitment": "MegaK Rekrutacja",
@@ -122,6 +135,7 @@
       "projectsDescriptions": {
         "commercial": "Projekt komercyjny",
         "personal": "Projekt prywatny",
+        "givemeart": "Projekt ten był moim debiutem jako freelancera oraz pierwszym profesjonalnym doświadczeniem w roli Web Designera i Developera Next.js. Byłem odpowiedzialny za zaprojektowanie całego interfejsu użytkownika, rozwój front-endu z użyciem Next.js i Tailwind CSS, oraz stworzenie kompleksowego systemu designu w Figmie, co zapewniło spójność i usprawniło proces rozwoju. Projekt GiveMeArt projekt mający na celu integrację generowania grafik opartych na AI z usługą print-on-demand.",
         "Shiftana": "Shiftana to aplikacja umożliwiająca szczegółowe zarządzanie harmonogramem pracy, dostępnością pracowników oraz raportowaniem wykonanej pracy.",
         "trenujemyAdmin": "Panel admina aplikacji trenujemy.pl. Umożliwia dodawanie posiłków, suplementów oraz ćwiczeń, a także tworzenie spersonalizowanych planów dietetycznych i treningowych dla użytkowników. Byłem odpowiedzialny za implementację interfejsu admina, zapewnienie responsywności oraz funkcjonalności.",
         "trenujemyUser": "Moja praca polegała na tworzeniu z otrzymanych projektów atrakcyjnych i funkcjonalnych widoków, które zapewniały wygodne i satysfakcjonujące doświadczenie użytkownikom aplikacji trenujemy.pl. Widoki użytkowników obejmowały przeglądanie posiłków, suplementów i ćwiczeń, spersonalizowanych planów dietetycznych i treningowych oraz monitorowanie postępów.",

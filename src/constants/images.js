@@ -22,30 +22,39 @@ import project0402 from "../assets/project0402.webp";
 import project0403 from "../assets/project0403.webp";
 import project0404 from "../assets/project0404.webp";
 import shiftana01 from "../assets/shiftana01.webp";
-
+import givemeart01 from "../assets/givemeart01.webp";
+import givemeart02 from "../assets/givemeart02.webp";
+import givemeart03 from "../assets/givemeart03.webp";
+import givemeart04 from "../assets/givemeart04.webp";
+import givemeart05 from "../assets/givemeart05.webp";
 
 const images = {
-    client01,
-    client02,
-    client03,
-    project0301,
-    project0302,
-    project0303,
-    project0304,
-    project0401,
-    project0402,
-    project0403,
-    project0404,
-    admin01,
-    admin02,
-    admin03,
-    admin04,
-    avatar02,
-    avatar01,
-    about01,
-    about02,
-    about03,
-    about04,
-    shiftana01
+  client01,
+  client02,
+  client03,
+  project0301,
+  project0302,
+  project0303,
+  project0304,
+  project0401,
+  project0402,
+  project0403,
+  project0404,
+  admin01,
+  admin02,
+  admin03,
+  admin04,
+  avatar02,
+  avatar01,
+  about01,
+  about02,
+  about03,
+  about04,
+  shiftana01,
+  givemeart01,
+  givemeart02,
+  givemeart03,
+  givemeart04,
+  givemeart05,
 };
-export default images
+export default images;
